@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - Yayasan Al-Hidayah Lembah Hijau</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+     <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">YAYASAN AL-HIDAYAH</span>
+                        <span class="logo-subtitle">Lembah Hijau</span>
+                    </div>
+                </a>
+
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Beranda</a></li>
+                        <li><a href="about.html" class="nav-link">Tentang</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Struktur <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
+                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active">
+                                Program <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                                <li><a href="humanity.html" class="active"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">Berita</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                </nav>
+
+                <a href="donation.html" class="btn btn-primary btn-donate">
+                    <i class="fas fa-hand-holding-heart"></i> Donasi
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Berita & Artikel</h1>
+            <p>Informasi terbaru seputar kegiatan, prestasi, dan program Yayasan Al-Hidayah Lembah Hijau</p>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="section">
+        <div class="container">
+            <div class="featured-news">
+                <div class="featured-news-image">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wisuda">
+                    <span class="news-category featured">Pendidikan</span>
+                </div>
+                <div class="featured-news-content">
+                    <div class="news-meta">
+                        <span><i class="far fa-calendar"></i> 15 Juni 2024</span>
+                        <span><i class="far fa-user"></i> Admin</span>
+                        <span><i class="far fa-eye"></i> 2.5k dilihat</span>
+                    </div>
+                    <h2>Wisuda Angkatan ke-26: 98% Lulusan Diterima di PTN Favorit</h2>
+                    <p>Sebanyak 312 siswa SMA Islam Al-Hidayah diwisuda dengan prestasi gemilang. 306 di antaranya diterima di berbagai perguruan tinggi negeri melalui jalur SNBP, SNBT, dan jalur prestasi lainnya. Acara wisuda berlangsung di Balai Sidang Jakarta Convention Center dan dihadiri oleh orang tua, dewan guru, serta pejabat pendidikan.</p>
+                    <div class="featured-news-footer">
+                        <a href="wisuda-news.html" class="btn btn-primary">Baca Selengkapnya</a>
+                        <div class="news-share">
+                            <span>Bagikan:</span>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter & Search -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="news-filter-section">
+                <div class="news-filter">
+                    <button class="news-filter-btn active" data-filter="all">Semua</button>
+                    <button class="news-filter-btn" data-filter="pendidikan">Pendidikan</button>
+                    <button class="news-filter-btn" data-filter="kemanusiaan">Kemanusiaan</button>
+                    <button class="news-filter-btn" data-filter="prestasi">Prestasi</button>
+                    <button class="news-filter-btn" data-filter="kegiatan">Kegiatan</button>
+                </div>
+                <div class="news-search">
+                    <input type="text" placeholder="Cari berita...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="berita-grid">
+                <!-- Berita 1 -->
+                <div class="berita-card" data-category="prestasi">
+                    <div class="berita-image">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="OSN">
+                        <span class="berita-category">Prestasi</span>
+                    </div>
+                    <div class="berita-content">
+                        <div class="berita-date">
+                            <i class="far fa-calendar"></i> 10 Juni 2024
+                        </div>
+                        <h3 class="berita-title">
+                            <a href="berita-detail.html">Siswa Al-Hidayah Raih 3 Medali di OSN 2024</a>
+                        </h3>
+                        <p class="berita-excerpt">
+                            Tim olimpiade kami kembali mengharumkan nama sekolah dengan meraih 1 emas dan 2 perak di OSN Matematika dan IPA tingkat nasional...
+                        </p>
+                        <div class="berita-meta">
+                            <span><i class="far fa-eye"></i> 1.8k</span>
+                            <span><i class="far fa-comment"></i> 32</span>
+                        </div>
+                        <a href="berita-detail.html" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Berita 2 -->
+                <div class="berita-card" data-category="kemanusiaan">
+                    <div class="berita-image">
+                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan Bencana">
+                        <span class="berita-category">Kemanusiaan</span>
+                    </div>
+                    <div class="berita-content">
+                        <div class="berita-date">
+                            <i class="far fa-calendar"></i> 5 Juni 2024
+                        </div>
+                        <h3 class="berita-title">
+                            <a href="berita-detail.html">Penyaluran Bantuan untuk Korban Bencana di Cianjur</a>
+                        </h3>
+                        <p class="berita-excerpt">
+                            Yayasan menyalurkan bantuan sembako, pakaian, dan layanan medis untuk 500 keluarga korban bencana alam di Cianjur...
+                        </p>
+                        <div class="berita-meta">
+                            <span><i class="far fa-eye"></i> 2.1k</span>
+                            <span><i class="far fa-comment"></i> 45</span>
+                        </div>
+                        <a href="berita-detail.html" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Berita 3 -->
+                <div class="berita-card" data-category="pendidikan">
+                    <div class="berita-image">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Guru">
+                        <span class="berita-category">Pendidikan</span>
+                    </div>
+                    <div class="berita-content">
+                        <div class="berita-date">
+                            <i class="far fa-calendar"></i> 1 Juni 2024
+                        </div>
+                        <h3 class="berita-title">
+                            <a href="berita-detail.html">3 Guru Al-Hidayah Raih Penghargaan Guru Inspiratif 2024</a>
+                        </h3>
+                        <p class="berita-excerpt">
+                            Tiga guru Yayasan Al-Hidayah menerima penghargaan Guru Inspiratif dari Dinas Pendidikan atas dedikasi dan inovasi pembelajaran...
+                        </p>
+                        <div class="berita-meta">
+                            <span><i class="far fa-eye"></i> 1.2k</span>
+                            <span><i class="far fa-comment"></i> 28</span>
+                        </div>
+                        <a href="berita-detail.html" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Berita 4 -->
+                <div class="berita-card" data-category="kegiatan">
+                    <div class="berita-image">
+                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f8f4be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Olahraga">
+                        <span class="berita-category">Kegiatan</span>
+                    </div>
+                    <div class="berita-content">
+                        <div class="berita-date">
+                            <i class="far fa-calendar"></i> 28 Mei 2024
+                        </div>
+                        <h3 class="berita-title">
+                            <a href="berita-detail.html">Pekan Olahraga dan Seni Antar Siswa 2024</a>
+                        </h3>
+                        <p class="berita-excerpt">
+                            Ratusan siswa dari berbagai unit sekolah mengikuti kompetisi olahraga dan seni dalam rangka memperingati Hari Pendidikan Nasional...
+                        </p>
+                        <div class="berita-meta">
+                            <span><i class="far fa-eye"></i> 1.5k</span>
+                            <span><i class="far fa-comment"></i> 23</span>
+                        </div>
+                        <a href="berita-detail.html" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Berita 5 -->
+                <div class="berita-card" data-category="kemanusiaan">
+                    <div class="berita-image">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Santunan">
+                        <span class="berita-category">Kemanusiaan</span>
+                    </div>
+                    <div class="berita-content">
+                        <div class="berita-date">
+                            <i class="far fa-calendar"></i> 20 Mei 2024
+                        </div>
+                        <h3 class="berita-title">
+                            <a href="berita-detail.html">Santunan 250 Anak Yatim Menyambut Idul Adha</a>
+                        </h3>
+                        <p class="berita-excerpt">
+                            Yayasan menyalurkan santunan dan bingkisan Idul Adha untuk 250 anak yatim dari berbagai panti asuhan di Jakarta dan sekitarnya...
+                        </p>
+                        <div class="berita-meta">
+                            <span><i class="far fa-eye"></i> 1.9k</span>
+                            <span><i class="far fa-comment"></i> 37</span>
+                        </div>
+                        <a href="berita-detail.html" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Berita 6 -->
+                <div class="berita-card" data-category="prestasi">
+                    <div class="berita-image">
+                        <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Debat Bahasa">
+                        <span class="berita-category">Prestasi</span>
+                    </div>
+                    <div class="berita-content">
+                        <div class="berita-date">
+                            <i class="far fa-calendar"></i> 15 Mei 2024
+                        </div>
+                        <h3 class="berita-title">
+                            <a href="berita-detail.html">Juara 1 Debat Bahasa Inggris Tingkat Nasional</a>
+                        </h3>
+                        <p class="berita-excerpt">
+                            Tim debat SMA Islam Al-Hidayah berhasil meraih juara 1 dalam kompetisi debat bahasa Inggris antar sekolah se-Indonesia...
+                        </p>
+                        <div class="berita-meta">
+                            <span><i class="far fa-eye"></i> 1.3k</span>
+                            <span><i class="far fa-comment"></i> 19</span>
+                        </div>
+                        <a href="berita-detail.html" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link">5</a>
+                <span>...</span>
+                <a href="#" class="page-link">10</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="newsletter-content">
+                    <h3>Berlangganan Newsletter</h3>
+                    <p>Dapatkan update berita dan program terbaru dari Yayasan Al-Hidayah langsung di email Anda.</p>
+                </div>
+                <form class="newsletter-form-large">
+                    <input type="email" placeholder="Alamat Email Anda" required>
+                    <button type="submit" class="btn btn-primary">Langganan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-kaaba"></i>
+                        <div>
+                            <h4>YAYASAN AL-HIDAYAH</h4>
+                            <p>Lembah Hijau</p>
+                        </div>
+                    </div>
+                    <p>Mencerdaskan kehidupan bangsa, meringankan beban sesama. Bersama membangun peradaban yang lebih baik.</p>
+                    <div class="footer-cert">
+                        <span><i class="fas fa-check-circle"></i> SK Kemenkumham No. AHU-1234.2024</span>
+                        <span><i class="fas fa-check-circle"></i> Terdaftar di BAZNAS</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="education.html">Pendidikan Islam</a></li>
+                        <li><a href="humanity.html">Kemanusiaan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tentang</h4>
+                    <ul>
+                        <li><a href="about.html">Sejarah</a></li>
+                        <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
+                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Dukungan</h4>
+                    <ul>
+                        <li><a href="donation.html">Cara Donasi</a></li>
+                        <li><a href="relawan.html">Jadi Relawan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yayasan Al-Hidayah Lembah Hijau. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Kebijakan Privasi</a>
+                    <a href="terms.html">Syarat & Ketentuan</a>
+                    <a href="sitemap.html">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

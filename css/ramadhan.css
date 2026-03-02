@@ -1,0 +1,747 @@
+/* ramadhan.css - Halaman Ramadhan Berkah */
+
+/* ===== VARIABLES KHUSUS RAMADHAN ===== */
+:root {
+    --ramadhan-gold: #D4AF37;
+    --ramadhan-gold-light: #FBBF24;
+    --ramadhan-night: #1A2A3A;
+    --ramadhan-moon: #F1F0E8;
+    --ramadhan-star: #FFE484;
+}
+
+/* ===== RAMADHAN HEADER ===== */
+.ramadhan-header {
+    background: linear-gradient(135deg, #0a2e4a 0%, #1a3f5a 50%, #2a4f6a 100%);
+    padding: 8rem 0 6rem;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 80px 80px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+/* Dekorasi Ramadhan */
+.ramadhan-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.moon {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, var(--ramadhan-moon), #e0d9c0);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 255, 200, 0.5);
+    animation: moonGlow 4s ease-in-out infinite;
+}
+
+.moon::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 50%;
+}
+
+@keyframes moonGlow {
+    0%, 100% { box-shadow: 0 0 50px rgba(255, 255, 200, 0.5); }
+    50% { box-shadow: 0 0 80px rgba(255, 255, 200, 0.8); }
+}
+
+.star {
+    position: absolute;
+    background: var(--ramadhan-star);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.star-1 {
+    width: 20px;
+    height: 20px;
+    top: 30%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    left: 10%;
+    animation-delay: 0.5s;
+}
+
+.star-3 {
+    width: 25px;
+    height: 25px;
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.star-4 {
+    width: 18px;
+    height: 18px;
+    top: 40%;
+    right: 25%;
+    animation-delay: 1.5s;
+}
+
+.star-5 {
+    width: 12px;
+    height: 12px;
+    bottom: 40%;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.ramadhan-header .header-content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-tagline {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.1);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Amiri', serif;
+}
+
+.ramadhan-header h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    font-family: 'Amiri', serif;
+}
+
+.header-description {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* ===== INFO RAMADHAN ===== */
+.ramadhan-info {
+    padding: 4rem 0;
+    background: var(--light-gray);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--ramadhan-gold);
+}
+
+.info-card i {
+    font-size: 3rem;
+    color: var(--ramadhan-gold);
+    margin-bottom: 1.5rem;
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.info-card p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.info-card strong {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* ===== PROGRAM RAMADHAN ===== */
+.program-ramadhan {
+    padding: 5rem 0;
+    background: white;
+}
+
+.program-ramadhan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.program-ramadhan-card {
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+}
+
+.program-ramadhan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--ramadhan-gold);
+}
+
+.program-ramadhan-card.featured {
+    border: 2px solid var(--ramadhan-gold);
+    background: linear-gradient(135deg, #fff9e6 0%, white 100%);
+}
+
+.program-badge {
+    position: absolute;
+    top: -12px;
+    right: 30px;
+    background: var(--ramadhan-gold);
+    color: var(--dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.program-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--ramadhan-gold-light) 0%, var(--ramadhan-gold) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.program-icon-wrapper i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.program-ramadhan-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.program-target {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.program-progress {
+    margin-bottom: 1.5rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.progress-bar {
+    height: 10px;
+    background: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--ramadhan-gold-light), var(--ramadhan-gold));
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+
+.program-benefits {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.program-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.program-benefits i {
+    color: var(--ramadhan-gold);
+    font-size: 1rem;
+}
+
+.program-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 2px dashed var(--border);
+    border-bottom: 2px dashed var(--border);
+}
+
+/* ===== JADWAL RAMADHAN ===== */
+.jadwal-ramadhan {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+}
+
+.jadwal-wrapper {
+    max-width: 800px;
+    margin: 3rem auto 1rem;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.jadwal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.jadwal-table th {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.jadwal-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.jadwal-table tr:hover td {
+    background: var(--light-gray);
+}
+
+.jadwal-table .show-more-row td {
+    padding: 1rem;
+    text-align: center;
+}
+
+.jadwal-note {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* ===== KAJIAN RAMADHAN ===== */
+.kajian-ramadhan {
+    padding: 5rem 0;
+    background: white;
+}
+
+.kajian-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.kajian-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.kajian-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--ramadhan-gold);
+}
+
+.kajian-time {
+    margin-bottom: 1rem;
+}
+
+.time-badge {
+    background: var(--ramadhan-gold);
+    color: var(--dark);
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.kajian-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.kajian-topic {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.kajian-card i {
+    color: var(--gray);
+    margin-right: 0.5rem;
+    width: 18px;
+}
+
+.kajian-speaker,
+.kajian-location,
+.kajian-time-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== CARA DONASI ===== */
+.cara-donasi-ramadhan {
+    padding: 5rem 0;
+    background: var(--light-gray);
+}
+
+.donasi-ramadhan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.donasi-description {
+    color: var(--gray);
+    margin: 1.5rem 0 2rem;
+    font-size: 1.1rem;
+}
+
+.metode-list {
+    margin-bottom: 3rem;
+}
+
+.metode-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.metode-item:hover {
+    transform: translateX(10px);
+    border-color: var(--ramadhan-gold);
+}
+
+.metode-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--ramadhan-gold-light) 0%, var(--ramadhan-gold) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.metode-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.metode-detail h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.metode-detail p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.donasi-image {
+    position: relative;
+}
+
+.donasi-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: var(--shadow-lg);
+}
+
+.donasi-image .image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    font-size: 0.9rem;
+}
+
+/* ===== DOA RAMADHAN ===== */
+.doa-ramadhan {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1a3f5a 0%, #0a2e4a 100%);
+    color: white;
+    text-align: center;
+}
+
+.doa-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.doa-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    border: 2px solid var(--ramadhan-gold);
+}
+
+.doa-icon i {
+    font-size: 3rem;
+    color: var(--ramadhan-gold);
+}
+
+.doa-wrapper h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Amiri', serif;
+}
+
+.doa-arab {
+    font-size: 2.5rem;
+    font-family: 'Amiri', serif;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--ramadhan-gold);
+}
+
+.doa-latin {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.doa-arti {
+    font-size: 1rem;
+    opacity: 0.9;
+    color: var(--ramadhan-star);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .ramadhan-header h1 {
+        font-size: 3.5rem;
+    }
+    
+    .program-ramadhan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .kajian-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .donasi-ramadhan-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .donasi-image {
+        order: -1;
+    }
+    
+    .moon {
+        width: 100px;
+        height: 100px;
+        top: 50px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ramadhan-header {
+        padding: 6rem 0 4rem;
+    }
+    
+    .ramadhan-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header-description {
+        font-size: 1.1rem;
+    }
+    
+    .header-buttons {
+        flex-direction: column;
+    }
+    
+    .program-ramadhan-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kajian-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .jadwal-table {
+        font-size: 0.85rem;
+    }
+    
+    .jadwal-table th,
+    .jadwal-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .doa-arab {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ramadhan-header h1 {
+        font-size: 2rem;
+    }
+    
+    .metode-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .metode-icon {
+        margin: 0 auto;
+    }
+    
+    .doa-arab {
+        font-size: 1.5rem;
+    }
+    
+    .star-1, .star-2, .star-3, .star-4, .star-5 {
+        display: none;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ramadhan-header .header-content-wrapper {
+    animation: fadeInUp 1s ease;
+}
+
+.info-card,
+.program-ramadhan-card,
+.kajian-card,
+.metode-item {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.info-card:nth-child(1) { animation-delay: 0.1s; }
+.info-card:nth-child(2) { animation-delay: 0.2s; }
+.info-card:nth-child(3) { animation-delay: 0.3s; }
+.info-card:nth-child(4) { animation-delay: 0.4s; }

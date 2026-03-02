@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Yayasan Al-Hidayah Lembah Hijau</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+     <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">YAYASAN AL-HIDAYAH</span>
+                        <span class="logo-subtitle">Lembah Hijau</span>
+                    </div>
+                </a>
+
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Beranda</a></li>
+                        <li><a href="about.html" class="nav-link">Tentang</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Struktur <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
+                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active">
+                                Program <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                                <li><a href="humanity.html" class="active"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">Berita</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                </nav>
+
+                <a href="donation.html" class="btn btn-primary btn-donate">
+                    <i class="fas fa-hand-holding-heart"></i> Donasi
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Galeri Kegiatan</h1>
+            <p>Dokumentasi momen-momen berharga kegiatan pendidikan dan kemanusiaan Yayasan Al-Hidayah</p>
+        </div>
+    </section>
+
+    <!-- Filter Galeri -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="gallery-filter-section">
+                <div class="gallery-filter">
+                    <button class="gallery-filter-btn active" data-category="all">Semua</button>
+                    <button class="gallery-filter-btn" data-category="pendidikan">Pendidikan</button>
+                    <button class="gallery-filter-btn" data-category="kemanusiaan">Kemanusiaan</button>
+                    <button class="gallery-filter-btn" data-category="kegiatan">Kegiatan</button>
+                    <button class="gallery-filter-btn" data-category="fasilitas">Fasilitas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryContainer">
+                <!-- Pendidikan -->
+                <div class="gallery-item" data-category="pendidikan" data-src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kegiatan Belajar">
+                    <div class="gallery-overlay">
+                        <h4>Kegiatan Belajar Mengajar</h4>
+                        <p>Siswa SD Islam Al-Hidayah</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pendidikan" data-src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lab Sains">
+                    <div class="gallery-overlay">
+                        <h4>Praktikum Sains</h4>
+                        <p>Siswa SMP melakukan eksperimen</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pendidikan" data-src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wisuda">
+                    <div class="gallery-overlay">
+                        <h4>Wisuda Angkatan ke-26</h4>
+                        <p>SMA Islam Al-Hidayah</p>
+                    </div>
+                </div>
+
+                <!-- Kemanusiaan -->
+                <div class="gallery-item" data-category="kemanusiaan" data-src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan Bencana">
+                    <div class="gallery-overlay">
+
+                        <h4>Penyaluran Bantuan</h4>
+                        <p>Bencana alam Cianjur</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kemanusiaan" data-src="https://images.unsplash.com/photo-1488521787991-aa207e0c37dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1488521787991-aa207e0c37dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Santunan Yatim">
+                    <div class="gallery-overlay">
+                        <h4>Santunan Anak Yatim</h4>
+                        <p>Program rutin bulanan</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kemanusiaan" data-src="https://images.unsplash.com/photo-1584515933487-77982462f1f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1584515933487-77982462f1f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Layanan Kesehatan">
+                    <div class="gallery-overlay">
+                        <h4>Layanan Kesehatan Gratis</h4>
+                        <p>Klinik keliling</p>
+                    </div>
+                </div>
+
+                <!-- Kegiatan -->
+                <div class="gallery-item" data-category="kegiatan" data-src="https://images.unsplash.com/photo-1517486808906-6ca8b3f8f4be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f8f4be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Olahraga">
+                    <div class="gallery-overlay">
+                        <h4>Pekan Olahraga</h4>
+                        <p>Kompetisi antar kelas</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kegiatan" data-src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pesantren Kilat">
+                    <div class="gallery-overlay">
+                        <h4>Pesantren Kilat</h4>
+                        <p>Kegiatan Ramadhan</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kegiatan" data-src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workshop Guru">
+                    <div class="gallery-overlay">
+                        <h4>Workshop Guru</h4>
+                        <p>Pengembangan kompetensi</p>
+                    </div>
+                </div>
+
+                <!-- Fasilitas -->
+                <div class="gallery-item" data-category="fasilitas" data-src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Perpustakaan">
+                    <div class="gallery-overlay">
+                        <h4>Perpustakaan Digital</h4>
+                        <p>Koleksi 15.000+ buku</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="fasilitas" data-src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Masjid">
+                    <div class="gallery-overlay">
+                        <h4>Masjid Al-Hidayah</h4>
+                        <p>Kapasitas 1000 jamaah</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="fasilitas" data-src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kelas">
+                    <div class="gallery-overlay">
+                        <h4>Ruang Kelas Modern</h4>
+                        <p>Full AC dan multimedia</p>
+                    </div>
+                </div>
+
+                <!-- Tambahan foto -->
+                <div class="gallery-item" data-category="pendidikan" data-src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Siswa">
+                    <div class="gallery-overlay">
+                        <h4>Siswa Berprestasi</h4>
+                        <p>Penerima beasiswa</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kemanusiaan" data-src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Santunan">
+                    <div class="gallery-overlay">
+                        <h4>Santunan Dhuafa</h4>
+                        <p>Program Jumat Berkah</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="fasilitas" data-src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lab Komputer">
+                    <div class="gallery-overlay">
+                        <h4>Laboratorium Komputer</h4>
+                        <p>60 unit komputer</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kegiatan" data-src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="OSN">
+                    <div class="gallery-overlay">
+                        <h4>Tim Olimpiade Sains</h4>
+                        <p>Persiapan OSN 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">VIDEO</span>
+                <h2 class="section-title">Video Profil & Kegiatan</h2>
+                <p class="section-description">Saksikan dokumentasi video kegiatan Yayasan Al-Hidayah</p>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Video Profil">
+                        <a href="#" class="video-play"><i class="fas fa-play"></i></a>
+                    </div>
+                    <h4>Video Profil Yayasan Al-Hidayah 2026</h4>
+                    <p>Durasi: 5:30 menit</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Video Kegiatan">
+                        <a href="#" class="video-play"><i class="fas fa-play"></i></a>
+                    </div>
+                    <h4>Kegiatan Ramadhan Berkah 2026</h4>
+                    <p>Durasi: 3:45 menit</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Video Wisuda">
+                        <a href="#" class="video-play"><i class="fas fa-play"></i></a>
+                    </div>
+                    <h4>Wisuda Angkatan ke-26</h4>
+                    <p>Durasi: 7:20 menit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-kaaba"></i>
+                        <div>
+                            <h4>YAYASAN AL-HIDAYAH</h4>
+                            <p>Lembah Hijau</p>
+                        </div>
+                    </div>
+                    <p>Mencerdaskan kehidupan bangsa, meringankan beban sesama. Bersama membangun peradaban yang lebih baik.</p>
+                    <div class="footer-cert">
+                        <span><i class="fas fa-check-circle"></i> SK Kemenkumham No. AHU-1234.2024</span>
+                        <span><i class="fas fa-check-circle"></i> Terdaftar di BAZNAS</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="education.html">Pendidikan Islam</a></li>
+                        <li><a href="humanity.html">Kemanusiaan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tentang</h4>
+                    <ul>
+                        <li><a href="about.html">Sejarah</a></li>
+                        <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
+                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Dukungan</h4>
+                    <ul>
+                        <li><a href="donation.html">Cara Donasi</a></li>
+                        <li><a href="relawan.html">Jadi Relawan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yayasan Al-Hidayah Lembah Hijau. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Kebijakan Privasi</a>
+                    <a href="terms.html">Syarat & Ketentuan</a>
+                    <a href="sitemap.html">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

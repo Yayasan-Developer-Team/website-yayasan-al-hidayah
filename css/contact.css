@@ -1,0 +1,314 @@
+/* kontak.css - Halaman Kontak */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 8rem 0 4rem;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    border-radius: 10px 10px 100px 100px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.page-header p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Info Grid */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-info-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.contact-info-card p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.contact-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: var(--secondary);
+}
+
+.contact-note {
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin-top: 0.5rem;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-map {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: 450px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.contact-form-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+/* Cabang Grid */
+.cabang-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cabang-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.cabang-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cabang-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.cabang-card p {
+    color: var(--gray);
+    margin-bottom: 0.75rem;
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cabang-card i {
+    color: var(--primary);
+    width: 20px;
+}
+
+/* Social Media Large */
+.social-media-section {
+    text-align: center;
+}
+
+.social-media-section h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.social-media-section p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.social-media-large {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--gray);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.social-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.social-item i {
+    font-size: 3rem;
+}
+
+.social-item span {
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.social-item.instagram:hover i,
+.social-item.instagram:hover {
+    color: #e1306c;
+}
+
+.social-item.facebook:hover i,
+.social-item.facebook:hover {
+    color: #4267B2;
+}
+
+.social-item.youtube:hover i,
+.social-item.youtube:hover {
+    color: #FF0000;
+}
+
+.social-item.tiktok:hover i,
+.social-item.tiktok:hover {
+    color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cabang-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .social-media-large {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .cabang-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-media-large {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

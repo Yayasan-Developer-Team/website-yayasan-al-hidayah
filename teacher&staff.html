@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru & Staff - Yayasan Al-Hidayah Lembah Hijau</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/teacher$staff.css">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">YAYASAN AL-HIDAYAH</span>
+                        <span class="logo-subtitle">Lembah Hijau</span>
+                    </div>
+                </a>
+
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Beranda</a></li>
+                        <li><a href="about.html" class="nav-link">Tentang</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Struktur <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
+                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active">
+                                Program <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                                <li><a href="humanity.html" class="active"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">Berita</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                </nav>
+
+                <a href="donation.html" class="btn btn-primary btn-donate">
+                    <i class="fas fa-hand-holding-heart"></i> Donasi
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Guru & Tenaga Kependidikan</h1>
+            <p>Para pendidik profesional yang berdedikasi membentuk generasi unggul</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="filter-section">
+                <div class="filter-header">
+                    <h3>Filter berdasarkan jenjang</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Semua</button>
+                        <button class="filter-btn" data-filter="tk">TK Islam</button>
+                        <button class="filter-btn" data-filter="sd">SD Islam</button>
+                        <button class="filter-btn" data-filter="smp">SMP Islam</button>
+                        <button class="filter-btn" data-filter="sma">SMA Islam</button>
+                        <button class="filter-btn" data-filter="staff">Staff Yayasan</button>
+                    </div>
+                </div>
+                <div class="filter-search">
+                    <input type="text" placeholder="Cari nama guru..." id="searchInput">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- Statistik Guru -->
+            <div class="guru-stats">
+                <div class="guru-stat-card">
+                    <h3>320+</h3>
+                    <p>Total Guru & Staff</p>
+                </div>
+                <div class="guru-stat-card">
+                    <h3>85%</h3>
+                    <p>Sertifikasi Pendidik</p>
+                </div>
+                <div class="guru-stat-card">
+                    <h3>45%</h3>
+                    <p>Gelar Magister & Doktor</p>
+                </div>
+                <div class="guru-stat-card">
+                    <h3>12+</h3>
+                    <p>Rata-rata Pengalaman</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guru TK -->
+    <section class="section" data-category="tk">
+        <div class="container">
+            <h2 class="jenjang-title">TK Islam Al-Hidayah</h2>
+            <div class="guru-grid">
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Siti Aminah">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Siti Aminah, S.Pd.</h3>
+                        <p class="guru-jabatan">Kepala TK</p>
+                        <p class="guru-pendidikan">S1 PAUD, Universitas Negeri Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 15 tahun</p>
+                        <div class="guru-tags">
+                            <span>PAUD</span>
+                            <span>Sertifikasi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Dewi Lestari">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Dewi Lestari, S.Pd.</h3>
+                        <p class="guru-jabatan">Guru Kelas</p>
+                        <p class="guru-pendidikan">S1 PAUD, UIN Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 10 tahun</p>
+                        <div class="guru-tags">
+                            <span>PAUD</span>
+                            <span>Montessori</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Rina Wulandari">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Rina Wulandari, S.Pd.</h3>
+                        <p class="guru-jabatan">Guru Pendamping</p>
+                        <p class="guru-pendidikan">S1 Psikologi, Universitas Indonesia</p>
+                        <p class="guru-pengalaman">Pengalaman: 8 tahun</p>
+                        <div class="guru-tags">
+                            <span>Psikologi Anak</span>
+                            <span>Inklusi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Maya Sari">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Maya Sari, S.Pd.</h3>
+                        <p class="guru-jabatan">Guru Tahfidz</p>
+                        <p class="guru-pendidikan">Hafidzah 15 Juz</p>
+                        <p class="guru-pengalaman">Pengalaman: 7 tahun</p>
+                        <div class="guru-tags">
+                            <span>Tahfidz</span>
+                            <span>Qiroah</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guru SD -->
+    <section class="section section-light" data-category="sd">
+        <div class="container">
+            <h2 class="jenjang-title">SD Islam Al-Hidayah</h2>
+            <div class="guru-grid">
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Drs. H. Ahmad Fauzi">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Drs. H. Ahmad Fauzi</h3>
+                        <p class="guru-jabatan">Kepala SD</p>
+                        <p class="guru-pendidikan">S2 Manajemen Pendidikan, UNJ</p>
+                        <p class="guru-pengalaman">Pengalaman: 22 tahun</p>
+                        <div class="guru-tags">
+                            <span>Manajemen</span>
+                            <span>Sertifikasi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Nurhayati">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Nurhayati, S.Pd., M.Pd.</h3>
+                        <p class="guru-jabatan">Guru Matematika</p>
+                        <p class="guru-pendidikan">S2 Pendidikan Matematika, UPI</p>
+                        <p class="guru-pengalaman">Pengalaman: 18 tahun</p>
+                        <div class="guru-tags">
+                            <span>Matematika</span>
+                            <span>Olimpiade</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Hasan Basri">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Hasan Basri, S.Pd.I.</h3>
+                        <p class="guru-jabatan">Guru Al-Qur'an</p>
+                        <p class="guru-pendidikan">LIPIA Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 12 tahun</p>
+                        <div class="guru-tags">
+                            <span>Tahfidz</span>
+                            <span>Qiroah</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Siti Khadijah">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Siti Khadijah, S.Pd.</h3>
+                        <p class="guru-jabatan">Guru Bahasa Inggris</p>
+                        <p class="guru-pendidikan">S1 Pendidikan Bahasa Inggris, UNJ</p>
+                        <p class="guru-pengalaman">Pengalaman: 9 tahun</p>
+                        <div class="guru-tags">
+                            <span>TOEFL</span>
+                            <span>Bilingual</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Mahmud">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Mahmud, S.Pd.</h3>
+                        <p class="guru-jabatan">Guru Olahraga</p>
+                        <p class="guru-pendidikan">S1 Pendidikan Olahraga, UNJ</p>
+                        <p class="guru-pengalaman">Pengalaman: 11 tahun</p>
+                        <div class="guru-tags">
+                            <span>Renang</span>
+                            <span>Futsal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Fatimah">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Fatimah Az-Zahra, S.Pd.</h3>
+                        <p class="guru-jabatan">Guru Kelas 4</p>
+                        <p class="guru-pendidikan">S1 PGSD, Universitas Terbuka</p>
+                        <p class="guru-pengalaman">Pengalaman: 13 tahun</p>
+                        <div class="guru-tags">
+                            <span>Inklusi</span>
+                            <span>Kurikulum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guru SMP -->
+    <section class="section" data-category="smp">
+        <div class="container">
+            <h2 class="jenjang-title">SMP Islam Al-Hidayah</h2>
+            <div class="guru-grid">
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. H. Syamsul Ma'arif">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Dr. H. Syamsul Ma'arif, M.Pd.</h3>
+                        <p class="guru-jabatan">Kepala SMP</p>
+                        <p class="guru-pendidikan">Doktor Pendidikan, UIN Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 20 tahun</p>
+                        <div class="guru-tags">
+                            <span>Manajemen</span>
+                            <span>Peneliti</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Laila Sari">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Laila Sari, S.Si., M.Pd.</h3>
+                        <p class="guru-jabatan">Guru IPA</p>
+                        <p class="guru-pendidikan">S2 Pendidikan Sains, UNJ</p>
+                        <p class="guru-pengalaman">Pengalaman: 15 tahun</p>
+                        <div class="guru-tags">
+                            <span>OSN IPA</span>
+                            <span>Lab Sains</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Joko Susilo">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Joko Susilo, S.Pd., M.Si.</h3>
+                        <p class="guru-jabatan">Guru Matematika</p>
+                        <p class="guru-pendidikan">S2 Matematika, ITB</p>
+                        <p class="guru-pengalaman">Pengalaman: 14 tahun</p>
+                        <div class="guru-tags">
+                            <span>OSN Matematika</span>
+                            <span>Pembina</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Dian Permatasari">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Dian Permatasari, S.Pd.</h3>
+                        <p class="guru-jabatan">Guru Bahasa Indonesia</p>
+                        <p class="guru-pendidikan">S1 Pendidikan Bahasa, UNJ</p>
+                        <p class="guru-pengalaman">Pengalaman: 10 tahun</p>
+                        <div class="guru-tags">
+                            <span>Jurnalistik</span>
+                            <span>Debat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guru SMA -->
+    <section class="section section-light" data-category="sma">
+        <div class="container">
+            <h2 class="jenjang-title">SMA Islam Al-Hidayah</h2>
+            <div class="guru-grid">
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Prof. Dr. H. Ahmad Zaini">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Prof. Dr. H. Ahmad Zaini, MA.</h3>
+                        <p class="guru-jabatan">Kepala SMA</p>
+                        <p class="guru-pendidikan">Guru Besar UIN Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 25 tahun</p>
+                        <div class="guru-tags">
+                            <span>Akademisi</span>
+                            <span>Penulis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1494790108777-223d9f035db8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. Nuriya Hasanah">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Dr. Nuriya Hasanah, M.Si.</h3>
+                        <p class="guru-jabatan">Guru Kimia</p>
+                        <p class="guru-pendidikan">Doktor Kimia, UI</p>
+                        <p class="guru-pengalaman">Pengalaman: 16 tahun</p>
+                        <div class="guru-tags">
+                            <span>OSN Kimia</span>
+                            <span>Riset</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Fahmi Alamsyah">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Fahmi Alamsyah, Lc., M.A.</h3>
+                        <p class="guru-jabatan">Guru Bahasa Arab</p>
+                        <p class="guru-pendidikan">LIPIA, S2 UIN Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 12 tahun</p>
+                        <div class="guru-tags">
+                            <span>Bahasa Arab</span>
+                            <span>TOAFL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Ratna Dewi">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Ratna Dewi, S.Pd., M.Pd.</h3>
+                        <p class="guru-jabatan">Guru BK</p>
+                        <p class="guru-pendidikan">S2 Bimbingan Konseling, UNJ</p>
+                        <p class="guru-pengalaman">Pengalaman: 13 tahun</p>
+                        <div class="guru-tags">
+                            <span>Konseling</span>
+                            <span>Karir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Yayasan -->
+    <section class="section" data-category="staff">
+        <div class="container">
+            <h2 class="jenjang-title">Staff Yayasan & Tenaga Kependidikan</h2>
+            <div class="guru-grid">
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Siti Maemunah">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Siti Maemunah, S.E.</h3>
+                        <p class="guru-jabatan">Kepala Administrasi</p>
+                        <p class="guru-pendidikan">S1 Manajemen, Universitas Pancasila</p>
+                        <p class="guru-pengalaman">Pengalaman: 18 tahun</p>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Mahmud Syarif">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Mahmud Syarif, S.Kom.</h3>
+                        <p class="guru-jabatan">Kepala IT</p>
+                        <p class="guru-pendidikan">S1 Teknik Informatika, UIN Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 12 tahun</p>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Laila Hasanah">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Laila Hasanah, A.Md.</h3>
+                        <p class="guru-jabatan">Staff Keuangan</p>
+                        <p class="guru-pendidikan">D3 Akuntansi, STAN</p>
+                        <p class="guru-pengalaman">Pengalaman: 10 tahun</p>
+                    </div>
+                </div>
+                <div class="guru-card">
+                    <div class="guru-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Rizki Fauzi">
+                    </div>
+                    <div class="guru-info">
+                        <h3>Rizki Fauzi, S.Sos.</h3>
+                        <p class="guru-jabatan">Humas & Kerjasama</p>
+                        <p class="guru-pendidikan">S1 Ilmu Komunikasi, UIN Jakarta</p>
+                        <p class="guru-pengalaman">Pengalaman: 8 tahun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-kaaba"></i>
+                        <div>
+                            <h4>YAYASAN AL-HIDAYAH</h4>
+                            <p>Lembah Hijau</p>
+                        </div>
+                    </div>
+                    <p>Mencerdaskan kehidupan bangsa, meringankan beban sesama. Bersama membangun peradaban yang lebih baik.</p>
+                    <div class="footer-cert">
+                        <span><i class="fas fa-check-circle"></i> SK Kemenkumham No. AHU-1234.2024</span>
+                        <span><i class="fas fa-check-circle"></i> Terdaftar di BAZNAS</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="education.html">Pendidikan Islam</a></li>
+                        <li><a href="humanity.html">Kemanusiaan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tentang</h4>
+                    <ul>
+                        <li><a href="about.html">Sejarah</a></li>
+                        <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
+                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Dukungan</h4>
+                    <ul>
+                        <li><a href="donation.html">Cara Donasi</a></li>
+                        <li><a href="relawan.html">Jadi Relawan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yayasan Al-Hidayah Lembah Hijau. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Kebijakan Privasi</a>
+                    <a href="terms.html">Syarat & Ketentuan</a>
+                    <a href="sitemap.html">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

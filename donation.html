@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi - Yayasan Al-Hidayah Lembah Hijau</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/donation.css">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+     <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">YAYASAN AL-HIDAYAH</span>
+                        <span class="logo-subtitle">Lembah Hijau</span>
+                    </div>
+                </a>
+
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Beranda</a></li>
+                        <li><a href="about.html" class="nav-link">Tentang</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Struktur <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
+                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active">
+                                Program <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                                <li><a href="humanity.html" class="active"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">Berita</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                </nav>
+
+                <a href="donation.html" class="btn btn-primary btn-donate">
+                    <i class="fas fa-hand-holding-heart"></i> Donasi
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Donasi & Wakaf</h1>
+            <p>Salurkan donasi terbaik Anda untuk program pendidikan dan kemanusiaan</p>
+        </div>
+    </section>
+
+    <!-- Mengapa Donasi -->
+    <section class="section">
+        <div class="container">
+            <div class="why-donate-grid">
+                <div class="why-donate-content">
+                    <span class="section-tagline">MENGAPA DONASI</span>
+                    <h2 class="section-title">Setiap Rupiah <br>Adalah Harapan</h2>
+                    <p class="why-donate-text">
+                        Donasi Anda akan disalurkan untuk program-program yang berdampak langsung pada 
+                        peningkatan kualitas pendidikan anak bangsa dan bantuan kemanusiaan bagi mereka 
+                        yang membutuhkan.
+                    </p>
+                    
+                    <div class="why-stats">
+                        <div class="why-stat">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>100% Amanah</h4>
+                                <p>Donasi Anda sampai ke penerima</p>
+                            </div>
+                        </div>
+                        <div class="why-stat">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Transparan</h4>
+                                <p>Laporan keuangan rutin</p>
+                            </div>
+                        </div>
+                        <div class="why-stat">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Tax Deductible</h4>
+                                <p>Pengurangan pajak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-donate-image">
+                    <img src="https://i.pinimg.com/736x/7b/d6/ab/7bd6ab131fee7739663361efefbfad91.jpg" alt="Donasi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Donasi -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">PROGRAM DONASI</span>
+                <h2 class="section-title">Pilih Program Donasi</h2>
+                <p class="section-description">Salurkan donasi Anda untuk program yang paling sesuai dengan hati Anda</p>
+            </div>
+
+            <div class="program-donasi-grid">
+                <div class="program-donasi-card">
+                    <div class="program-donasi-icon" style="background: rgba(10, 75, 122, 0.1); color: #0a4b7a;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Beasiswa Pendidikan</h3>
+                    <p>Bantu anak-anak kurang mampu untuk tetap bersekolah dan meraih cita-cita.</p>
+                    <div class="program-donasi-target">
+                        <div class="target-info">
+                            <span>Terkumpul</span>
+                            <strong>Rp 245 Juta</strong>
+                        </div>
+                        <div class="target-info">
+                            <span>Target</span>
+                            <strong>Rp 500 Juta</strong>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 49%"></div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Donasi Sekarang</a>
+                </div>
+
+                <div class="program-donasi-card featured">
+                    <div class="program-badge">Paling Dibutuhkan</div>
+                    <div class="program-donasi-icon" style="background: rgba(225, 87, 60, 0.1); color: #e1573c;">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Bantuan Bencana</h3>
+                    <p>Bantuan darurat untuk korban bencana alam di berbagai wilayah Indonesia.</p>
+                    <div class="program-donasi-target">
+                        <div class="target-info">
+                            <span>Terkumpul</span>
+                            <strong>Rp 180 Juta</strong>
+                        </div>
+                        <div class="target-info">
+                            <span>Target</span>
+                            <strong>Rp 300 Juta</strong>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Donasi Sekarang</a>
+                </div>
+
+                <div class="program-donasi-card">
+                    <div class="program-donasi-icon" style="background: rgba(10, 75, 122, 0.1); color: #0a4b7a;">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>Pembangunan Masjid</h3>
+                    <p>Pembangunan dan renovasi masjid di daerah terpencil.</p>
+                    <div class="program-donasi-target">
+                        <div class="target-info">
+                            <span>Terkumpul</span>
+                            <strong>Rp 320 Juta</strong>
+                        </div>
+                        <div class="target-info">
+                            <span>Target</span>
+                            <strong>Rp 1 M</strong>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 32%"></div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Donasi Sekarang</a>
+                </div>
+
+                <div class="program-donasi-card">
+                    <div class="program-donasi-icon" style="background: rgba(10, 75, 122, 0.1); color: #0a4b7a;">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Program Makanan</h3>
+                    <p>Bantuan makanan untuk anak yatim dan dhuafa.</p>
+                    <div class="program-donasi-target">
+                        <div class="target-info">
+                            <span>Terkumpul</span>
+                            <strong>Rp 85 Juta</strong>
+                        </div>
+                        <div class="target-info">
+                            <span>Target</span>
+                            <strong>Rp 150 Juta</strong>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 57%"></div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-block">Donasi Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Donasi -->
+    <section class="section">
+        <div class="container">
+            <div class="donasi-form-section">
+                <div class="donasi-form-header">
+                    <h2>Form Donasi</h2>
+                    <p>Isi form berikut untuk melakukan donasi secara online</p>
+                </div>
+
+                <div class="donasi-form-grid">
+                    <div class="donasi-form-container">
+                        <form id="donasiForm">
+                            <div class="form-group">
+                                <label>Pilih Program Donasi *</label>
+                                <select required>
+                                    <option value="">-- Pilih Program --</option>
+                                    <option value="beasiswa">Beasiswa Pendidikan</option>
+                                    <option value="bencana">Bantuan Bencana</option>
+                                    <option value="masjid">Pembangunan Masjid</option>
+                                    <option value="makanan">Program Makanan</option>
+                                    <option value="umum">Donasi Umum</option>
+                                </select>
+                            </div>
+
+                            <div class="nominal-donasi">
+                                <label>Nominal Donasi *</label>
+                                <div class="nominal-options">
+                                    <button type="button" class="nominal-btn" data-nominal="50000">Rp 50.000</button>
+                                    <button type="button" class="nominal-btn" data-nominal="100000">Rp 100.000</button>
+                                    <button type="button" class="nominal-btn" data-nominal="250000">Rp 250.000</button>
+                                    <button type="button" class="nominal-btn" data-nominal="500000">Rp 500.000</button>
+                                    <button type="button" class="nominal-btn" data-nominal="1000000">Rp 1.000.000</button>
+                                    <button type="button" class="nominal-btn" data-nominal="other">Lainnya</button>
+                                </div>
+                                <div class="nominal-custom" style="display: none;">
+                                    <input type="number" placeholder="Masukkan nominal (Rp)">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nama Lengkap *</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>No. WhatsApp</label>
+                                    <input type="tel" placeholder="08xxxxxxxxxx">
+                                </div>
+                                <div class="form-group">
+                                    <label>Doa / Pesan</label>
+                                    <input type="text" placeholder="Doa untuk penerima manfaat">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Metode Pembayaran *</label>
+                                <div class="payment-methods">
+                                    <label class="payment-method">
+                                        <input type="radio" name="payment" value="transfer" checked>
+                                        <span>Transfer Bank</span>
+                                    </label>
+                                    <label class="payment-method">
+                                        <input type="radio" name="payment" value="qris">
+                                        <span>QRIS</span>
+                                    </label>
+                                    <label class="payment-method">
+                                        <input type="radio" name="payment" value="e-wallet">
+                                        <span>E-Wallet</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span>Saya menyetujui <a href="#">syarat dan ketentuan</a> yang berlaku</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-large">Lanjutkan Donasi</button>
+                        </form>
+                    </div>
+
+                    <div class="donasi-info">
+                        <h3>Rekening Donasi</h3>
+                        <div class="rekening-list">
+                            <div class="rekening-item">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <h4>Bank Syariah Indonesia (BSI)</h4>
+                                    <p class="rekening-number">123.456.7890</p>
+                                    <p class="rekening-name">a.n Yayasan Al-Hidayah</p>
+                                </div>
+                            </div>
+                            <div class="rekening-item">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <h4>Bank Mandiri</h4>
+                                    <p class="rekening-number">123.00.1234567.8</p>
+                                    <p class="rekening-name">a.n Yayasan Al-Hidayah</p>
+                                </div>
+                            </div>
+                            <div class="rekening-item">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <h4>Bank BNI</h4>
+                                    <p class="rekening-number">1234567890</p>
+                                    <p class="rekening-name">a.n Yayasan Al-Hidayah</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donasi-kepercayaan">
+                            <h4>Mengapa Donasi di Sini?</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Laporan keuangan transparan</li>
+                                <li><i class="fas fa-check"></i> Terdaftar di Kemenkumham</li>
+                                <li><i class="fas fa-check"></i> Bebas biaya administrasi</li>
+                                <li><i class="fas fa-check"></i> Konfirmasi cepat via WA</li>
+                            </ul>
+                        </div>
+
+                        <div class="donasi-contact">
+                            <p>Butuh bantuan? Hubungi kami:</p>
+                            <a href="https://wa.me/6281212345678" class="btn btn-outline btn-block">
+                                <i class="fab fa-whatsapp"></i> 0812-1234-5678
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wakaf Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="wakaf-section">
+                <div class="wakaf-content">
+                    <span class="section-tagline">WAKAF</span>
+                    <h2 class="section-title">Wakaf Produktif <br>Al-Hidayah</h2>
+                    <p class="wakaf-text">
+                        Salurkan wakaf Anda untuk pembangunan gedung sekolah, asrama, dan fasilitas pendidikan 
+                        lainnya yang akan memberikan manfaat jangka panjang.
+                    </p>
+                    
+                    <div class="wakaf-features">
+                        <div class="wakaf-feature">
+                            <i class="fas fa-building"></i>
+                            <h4>Wakaf Gedung</h4>
+                            <p>Pembangunan ruang kelas baru</p>
+                        </div>
+                        <div class="wakaf-feature">
+                            <i class="fas fa-book"></i>
+                            <h4>Wakaf Buku</h4>
+                            <p>Pengadaan perpustakaan</p>
+                        </div>
+                        <div class="wakaf-feature">
+                            <i class="fas fa-water"></i>
+                            <h4>Wakaf Sumur</h4>
+                            <p>Sumur bor untuk daerah kering</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-primary">Info Wakaf Selengkapnya</a>
+                </div>
+                <div class="wakaf-image">
+                    <img src="https://i.pinimg.com/736x/29/1c/0c/291c0c1b2a037997a0d422272c86b977.jpg" alt="Wakaf">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Donatur -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">TESTIMONI</span>
+                <h2 class="section-title">Apa Kata Donatur</h2>
+                <p class="section-description">Mereka yang telah percaya menyalurkan donasi melalui Yayasan Al-Hidayah</p>
+            </div>
+
+            <div class="testimoni-donatur-grid">
+                <div class="testimoni-donatur-card">
+                    <div class="testimoni-donatur-header">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Donatur">
+                        <div>
+                            <h4>Bapak Ahmad Fauzi</h4>
+                            <p>Donatur Rutin</p>
+                        </div>
+                    </div>
+                    <p class="testimoni-donatur-text">
+                        "Alhamdulillah, saya rutin berdonasi setiap bulan. Pelaporannya transparan dan saya bisa melihat langsung manfaatnya."
+                    </p>
+                </div>
+                <div class="testimoni-donatur-card">
+                    <div class="testimoni-donatur-header">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Donatur">
+                        <div>
+                            <h4>Ibu Siti Nurhayati</h4>
+                            <p>Donatur Wakaf</p>
+                        </div>
+                    </div>
+                    <p class="testimoni-donatur-text">
+                        "Saya memilih wakaf karena pahalanya terus mengalir. Semoga bermanfaat untuk anak-anak yang belajar di sini."
+                    </p>
+                </div>
+                <div class="testimoni-donatur-card">
+                    <div class="testimoni-donatur-header">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Donatur">
+                        <div>
+                            <h4>PT. Berkah Abadi</h4>
+                            <p>Donatur Korporat</p>
+                        </div>
+                    </div>
+                    <p class="testimoni-donatur-text">
+                        "Kami percaya menyalurkan CSR melalui Yayasan Al-Hidayah karena profesional dan tepat sasaran."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Donasi -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">FAQ</span>
+                <h2 class="section-title">Pertanyaan Seputar Donasi</h2>
+                <p class="section-description">Temukan jawaban atas pertanyaan yang sering diajukan</p>
+            </div>
+
+            <div class="faq-donasi-grid">
+                <div class="faq-donasi-item">
+                    <div class="faq-donasi-question">
+                        <h3>Apakah donasi saya bisa digunakan untuk program tertentu?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-donasi-answer">
+                        <p>Ya, Anda dapat memilih program donasi yang tersedia. Donasi Anda akan disalurkan sesuai program yang dipilih.</p>
+                    </div>
+                </div>
+                <div class="faq-donasi-item">
+                    <div class="faq-donasi-question">
+                        <h3>Bagaimana cara mendapatkan bukti donasi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-donasi-answer">
+                        <p>Bukti donasi akan dikirim melalui email setelah donasi Anda terkonfirmasi. Anda juga bisa meminta bukti fisik jika diperlukan.</p>
+                    </div>
+                </div>
+                <div class="faq-donasi-item">
+                    <div class="faq-donasi-question">
+                        <h3>Apakah donasi bisa dibatalkan?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-donasi-answer">
+                        <p>Donasi yang sudah masuk tidak dapat dibatalkan karena sudah diproses untuk penyaluran program.</p>
+                    </div>
+                </div>
+                <div class="faq-donasi-item">
+                    <div class="faq-donasi-question">
+                        <h3>Apakah ada laporan penggunaan dana?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-donasi-answer">
+                        <p>Ya, kami menerbitkan laporan keuangan secara berkala yang bisa diakses melalui website atau dikirim via email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-kaaba"></i>
+                        <div>
+                            <h4>YAYASAN AL-HIDAYAH</h4>
+                            <p>Lembah Hijau</p>
+                        </div>
+                    </div>
+                    <p>Mencerdaskan kehidupan bangsa, meringankan beban sesama. Bersama membangun peradaban yang lebih baik.</p>
+                    <div class="footer-cert">
+                        <span><i class="fas fa-check-circle"></i> SK Kemenkumham No. AHU-1234.2024</span>
+                        <span><i class="fas fa-check-circle"></i> Terdaftar di BAZNAS</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="education.html">Pendidikan Islam</a></li>
+                        <li><a href="humanity.html">Kemanusiaan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tentang</h4>
+                    <ul>
+                        <li><a href="about.html">Sejarah</a></li>
+                        <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
+                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Dukungan</h4>
+                    <ul>
+                        <li><a href="donation.html">Cara Donasi</a></li>
+                        <li><a href="relawan.html">Jadi Relawan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yayasan Al-Hidayah Lembah Hijau. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Kebijakan Privasi</a>
+                    <a href="terms.html">Syarat & Ketentuan</a>
+                    <a href="sitemap.html">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Nominal Donasi
+        const nominalBtns = document.querySelectorAll('.nominal-btn');
+        const customNominal = document.querySelector('.nominal-custom');
+
+        nominalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                nominalBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                if (btn.dataset.nominal === 'other') {
+                    customNominal.style.display = 'block';
+                } else {
+                    customNominal.style.display = 'none';
+                }
+            });
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-donasi-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const allItems = document.querySelectorAll('.faq-donasi-item');
+                
+                allItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                item.classList.toggle('active');
+            });
+        });
+
+        // Form Submission
+        const donasiForm = document.getElementById('donasiForm');
+        if (donasiForm) {
+            donasiForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Terima kasih! Form donasi Anda telah diterima. Silakan lakukan pembayaran sesuai instruksi.');
+            });
+        }
+
+        // Dropdown for Mobile
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        
+        if (dropdownToggle) {
+            dropdownToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdown = document.querySelector('.dropdown');
+                dropdown.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
