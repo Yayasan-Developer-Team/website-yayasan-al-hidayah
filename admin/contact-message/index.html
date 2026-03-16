@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Masuk - Admin</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Pesan Masuk</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <button class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Stats Mini -->
+                <div class="stats-mini">
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Total Pesan</span>
+                        <span class="stat-value">28</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Belum Dibaca</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Sudah Dijawab</span>
+                        <span class="stat-value">15</span>
+                    </div>
+                </div>
+                
+                <!-- Search & Filter -->
+                <div class="content-toolbar">
+                    <div class="toolbar-left">
+                        <select class="filter-select">
+                            <option value="">Semua Status</option>
+                            <option value="unread">Belum Dibaca</option>
+                            <option value="read">Sudah Dibaca</option>
+                            <option value="replied">Sudah Dijawab</option>
+                        </select>
+                    </div>
+                    
+                    <div class="toolbar-right">
+                        <div class="search-box">
+                            <input type="text" placeholder="Cari pesan...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Messages Table -->
+                <div class="dashboard-card mt-4">
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th width="30">
+                                        <input type="checkbox">
+                                    </th>
+                                    <th>Nama</th>
+                                    <th>Email / WA</th>
+                                    <th>Subjek</th>
+                                    <th>Tanggal</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="unread-row">
+                                    <td><input type="checkbox"></td>
+                                    <td><strong>Ahmad Fauzi</strong></td>
+                                    <td>ahmad@email.com<br><small>0812-3456-7890</small></td>
+                                    <td>Informasi Pendaftaran</td>
+                                    <td>5 menit lalu</td>
+                                    <td><span class="badge badge-warning">Baru</span></td>
+                                    <td>
+                                        <a href="show.html?id=1" class="btn-action btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="unread-row">
+                                    <td><input type="checkbox"></td>
+                                    <td><strong>Siti Aminah</strong></td>
+                                    <td>siti@email.com<br><small>0856-7890-1234</small></td>
+                                    <td>Donasi Ramadhan</td>
+                                    <td>1 jam lalu</td>
+                                    <td><span class="badge badge-warning">Baru</span></td>
+                                    <td>
+                                        <a href="show.html?id=2" class="btn-action btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Bambang Susanto</td>
+                                    <td>bambang@email.com<br><small>0813-4567-8901</small></td>
+                                    <td>Kerjasama Program</td>
+                                    <td>3 jam lalu</td>
+                                    <td><span class="badge badge-info">Dibaca</span></td>
+                                    <td>
+                                        <a href="show.html?id=3" class="btn-action btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Dewi Lestari</td>
+                                    <td>dewi@email.com<br><small>0821-2345-6789</small></td>
+                                    <td>Info Beasiswa</td>
+                                    <td>5 jam lalu</td>
+                                    <td><span class="badge badge-success">Dijawab</span></td>
+                                    <td>
+                                        <a href="show.html?id=4" class="btn-action btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
+                            <a href="#" class="page-link active">1</a>
+                            <a href="#" class="page-link">2</a>
+                            <a href="#" class="page-link">3</a>
+                            <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Donasi - Admin</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- ... sidebar sama seperti index.html ... -->
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="../contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Edit Pengaturan Donasi</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <button class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="form-container">
+                    <form action="index.html" method="get" class="admin-form">
+                        <h3 class="form-section-title">Informasi Donasi</h3>
+                        
+                        <div class="form-grid">
+                            <!-- Header -->
+                            <div class="form-group full-width">
+                                <label for="header_text">Teks Header</label>
+                                <input 
+                                    type="text" 
+                                    id="header_text" 
+                                    name="header_text" 
+                                    value="Donasi & Wakaf"
+                                >
+                            </div>
+                            
+                            <!-- Subheader -->
+                            <div class="form-group full-width">
+                                <label for="subheader_text">Subheader</label>
+                                <input 
+                                    type="text" 
+                                    id="subheader_text" 
+                                    name="subheader_text" 
+                                    value="Salurkan donasi terbaik Anda untuk program pendidikan dan kemanusiaan"
+                                >
+                            </div>
+                            
+                            <!-- Why Donate Text -->
+                            <div class="form-group full-width">
+                                <label for="why_donate_text">Teks "Mengapa Donasi"</label>
+                                <textarea 
+                                    id="why_donate_text" 
+                                    name="why_donate_text" 
+                                    rows="4"
+                                >Donasi Anda akan disalurkan untuk program-program yang berdampak langsung pada peningkatan kualitas pendidikan anak bangsa dan bantuan kemanusiaan bagi mereka yang membutuhkan.</textarea>
+                            </div>
+                        </div>
+                        
+                        <h3 class="form-section-title">Rekening Donasi</h3>
+                        
+                        <div id="rekening-container">
+                            <!-- Rekening 1 -->
+                            <div class="rekening-item">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Nama Bank</label>
+                                        <input type="text" name="bank[0][nama]" value="Bank Syariah Indonesia (BSI)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nomor Rekening</label>
+                                        <input type="text" name="bank[0][nomor]" value="123.456.7890">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Atas Nama</label>
+                                        <input type="text" name="bank[0][atas_nama]" value="Yayasan Al-Hidayah">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Rekening 2 -->
+                            <div class="rekening-item">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Nama Bank</label>
+                                        <input type="text" name="bank[1][nama]" value="Bank Mandiri">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nomor Rekening</label>
+                                        <input type="text" name="bank[1][nomor]" value="123.00.1234567.8">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Atas Nama</label>
+                                        <input type="text" name="bank[1][atas_nama]" value="Yayasan Al-Hidayah">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Rekening 3 -->
+                            <div class="rekening-item">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Nama Bank</label>
+                                        <input type="text" name="bank[2][nama]" value="Bank BNI">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nomor Rekening</label>
+                                        <input type="text" name="bank[2][nomor]" value="1234567890">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Atas Nama</label>
+                                        <input type="text" name="bank[2][atas_nama]" value="Yayasan Al-Hidayah">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="button" class="btn-add-rekening" onclick="addRekening()">
+                                <i class="fas fa-plus"></i> Tambah Rekening
+                            </button>
+                        </div>
+                        
+                        <h3 class="form-section-title">Info Tambahan</h3>
+                        
+                        <div class="form-grid">
+                            <!-- Poin Kepercayaan -->
+                            <div class="form-group full-width">
+                                <label>Poin Kepercayaan (satu per baris)</label>
+                                <textarea 
+                                    name="trust_points" 
+                                    rows="6"
+                                >Laporan keuangan transparan
+Terdaftar di Kemenkumham
+Bebas biaya administrasi
+Konfirmasi cepat via WA</textarea>
+                                <small>Setiap poin dalam baris baru</small>
+                            </div>
+                            
+                            <!-- Nominal -->
+                            <div class="form-group">
+                                <label>Nominal 1</label>
+                                <input type="number" name="nominal1" value="50000">
+                            </div>
+                            <div class="form-group">
+                                <label>Nominal 2</label>
+                                <input type="number" name="nominal2" value="100000">
+                            </div>
+                            <div class="form-group">
+                                <label>Nominal 3</label>
+                                <input type="number" name="nominal3" value="250000">
+                            </div>
+                            <div class="form-group">
+                                <label>Nominal 4</label>
+                                <input type="number" name="nominal4" value="500000">
+                            </div>
+                            <div class="form-group">
+                                <label>Nominal 5</label>
+                                <input type="number" name="nominal5" value="1000000">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save"></i> Simpan Perubahan
+                            </button>
+                            <a href="index.html" class="btn-cancel">
+                                <i class="fas fa-times"></i> Batal
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+        
+        // Add Rekening
+        let rekeningIndex = 3;
+        
+        function addRekening() {
+            const container = document.getElementById('rekening-container');
+            const template = `
+                <div class="rekening-item">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nama Bank</label>
+                            <input type="text" name="bank[${rekeningIndex}][nama]">
+                        </div>
+                        <div class="form-group">
+                            <label>Nomor Rekening</label>
+                            <input type="text" name="bank[${rekeningIndex}][nomor]">
+                        </div>
+                        <div class="form-group">
+                            <label>Atas Nama</label>
+                            <input type="text" name="bank[${rekeningIndex}][atas_nama]">
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.insertAdjacentHTML('beforeend', template);
+            rekeningIndex++;
+        }
+        
+        // Form submit demo
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Data donasi berhasil disimpan!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

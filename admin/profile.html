@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Admin - Yayasan Al-Hidayah</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li class="active">
+                            <a href="profile.html">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Profile Admin</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <a href="notifications.html" class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </a>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <a href="profile.html" class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <div class="profile-header-content">
+                        <div class="profile-avatar-large">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div>
+                            <div class="profile-title">
+                                <h2>Admin Yayasan</h2>
+                                <p>Administrator • Bergabung sejak 2024</p>
+                                <span class="profile-badge">
+                                    <i class="fas fa-check-circle"></i> Verified Account
+                                </span>
+                            </div>
+                            
+                            <div class="profile-stats">
+                                <div class="profile-stat-item">
+                                    <h3>127</h3>
+                                    <p>Aktivitas</p>
+                                </div>
+                                <div class="profile-stat-item">
+                                    <h3>12</h3>
+                                    <p>Berita</p>
+                                </div>
+                                <div class="profile-stat-item">
+                                    <h3>24</h3>
+                                    <p>Foto</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Grid -->
+                <div class="profile-grid">
+                    <!-- Informasi Pribadi -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-user"></i> Informasi Pribadi</h3>
+                            <button class="profile-edit-btn" onclick="editProfile()">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Nama Lengkap</div>
+                                <div class="profile-info-value">Admin Yayasan</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Username</div>
+                                <div class="profile-info-value">admin <small>@admin</small></div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Email</div>
+                                <div class="profile-info-value">admin@alhidayah.or.id</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">No. WhatsApp</div>
+                                <div class="profile-info-value">0812-3456-7890</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Role</div>
+                                <div class="profile-info-value">
+                                    <span class="badge badge-primary">Super Admin</span>
+                                </div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Bergabung</div>
+                                <div class="profile-info-value">15 Januari 2024</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Terakhir Login</div>
+                                <div class="profile-info-value">16 Maret 2026, 09:30 WIB</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Keamanan -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-shield-alt"></i> Keamanan</h3>
+                            <button class="profile-edit-btn" onclick="changePassword()">
+                                <i class="fas fa-key"></i> Ganti Password
+                            </button>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="security-option">
+                                <div class="security-info">
+                                    <h4>Verifikasi 2 Langkah</h4>
+                                    <p>Aktifkan verifikasi 2 langkah untuk keamanan tambahan</p>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="security-option">
+                                <div class="security-info">
+                                    <h4>Notifikasi Login</h4>
+                                    <p>Dapatkan notifikasi saat ada login dari perangkat baru</p>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="security-option">
+                                <div class="security-info">
+                                    <h4>Sesi Aktif</h4>
+                                    <p>Kelola perangkat yang sedang login</p>
+                                </div>
+                                <button class="btn-edit" style="padding: 6px 12px;">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="security-option">
+                                <div class="security-info">
+                                    <h4>Riwayat Login</h4>
+                                    <p>Lihat riwayat login ke akun Anda</p>
+                                </div>
+                                <button class="btn-edit" style="padding: 6px 12px;">
+                                    <i class="fas fa-history"></i> Lihat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aktivitas Terbaru -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-clock"></i> Aktivitas Terbaru</h3>
+                            <a href="#" class="btn-view-all">Lihat Semua</a>
+                        </div>
+                        <div class="profile-card-body">
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-newspaper"></i>
+                                    </div>
+                                    <div class="activity-detail">
+                                        <p>Menambahkan berita baru</p>
+                                        <small>Wisuda Angkatan ke-26</small>
+                                    </div>
+                                    <div class="activity-time">2 jam lalu</div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                    <div class="activity-detail">
+                                        <p>Upload foto galeri</p>
+                                        <small>5 foto baru diupload</small>
+                                    </div>
+                                    <div class="activity-time">5 jam lalu</div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="activity-detail">
+                                        <p>Membalas pesan</p>
+                                        <small>Pesan dari Ahmad Fauzi</small>
+                                    </div>
+                                    <div class="activity-time">Kemarin</div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-edit"></i>
+                                    </div>
+                                    <div class="activity-detail">
+                                        <p>Mengupdate informasi kontak</p>
+                                        <small>Alamat dan telepon</small>
+                                    </div>
+                                    <div class="activity-time">Kemarin</div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-hand-holding-heart"></i>
+                                    </div>
+                                    <div class="activity-detail">
+                                        <p>Menambah rekening donasi</p>
+                                        <small>Bank BNI</small>
+                                    </div>
+                                    <div class="activity-time">3 hari lalu</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Perangkat & Sesi -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-laptop"></i> Perangkat Aktif</h3>
+                            <button class="btn-edit" onclick="logoutAll()">
+                                <i class="fas fa-sign-out-alt"></i> Logout Semua
+                            </button>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="device-item">
+                                <i class="fas fa-laptop"></i>
+                                <div style="flex: 1;">
+                                    <h4>Windows - Chrome</h4>
+                                    <small style="color: var(--gray);">IP: 192.168.1.100 • Jakarta, Indonesia</small>
+                                </div>
+                                <span class="badge badge-success">Sekarang</span>
+                            </div>
+                            
+                            <div class="device-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div style="flex: 1;">
+                                    <h4>iPhone - Safari</h4>
+                                    <small style="color: var(--gray);">IP: 192.168.1.101 • Jakarta, Indonesia</small>
+                                </div>
+                                <span class="badge badge-info">2 jam lalu</span>
+                            </div>
+                            
+                            <div class="device-item">
+                                <i class="fas fa-tablet-alt"></i>
+                                <div style="flex: 1;">
+                                    <h4>iPad - Safari</h4>
+                                    <small style="color: var(--gray);">IP: 192.168.1.102 • Jakarta, Indonesia</small>
+                                </div>
+                                <span class="badge badge-warning">Kemarin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+        
+        // Edit Profile
+        function editProfile() {
+            alert('Fitur edit profile akan segera hadir!');
+        }
+        
+        // Change Password
+        function changePassword() {
+            alert('Fitur ganti password akan segera hadir!');
+        }
+        
+        // Logout All Devices
+        function logoutAll() {
+            if(confirm('Logout dari semua perangkat?')) {
+                alert('Semua perangkat telah di logout');
+            }
+        }
+        
+        // Toggle switches
+        document.querySelectorAll('.toggle-switch').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

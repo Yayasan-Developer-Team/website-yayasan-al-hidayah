@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi - Admin Yayasan Al-Hidayah</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="profile.html">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Notifikasi</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <a href="notifications.html" class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </a>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <a href="profile.html" class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Notifications Header -->
+                <div class="notifications-header">
+                    <div class="notifications-title">
+                        <h2>Notifikasi</h2>
+                        <span class="notifications-badge-large">3 belum dibaca</span>
+                    </div>
+                    
+                    <div class="notifications-actions">
+                        <button class="btn-notification mark-read" onclick="markAllAsRead()">
+                            <i class="fas fa-check-double"></i> Tandai Semua Dibaca
+                        </button>
+                        <button class="btn-notification" onclick="settings()">
+                            <i class="fas fa-cog"></i> Pengaturan
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Filter Chips -->
+                <div class="notifications-filter">
+                    <button class="filter-chip active">Semua</button>
+                    <button class="filter-chip">Belum Dibaca</button>
+                    <button class="filter-chip">Pesan</button>
+                    <button class="filter-chip">Berita</button>
+                    <button class="filter-chip">Donasi</button>
+                    <button class="filter-chip">Sistem</button>
+                </div>
+                
+                <!-- Notifications List -->
+                <div class="notifications-list">
+                    <!-- Unread Notification 1 -->
+                    <div class="notification-item unread">
+                        <div class="notification-icon warning">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Pesan Baru dari Ahmad Fauzi</h4>
+                            <p>Menanyakan informasi pendaftaran untuk tahun ajaran 2026/2027. Anaknya akan masuk SD.</p>
+                            <div class="notification-meta">
+                                <span><i class="far fa-clock"></i> 5 menit yang lalu</span>
+                                <span><i class="fas fa-tag"></i> Pesan Masuk</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button onclick="markAsRead(1)" title="Tandai Dibaca"><i class="fas fa-check"></i></button>
+                            <button onclick="viewNotification(1)" title="Lihat"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Unread Notification 2 -->
+                    <div class="notification-item unread">
+                        <div class="notification-icon success">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Donasi Baru Masuk</h4>
+                            <p>Donasi sebesar Rp 500.000 dari Bapak Bambang untuk program Ramadhan.</p>
+                            <div class="notification-meta">
+                                <span><i class="far fa-clock"></i> 30 menit yang lalu</span>
+                                <span><i class="fas fa-tag"></i> Donasi</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button onclick="markAsRead(2)"><i class="fas fa-check"></i></button>
+                            <button onclick="viewNotification(2)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Unread Notification 3 -->
+                    <div class="notification-item unread">
+                        <div class="notification-icon info">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Berita Baru Perlu Persetujuan</h4>
+                            <p>Berita "Pekan Olahraga dan Seni 2024" perlu direview sebelum dipublish.</p>
+                            <div class="notification-meta">
+                                <span><i class="far fa-clock"></i> 1 jam yang lalu</span>
+                                <span><i class="fas fa-tag"></i> Berita</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button onclick="markAsRead(3)"><i class="fas fa-check"></i></button>
+                            <button onclick="viewNotification(3)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Read Notification 4 -->
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Admin Baru Telah Ditambahkan</h4>
+                            <p>User "operator" telah ditambahkan sebagai admin dengan role Operator.</p>
+                            <div class="notification-meta">
+                                <span><i class="far fa-clock"></i> 3 jam yang lalu</span>
+                                <span><i class="fas fa-tag"></i> Sistem</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button onclick="markAsRead(4)"><i class="fas fa-check"></i></button>
+                            <button onclick="viewNotification(4)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Read Notification 5 -->
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Kontak Berhasil Diupdate</h4>
+                            <p>Informasi kontak yayasan telah diperbarui oleh Admin.</p>
+                            <div class="notification-meta">
+                                <span><i class="far fa-clock"></i> 5 jam yang lalu</span>
+                                <span><i class="fas fa-tag"></i> Sistem</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button onclick="markAsRead(5)"><i class="fas fa-check"></i></button>
+                            <button onclick="viewNotification(5)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Read Notification 6 -->
+                    <div class="notification-item">
+                        <div class="notification-icon warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Peringatan: Storage Hampir Penuh</h4>
+                            <p>Penyimpanan file mencapai 85%. Hapus file yang tidak diperlukan.</p>
+                            <div class="notification-meta">
+                                <span><i class="far fa-clock"></i> Kemarin, 14:30</span>
+                                <span><i class="fas fa-tag"></i> Sistem</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button onclick="markAsRead(6)"><i class="fas fa-check"></i></button>
+                            <button onclick="viewNotification(6)"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More -->
+                <div class="load-more">
+                    <button class="btn-load-more" onclick="loadMore()">
+                        <i class="fas fa-sync-alt"></i> Muat Lebih Banyak
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+        
+        // Filter chips
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', function() {
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Mark as read
+        function markAsRead(id) {
+            const notification = event.target.closest('.notification-item');
+            notification.classList.remove('unread');
+            alert('Notifikasi #' + id + ' ditandai sudah dibaca');
+        }
+        
+        // Mark all as read
+        function markAllAsRead() {
+            document.querySelectorAll('.notification-item.unread').forEach(item => {
+                item.classList.remove('unread');
+            });
+            alert('Semua notifikasi ditandai sudah dibaca');
+        }
+        
+        // View notification
+        function viewNotification(id) {
+            alert('Melihat detail notifikasi #' + id);
+        }
+        
+        // Settings
+        function settings() {
+            alert('Pengaturan notifikasi');
+        }
+        
+        // Load more
+        function loadMore() {
+            alert('Memuat notifikasi lainnya...');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Berita - Admin</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="../contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Manajemen Berita</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <button class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Toolbar -->
+                <div class="content-toolbar">
+                    <div class="toolbar-left">
+                        <a href="create.html" class="btn-add">
+                            <i class="fas fa-plus"></i> Tambah Berita
+                        </a>
+                    </div>
+                    
+                    <div class="toolbar-right">
+                        <select class="filter-select">
+                            <option value="">Semua Kategori</option>
+                            <option value="Pendidikan">Pendidikan</option>
+                            <option value="Kemanusiaan">Kemanusiaan</option>
+                            <option value="Prestasi">Prestasi</option>
+                            <option value="Kegiatan">Kegiatan</option>
+                        </select>
+                        
+                        <select class="filter-select">
+                            <option value="">Semua Status</option>
+                            <option value="published">Published</option>
+                            <option value="draft">Draft</option>
+                        </select>
+                        
+                        <div class="search-box">
+                            <input type="text" placeholder="Cari berita...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats Mini -->
+                <div class="stats-mini">
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Total Berita</span>
+                        <span class="stat-value">12</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Published</span>
+                        <span class="stat-value">10</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Draft</span>
+                        <span class="stat-value">2</span>
+                    </div>
+                </div>
+                
+                <!-- News Table -->
+                <div class="dashboard-card mt-4">
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th width="50">No</th>
+                                    <th>Judul</th>
+                                    <th>Kategori</th>
+                                    <th>Tanggal</th>
+                                    <th>Penulis</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <strong>Wisuda Angkatan ke-26</strong>
+                                        <br>
+                                        <small>98% Lulusan Diterima di PTN Favorit</small>
+                                    </td>
+                                    <td><span class="badge badge-primary">Pendidikan</span></td>
+                                    <td>15 Juni 2024</td>
+                                    <td>Admin</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <a href="edit.html?id=1" class="btn-action btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button class="btn-action btn-delete" onclick="deleteNews(1)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <strong>Penyaluran Bantuan untuk Korban Bencana</strong>
+                                        <br>
+                                        <small>500 keluarga menerima bantuan</small>
+                                    </td>
+                                    <td><span class="badge badge-primary">Kemanusiaan</span></td>
+                                    <td>10 Juni 2024</td>
+                                    <td>Admin</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <a href="edit.html?id=2" class="btn-action btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button class="btn-action btn-delete" onclick="deleteNews(2)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <strong>3 Guru Al-Hidayah Raih Penghargaan</strong>
+                                        <br>
+                                        <small>Guru Inspiratif 2024</small>
+                                    </td>
+                                    <td><span class="badge badge-primary">Prestasi</span></td>
+                                    <td>5 Juni 2024</td>
+                                    <td>Admin</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <a href="edit.html?id=3" class="btn-action btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button class="btn-action btn-delete" onclick="deleteNews(3)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <strong>Pekan Olahraga dan Seni 2024</strong>
+                                        <br>
+                                        <small>Diikuti 500 siswa</small>
+                                    </td>
+                                    <td><span class="badge badge-primary">Kegiatan</span></td>
+                                    <td>1 Juni 2024</td>
+                                    <td>Admin</td>
+                                    <td><span class="badge badge-warning">Draft</span></td>
+                                    <td>
+                                        <a href="edit.html?id=4" class="btn-action btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button class="btn-action btn-delete" onclick="deleteNews(4)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
+                            <a href="#" class="page-link active">1</a>
+                            <a href="#" class="page-link">2</a>
+                            <a href="#" class="page-link">3</a>
+                            <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+        
+        // Delete function
+        function deleteNews(id) {
+            if(confirm('Hapus berita ini?')) {
+                alert('Berita berhasil dihapus (demo)');
+            }
+        }
+    </script>
+</body>
+</html>

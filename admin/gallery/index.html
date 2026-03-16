@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Foto - Admin</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- ... sidebar sama seperti index.html ... -->
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="../contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Upload Foto Baru</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <button class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="form-container">
+                    <form action="index.html" method="get" class="admin-form">
+                        <div class="form-grid">
+                            <!-- Judul -->
+                            <div class="form-group full-width">
+                                <label for="judul">Judul Foto *</label>
+                                <input 
+                                    type="text" 
+                                    id="judul" 
+                                    name="judul" 
+                                    placeholder="Contoh: Kegiatan Belajar Mengajar"
+                                    required
+                                >
+                            </div>
+                            
+                            <!-- Kategori -->
+                            <div class="form-group">
+                                <label for="kategori">Kategori *</label>
+                                <select id="kategori" name="kategori" required>
+                                    <option value="">Pilih Kategori</option>
+                                    <option value="Pendidikan">Pendidikan</option>
+                                    <option value="Kemanusiaan">Kemanusiaan</option>
+                                    <option value="Kegiatan">Kegiatan</option>
+                                    <option value="Fasilitas">Fasilitas</option>
+                                    <option value="Prestasi">Prestasi</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Status -->
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select id="status" name="status">
+                                    <option value="published">Published</option>
+                                    <option value="draft">Draft</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Tanggal -->
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal</label>
+                                <input 
+                                    type="date" 
+                                    id="tanggal" 
+                                    name="tanggal" 
+                                    value="2026-03-16"
+                                >
+                            </div>
+                            
+                            <!-- Upload Foto -->
+                            <div class="form-group full-width">
+                                <label for="foto">File Foto *</label>
+                                <div class="upload-area" id="uploadArea">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Drag & drop file di sini atau klik untuk memilih</p>
+                                    <input 
+                                        type="file" 
+                                        id="foto" 
+                                        name="foto" 
+                                        accept="image/*"
+                                        required
+                                        style="display: none;"
+                                    >
+                                    <button type="button" class="btn-select-file" onclick="document.getElementById('foto').click()">
+                                        Pilih File
+                                    </button>
+                                </div>
+                                <small>Format: JPG, PNG, GIF. Maksimal 5MB</small>
+                                
+                                <!-- Preview -->
+                                <div class="upload-preview" id="uploadPreview" style="display: none;">
+                                    <img src="" alt="Preview">
+                                    <button type="button" class="btn-remove-preview" onclick="removePreview()">
+                                        <i class="fas fa-times"></i> Hapus
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Lokasi -->
+                            <div class="form-group">
+                                <label for="lokasi">Lokasi</label>
+                                <input 
+                                    type="text" 
+                                    id="lokasi" 
+                                    name="lokasi" 
+                                    placeholder="Contoh: Jakarta"
+                                >
+                            </div>
+                            
+                            <!-- Deskripsi -->
+                            <div class="form-group full-width">
+                                <label for="deskripsi">Deskripsi</label>
+                                <textarea 
+                                    id="deskripsi" 
+                                    name="deskripsi" 
+                                    rows="4"
+                                    placeholder="Deskripsi singkat tentang foto ini"
+                                ></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-upload"></i> Upload Foto
+                            </button>
+                            <a href="index.html" class="btn-cancel">
+                                <i class="fas fa-times"></i> Batal
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+        
+        // Preview image
+        document.getElementById('foto').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('uploadPreview');
+                    preview.style.display = 'block';
+                    preview.querySelector('img').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        function removePreview() {
+            document.getElementById('uploadPreview').style.display = 'none';
+            document.getElementById('foto').value = '';
+        }
+        
+        // Form submit demo
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Foto berhasil diupload!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

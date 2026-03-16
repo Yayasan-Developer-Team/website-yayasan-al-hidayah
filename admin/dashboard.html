@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin Yayasan Al-Hidayah</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li class="active">
+                            <a href="dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="profile.html">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../index.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Dashboard</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <a href="notification.html" class="notification-btn" >
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </a>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <a href="profile.html" class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Alert Demo -->
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle"></i>
+                    Selamat datang di Admin Dashboard!
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(10, 75, 122, 0.1); color: #0a4b7a;">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="stat-detail">
+                            <h3>12</h3>
+                            <p>Total Berita</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(225, 87, 60, 0.1); color: #e1573c;">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="stat-detail">
+                            <h3>24</h3>
+                            <p>Total Galeri</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(10, 75, 122, 0.1); color: #0a4b7a;">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="stat-detail">
+                            <h3>Rp 45,5 Jt</h3>
+                            <p>Total Donasi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(225, 87, 60, 0.1); color: #e1573c;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-detail">
+                            <h3>3</h3>
+                            <p>Pesan Baru</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats Mini -->
+                <div class="stats-mini">
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Total Pesan</span>
+                        <span class="stat-value">28</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Belum Dibaca</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Sudah Dijawab</span>
+                        <span class="stat-value">15</span>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Contact Info -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Informasi Kontak</h3>
+                            <a href="contact/edit.html" class="btn-edit">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <table class="info-table">
+                                <tr>
+                                    <th>Alamat:</th>
+                                    <td>Jl. Pendidikan No. 123, Cilandak, Jakarta Selatan</td>
+                                </tr>
+                                <tr>
+                                    <th>Telepon:</th>
+                                    <td>(021) 1234-5678</td>
+                                </tr>
+                                <tr>
+                                    <th>Email:</th>
+                                    <td>info@alhidayah.or.id</td>
+                                </tr>
+                                <tr>
+                                    <th>WhatsApp:</th>
+                                    <td>0812-1234-5678</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Donation Info -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Informasi Donasi</h3>
+                            <a href="donation/edit.html" class="btn-edit">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <table class="info-table">
+                                <tr>
+                                    <th>BSI:</th>
+                                    <td>123.456.7890 a.n Yayasan Al-Hidayah</td>
+                                </tr>
+                                <tr>
+                                    <th>Mandiri:</th>
+                                    <td>123.00.1234567.8 a.n Yayasan Al-Hidayah</td>
+                                </tr>
+                                <tr>
+                                    <th>BNI:</th>
+                                    <td>1234567890 a.n Yayasan Al-Hidayah</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Messages -->
+                <div class="dashboard-card mt-4">
+                    <div class="card-header">
+                        <h3>Pesan Terbaru</h3>
+                        <a href="contact-message/index.html" class="btn-view-all">
+                            Lihat Semua <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Email</th>
+                                    <th>Subjek</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="unread-row">
+                                    <td>Ahmad Fauzi</td>
+                                    <td>ahmad@email.com</td>
+                                    <td>Informasi Pendaftaran</td>
+                                    <td><span class="badge badge-warning">Baru</span></td>
+                                    <td>
+                                        <a href="contact-message/show.html?id=1" class="btn-action btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="unread-row">
+                                    <td>Siti Aminah</td>
+                                    <td>siti@email.com</td>
+                                    <td>Donasi Ramadhan</td>
+                                    <td><span class="badge badge-warning">Baru</span></td>
+                                    <td>
+                                        <a href="contact-message/show.html?id=2" class="btn-action btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bambang Susanto</td>
+                                    <td>bambang@email.com</td>
+                                    <td>Kerjasama Program</td>
+                                    <td><span class="badge badge-info">Dibaca</span></td>
+                                    <td>
+                                        <a href="contact-message/show.html?id=3" class="btn-action btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Recent News -->
+                <div class="dashboard-card mt-4">
+                    <div class="card-header">
+                        <h3>Berita Terbaru</h3>
+                        <a href="news/create.html" class="btn-add">
+                            <i class="fas fa-plus"></i> Tambah
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Judul</th>
+                                    <th>Kategori</th>
+                                    <th>Tanggal</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Wisuda Angkatan ke-26</td>
+                                    <td><span class="badge badge-primary">Pendidikan</span></td>
+                                    <td>15 Juni 2024</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <a href="news/edit.html?id=1" class="btn-action btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button class="btn-action btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Penyaluran Bantuan Bencana</td>
+                                    <td><span class="badge badge-primary">Kemanusiaan</span></td>
+                                    <td>10 Juni 2024</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <a href="news/edit.html?id=2" class="btn-action btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button class="btn-action btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Recent Gallery -->
+                <div class="dashboard-card mt-4">
+                    <div class="card-header">
+                        <h3>Galeri Terbaru</h3>
+                        <a href="gallery/create.html" class="btn-add">
+                            <i class="fas fa-plus"></i> Upload
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="gallery-thumbnails">
+                            <div class="thumbnail-item">
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200" alt="Kegiatan">
+                                <div class="thumbnail-overlay">
+                                    <a href="gallery/edit.html?id=1" class="btn-icon"><i class="fas fa-edit"></i></a>
+                                    <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                </div>
+                                <div class="thumbnail-info">
+                                    <p>Kegiatan Belajar</p>
+                                    <small>Pendidikan</small>
+                                </div>
+                            </div>
+                            <div class="thumbnail-item">
+                                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=200" alt="Bantuan">
+                                <div class="thumbnail-overlay">
+                                    <a href="gallery/edit.html?id=2" class="btn-icon"><i class="fas fa-edit"></i></a>
+                                    <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                </div>
+                                <div class="thumbnail-info">
+                                    <p>Bantuan Bencana</p>
+                                    <small>Kemanusiaan</small>
+                                </div>
+                            </div>
+                            <div class="thumbnail-item">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=200" alt="Guru">
+                                <div class="thumbnail-overlay">
+                                    <a href="gallery/edit.html?id=3" class="btn-icon"><i class="fas fa-edit"></i></a>
+                                    <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                </div>
+                                <div class="thumbnail-info">
+                                    <p>Workshop Guru</p>
+                                    <small>Kegiatan</small>
+                                </div>
+                            </div>
+                            <div class="thumbnail-item">
+                                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=200" alt="Kelas">
+                                <div class="thumbnail-overlay">
+                                    <a href="gallery/edit.html?id=4" class="btn-icon"><i class="fas fa-edit"></i></a>
+                                    <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                </div>
+                                <div class="thumbnail-info">
+                                    <p>Ruang Kelas</p>
+                                    <small>Fasilitas</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+        
+        // Handle delete buttons
+        document.querySelectorAll('.btn-delete').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(confirm('Hapus item ini?')) {
+                    alert('Item akan dihapus (demo)');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

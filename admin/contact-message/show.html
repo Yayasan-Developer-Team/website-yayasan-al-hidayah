@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pesan - Admin</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- ... sidebar sama seperti index.html ... -->
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-kaaba"></i>
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="../contact/index.html">
+                                <i class="fas fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Detail Pesan</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <div class="notification-dropdown">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-dropdown">
+                        <button class="admin-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="message-detail">
+                    <div class="message-header">
+                        <div class="message-status">
+                            <span class="badge badge-warning">Belum Dibaca</span>
+                            <span class="message-date">
+                                <i class="far fa-calendar"></i> 16 Maret 2026, 10:30
+                            </span>
+                        </div>
+                        <div class="message-actions">
+                            <a href="index.html" class="btn-back">
+                                <i class="fas fa-arrow-left"></i> Kembali
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-body">
+                            <div class="message-info-grid">
+                                <div class="info-item">
+                                    <label>Nama Lengkap</label>
+                                    <div class="info-value">Ahmad Fauzi</div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <label>Email</label>
+                                    <div class="info-value">
+                                        <a href="mailto:ahmad@email.com">ahmad@email.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <label>No. WhatsApp</label>
+                                    <div class="info-value">
+                                        <a href="https://wa.me/6281234567890" target="_blank">
+                                            0812-3456-7890
+                                            <i class="fab fa-whatsapp" style="color: #25D366; margin-left: 5px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <label>Subjek</label>
+                                    <div class="info-value">Informasi Pendaftaran</div>
+                                </div>
+                            </div>
+                            
+                            <div class="message-content mt-4">
+                                <label>Pesan</label>
+                                <div class="message-box">
+                                    Assalamualaikum warahmatullahi wabarakatuh,<br><br>
+                                    
+                                    Saya ingin menanyakan informasi pendaftaran untuk tahun ajaran 2026/2027. 
+                                    Anak saya akan masuk SD. Mohon info mengenai:<br><br>
+                                    
+                                    1. Biaya pendaftaran<br>
+                                    2. Persyaratan yang diperlukan<br>
+                                    3. Jadwal tes masuk<br><br>
+                                    
+                                    Terima kasih sebelumnya.<br><br>
+                                    
+                                    Wassalamualaikum warahmatullahi wabarakatuh.
+                                </div>
+                            </div>
+                            
+                            <form action="index.html" method="get" class="mt-4">
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <select id="status" name="status" class="filter-select" style="width: 100%;">
+                                        <option value="unread" selected>Belum Dibaca</option>
+                                        <option value="read">Sudah Dibaca</option>
+                                        <option value="replied">Sudah Dijawab</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="catatan">Catatan Admin</label>
+                                    <textarea 
+                                        id="catatan" 
+                                        name="catatan" 
+                                        rows="3" 
+                                        placeholder="Tulis catatan internal tentang pesan ini..."
+                                    ></textarea>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn-save">
+                                        <i class="fas fa-save"></i> Simpan Perubahan
+                                    </button>
+                                    
+                                    <a href="mailto:ahmad@email.com" class="btn-reply">
+                                        <i class="fas fa-reply"></i> Balas Email
+                                    </a>
+                                    
+                                    <a href="https://wa.me/6281234567890" class="btn-wa" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> Balas WhatsApp
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+        
+        // Form submit demo
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Status pesan berhasil diperbarui!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
