@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Kontak - Admin</title>
+    <title>Upload Foto - Admin</title>
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -45,12 +45,6 @@
                 <div class="menu-section">
                     <div class="menu-label">KONTEN</div>
                     <ul>
-                        <li class="active">
-                            <a href="../contact/index.html">
-                                <i class="fas fa-address-book"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li>
                         <li>
                             <a href="../contact-message/index.html">
                                 <i class="fas fa-envelope"></i>
@@ -70,8 +64,8 @@
                                 <span>Berita</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="../gallery/index.html">
+                        <li class="active">
+                            <a href="index.html">
                                 <i class="fas fa-images"></i>
                                 <span>Galeri</span>
                             </a>
@@ -83,7 +77,7 @@
                     <div class="menu-label">AKUN</div>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="../profile.html">
                                 <i class="fas fa-user-cog"></i>
                                 <span>Profile</span>
                             </a>
@@ -116,7 +110,7 @@
             <!-- Top Navigation -->
             <nav class="top-nav">
                 <div class="page-title">
-                    <h2>Edit Informasi Kontak</h2>
+                    <h2>Upload Foto Baru</h2>
                 </div>
                 
                 <div class="top-nav-actions">
@@ -142,133 +136,106 @@
                 <div class="form-container">
                     <form action="index.html" method="get" class="admin-form">
                         <div class="form-grid">
-                            <!-- Alamat -->
+                            <!-- Judul -->
                             <div class="form-group full-width">
-                                <label for="alamat">Alamat Lengkap *</label>
+                                <label for="judul">Judul Foto *</label>
+                                <input 
+                                    type="text" 
+                                    id="judul" 
+                                    name="judul" 
+                                    placeholder="Contoh: Kegiatan Belajar Mengajar"
+                                    required
+                                >
+                            </div>
+                            
+                            <!-- Kategori -->
+                            <div class="form-group">
+                                <label for="kategori">Kategori *</label>
+                                <select id="kategori" name="kategori" required>
+                                    <option value="">Pilih Kategori</option>
+                                    <option value="Pendidikan">Pendidikan</option>
+                                    <option value="Kemanusiaan">Kemanusiaan</option>
+                                    <option value="Kegiatan">Kegiatan</option>
+                                    <option value="Fasilitas">Fasilitas</option>
+                                    <option value="Prestasi">Prestasi</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Status -->
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select id="status" name="status">
+                                    <option value="published">Published</option>
+                                    <option value="draft">Draft</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Tanggal -->
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal</label>
+                                <input 
+                                    type="date" 
+                                    id="tanggal" 
+                                    name="tanggal" 
+                                    value="2026-03-16"
+                                >
+                            </div>
+                            
+                            <!-- Upload Foto -->
+                            <div class="form-group full-width">
+                                <label for="foto">File Foto *</label>
+                                <div class="upload-area" id="uploadArea">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Drag & drop file di sini atau klik untuk memilih</p>
+                                    <input 
+                                        type="file" 
+                                        id="foto" 
+                                        name="foto" 
+                                        accept="image/*"
+                                        required
+                                        style="display: none;"
+                                    >
+                                    <button type="button" class="btn-select-file" onclick="document.getElementById('foto').click()">
+                                        Pilih File
+                                    </button>
+                                </div>
+                                <small>Format: JPG, PNG, GIF. Maksimal 5MB</small>
+                                
+                                <!-- Preview -->
+                                <div class="upload-preview" id="uploadPreview" style="display: none;">
+                                    <img src="" alt="Preview">
+                                    <button type="button" class="btn-remove-preview" onclick="removePreview()">
+                                        <i class="fas fa-times"></i> Hapus
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Lokasi -->
+                            <div class="form-group">
+                                <label for="lokasi">Lokasi</label>
+                                <input 
+                                    type="text" 
+                                    id="lokasi" 
+                                    name="lokasi" 
+                                    placeholder="Contoh: Jakarta"
+                                >
+                            </div>
+                            
+                            <!-- Deskripsi -->
+                            <div class="form-group full-width">
+                                <label for="deskripsi">Deskripsi</label>
                                 <textarea 
-                                    id="alamat" 
-                                    name="alamat" 
-                                    rows="3" 
-                                    required
-                                >Jl. Pendidikan No. 123, Cilandak, Jakarta Selatan 12540</textarea>
-                            </div>
-                            
-                            <!-- Telepon -->
-                            <div class="form-group">
-                                <label for="telepon">Telepon *</label>
-                                <input 
-                                    type="text" 
-                                    id="telepon" 
-                                    name="telepon" 
-                                    value="(021) 1234-5678"
-                                    required
-                                >
-                            </div>
-                            
-                            <!-- WhatsApp -->
-                            <div class="form-group">
-                                <label for="whatsapp">WhatsApp *</label>
-                                <input 
-                                    type="text" 
-                                    id="whatsapp" 
-                                    name="whatsapp" 
-                                    value="0812-1234-5678"
-                                    required
-                                >
-                            </div>
-                            
-                            <!-- Email -->
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    value="info@alhidayah.or.id"
-                                    required
-                                >
-                            </div>
-                            
-                            <!-- Email Cadangan -->
-                            <div class="form-group">
-                                <label for="email_cadangan">Email Cadangan</label>
-                                <input 
-                                    type="email" 
-                                    id="email_cadangan" 
-                                    name="email_cadangan" 
-                                    value="pendaftaran@alhidayah.or.id"
-                                >
-                            </div>
-                            
-                            <!-- Jam Operasional -->
-                            <div class="form-group full-width">
-                                <label for="jam_operasional">Jam Operasional *</label>
-                                <textarea 
-                                    id="jam_operasional" 
-                                    name="jam_operasional" 
-                                    rows="3" 
-                                    required
-                                >Senin - Jumat: 07.30 - 16.00
-Sabtu: 08.00 - 14.00
-Minggu: Tutup</textarea>
-                            </div>
-                            
-                            <!-- Google Maps -->
-                            <div class="form-group full-width">
-                                <label for="google_maps">Link Google Maps</label>
-                                <input 
-                                    type="url" 
-                                    id="google_maps" 
-                                    name="google_maps" 
-                                    value="https://maps.google.com/?q=..."
-                                >
-                            </div>
-                            
-                            <!-- Sosial Media -->
-                            <div class="form-group">
-                                <label for="instagram">Instagram</label>
-                                <input 
-                                    type="text" 
-                                    id="instagram" 
-                                    name="instagram" 
-                                    value="@alhidayah.lembahhijau"
-                                >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="facebook">Facebook</label>
-                                <input 
-                                    type="text" 
-                                    id="facebook" 
-                                    name="facebook" 
-                                    value="yayasan.alhidayah"
-                                >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="youtube">Youtube</label>
-                                <input 
-                                    type="text" 
-                                    id="youtube" 
-                                    name="youtube" 
-                                    value="@alhidayahtv"
-                                >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="tiktok">TikTok</label>
-                                <input 
-                                    type="text" 
-                                    id="tiktok" 
-                                    name="tiktok" 
-                                    value="@alhidayah.official"
-                                >
+                                    id="deskripsi" 
+                                    name="deskripsi" 
+                                    rows="4"
+                                    placeholder="Deskripsi singkat tentang foto ini"
+                                ></textarea>
                             </div>
                         </div>
                         
                         <div class="form-actions">
                             <button type="submit" class="btn-save">
-                                <i class="fas fa-save"></i> Simpan Perubahan
+                                <i class="fas fa-upload"></i> Upload Foto
                             </button>
                             <a href="index.html" class="btn-cancel">
                                 <i class="fas fa-times"></i> Batal
@@ -289,10 +256,29 @@ Minggu: Tutup</textarea>
             sidebar.classList.toggle('collapsed');
         });
         
+        // Preview image
+        document.getElementById('foto').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('uploadPreview');
+                    preview.style.display = 'block';
+                    preview.querySelector('img').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        function removePreview() {
+            document.getElementById('uploadPreview').style.display = 'none';
+            document.getElementById('foto').value = '';
+        }
+        
         // Form submit demo
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Data berhasil disimpan!');
+            alert('Foto berhasil diupload!');
             window.location.href = 'index.html';
         });
     </script>
