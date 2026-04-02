@@ -1,0 +1,260 @@
+/* terms.css - Syarat & Ketentuan Page Styles */
+
+:root {
+    --primary: #0a4b7a;
+    --primary-dark: #083b61;
+    --primary-light: #e6f0f9;
+    --primary-soft: rgba(10, 75, 122, 0.08);
+    --secondary: #e1573c;
+    --secondary-light: #fde9e5;
+    --gold: #D4AF37;
+    --gold-light: #fef8e7;
+    --dark: #1e293b;
+    --gray: #64748b;
+    --light-gray: #f8fafc;
+    --border: #e2e8f0;
+    --white: #ffffff;
+    --gradient-primary: linear-gradient(135deg, #0a4b7a 0%, #0e5d94 100%);
+}
+
+/* Page Header */
+.page-header {
+    background: var(--gradient-primary);
+    padding: 6rem 0 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-20px, -20px); }
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: 1.5px;
+}
+
+.page-header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+}
+
+.page-header p {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.page-header .update-date {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin-top: 0.5rem;
+}
+
+/* Content Section */
+.terms-content {
+    padding: 3rem 0 5rem;
+    background: #f5f7fa;
+}
+
+.content-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+.last-updated {
+    background: var(--primary-light);
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.last-updated i {
+    margin-right: 0.5rem;
+}
+
+/* Terms Sections */
+.terms-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.terms-section:last-of-type {
+    border-bottom: none;
+}
+
+.terms-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.terms-section h2 i {
+    font-size: 1.2rem;
+    color: var(--gold);
+    width: 30px;
+}
+
+.terms-section p {
+    color: var(--dark);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.terms-section ul {
+    margin: 0.75rem 0 0.75rem 1.75rem;
+}
+
+.terms-section li {
+    color: var(--dark);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.terms-section li strong {
+    color: var(--primary);
+}
+
+.terms-section a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.terms-section a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Contact Info */
+.contact-info {
+    background: var(--light-gray);
+    padding: 1.25rem;
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.contact-info i {
+    width: 24px;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+/* Acceptance */
+.acceptance {
+    background: linear-gradient(135deg, var(--primary-light), white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-left: 4px solid var(--gold);
+}
+
+.acceptance i {
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.acceptance p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 5rem 0 2.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .terms-section h2 {
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+    }
+    
+    .terms-section h2 i {
+        font-size: 1rem;
+    }
+    
+    .acceptance {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media print {
+    .header, .footer, .whatsapp-float, .back-to-top, .btn-donate {
+        display: none !important;
+    }
+    
+    .page-header {
+        margin-top: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .content-card {
+        padding: 0;
+        box-shadow: none;
+    }
+}

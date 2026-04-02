@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informasi Donasi - Admin</title>
-    
+
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Admin Style CSS -->
     <link rel="stylesheet" href="../css/admin-style.css">
 </head>
@@ -27,7 +27,7 @@
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-            
+
             <div class="sidebar-menu">
                 <div class="menu-section">
                     <div class="menu-label">MAIN</div>
@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-section">
                     <div class="menu-label">KONTEN</div>
                     <ul>
@@ -71,7 +71,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-section">
                     <div class="menu-label">AKUN</div>
                     <ul>
@@ -90,7 +90,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="sidebar-footer">
                 <div class="admin-info">
                     <div class="admin-avatar">
@@ -103,35 +103,51 @@
                 </div>
             </div>
         </aside>
-        
+
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Top Navigation -->
             <nav class="top-nav">
                 <div class="page-title">
                     <h2>Informasi Donasi</h2>
                 </div>
-                
-                <div class="top-nav-actions">
-                    <div class="notification-dropdown">
-                        <button class="notification-btn">
-                            <i class="fas fa-bell"></i>
-                            <span class="notification-badge">3</span>
-                        </button>
+            </nav>
+
+            <div class="content-area">
+
+                <!-- Statistik -->
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--primary-light); color: var(--primary);">
+                            <i class="fas fa-donate"></i>
+                        </div>
+                        <div class="stat-detail">
+                            <h3>Rp 12.500.000</h3>
+                            <p>Total Donasi Bulan Ini</p>
+                        </div>
                     </div>
-                    
-                    <div class="admin-dropdown">
-                        <button class="admin-btn">
-                            <i class="fas fa-user-circle"></i>
-                            <span>Admin</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--success-light); color: var(--success);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-detail">
+                            <h3>48</h3>
+                            <p>Total Donatur</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--secondary-light); color: var(--secondary);">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="stat-detail">
+                            <h3>12</h3>
+                            <p>Relawan Baru</p>
+                        </div>
                     </div>
                 </div>
-            </nav>
-            
-            <!-- Content Area -->
-            <div class="content-area">
+
+                <!-- Rekening Donasi -->
                 <div class="dashboard-card">
                     <div class="card-body">
                         <h4>Rekening Donasi</h4>
@@ -149,7 +165,7 @@
                                 <td>1234567890 a.n Yayasan Al-Hidayah</td>
                             </tr>
                         </table>
-                        
+
                         <h4 class="mt-4">Info Tambahan</h4>
                         <table class="info-table">
                             <tr>
@@ -182,15 +198,84 @@
                         </table>
                     </div>
                 </div>
+
+                <!-- Dummy Donasi -->
+                <div class="dashboard-card mt-4">
+                    <div class="card-header">
+                        <h3>Donasi Terbaru</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Program</th>
+                                    <th>Nominal</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ahmad Fauzi</td>
+                                    <td>Beasiswa Santri</td>
+                                    <td>Rp 500.000</td>
+                                    <td><span class="badge badge-success">Berhasil</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Siti Nurhaliza</td>
+                                    <td>Wakaf Al-Qur'an</td>
+                                    <td>Rp 250.000</td>
+                                    <td><span class="badge badge-warning">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Budi Santoso</td>
+                                    <td>Bantuan Pangan</td>
+                                    <td>Rp 1.000.000</td>
+                                    <td><span class="badge badge-success">Berhasil</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Dummy Relawan -->
+                <div class="dashboard-card mt-4">
+                    <div class="card-header">
+                        <h3>Relawan Terbaru</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Bidang</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rahmat Hidayat</td>
+                                    <td>Pendidikan</td>
+                                    <td><span class="badge badge-primary">Aktif</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nabila Putri</td>
+                                    <td>Kemanusiaan</td>
+                                    <td><span class="badge badge-info">Review</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
         </main>
     </div>
-    
+
     <script>
-        // Sidebar Toggle
         const sidebarToggle = document.getElementById('sidebarToggle');
         const sidebar = document.getElementById('sidebar');
-        
+
         sidebarToggle.addEventListener('click', function() {
             sidebar.classList.toggle('collapsed');
         });

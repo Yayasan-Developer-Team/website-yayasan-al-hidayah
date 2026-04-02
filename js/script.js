@@ -1,8 +1,3 @@
-/**
- * script.js - JavaScript Global untuk Website Yayasan Al-Hidayah Lembah Hijau
- * Menangani semua fungsionalitas di seluruh halaman
- */
-
 // ===== MOBILE MENU TOGGLE =====
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
@@ -130,3 +125,108 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 250);
     });
 });
+
+// ===== KEGIATAN TERBARU =====
+document.addEventListener('DOMContentLoaded', function() {
+    const adElement = document.getElementById('videoAd');
+    const closeBtn = document.getElementById('closeVideoAd');
+    const container = document.getElementById('videoAdCarousel');
+    const prevBtn = document.getElementById('videoAdPrev');
+    const nextBtn = document.getElementById('videoAdNext');
+    const dotsContainer = document.getElementById('videoAdDots');
+    
+    
+    // Close button
+    if (closeBtn && adElement) {
+    closeBtn.addEventListener('click', function() {
+        adElement.style.display = 'none';
+    });
+}
+    
+    // Carousel functionality
+    if (!container || !prevBtn || !nextBtn) return;
+    
+    let cards = document.querySelectorAll('.video-ad-card');
+    let currentIndex = 0;
+    
+    function updateDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        cards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('video-ad-dot');
+            if (index === currentIndex) dot.classList.add('active');
+            dot.addEventListener('click', () => scrollToIndex(index));
+            dotsContainer.appendChild(dot);
+        });
+    }
+    
+    function scrollToIndex(index) {
+        if (cards.length === 0) return;
+        index = Math.max(0, Math.min(index, cards.length - 1));
+        currentIndex = index;
+        const scrollPosition = cards[currentIndex].offsetLeft - container.offsetLeft;
+        container.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+        updateDots();
+    }
+    
+    function updateCurrentIndex() {
+        const scrollPosition = container.scrollLeft;
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        
+        cards.forEach((card, index) => {
+            const cardLeft = card.offsetLeft - container.offsetLeft;
+            const distance = Math.abs(scrollPosition - cardLeft);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = index;
+            }
+        });
+        
+        if (currentIndex !== closestIndex) {
+            currentIndex = closestIndex;
+            updateDots();
+        }
+    }
+    
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) scrollToIndex(currentIndex - 1);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - 1) scrollToIndex(currentIndex + 1);
+    });
+    
+    container.addEventListener('scroll', () => requestAnimationFrame(updateCurrentIndex));
+    
+    // Initialize
+    updateDots();
+    setTimeout(() => scrollToIndex(0), 100);
+});
+
+
+// BANNER IKLAN ATAS
+const banner = document.getElementById('simpleBanner');
+const closeBtn = document.getElementById('closeBanner');
+
+// Cek apakah sudah ditutup sebelumnya (session only)
+if (sessionStorage.getItem('bannerClosed') === 'true') {
+    banner.classList.add('hide');
+}
+
+// Tombol close
+if (closeBtn) {
+    closeBtn.onclick = function() {
+        banner.classList.add('hide');
+        sessionStorage.setItem('bannerClosed', 'true');
+    };
+}
+
+// Auto hilang setelah 15 menit (900000 ms)
+setTimeout(function() {
+    if (banner && !banner.classList.contains('hide')) {
+        banner.classList.add('hide');
+        sessionStorage.setItem('bannerClosed', 'true');
+    }
+}, 5 * 60 * 1000); // 15 menit

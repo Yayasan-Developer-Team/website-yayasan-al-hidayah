@@ -28,7 +28,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Header (sama seperti halaman lain) -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -75,7 +75,7 @@
                 </nav>
 
                 <a href="admin/login.html" class="btn btn-primary btn-donate">
-                    <i class="as fa-sign-in-alt"></i> Login
+                    <i class="fas fa-sign-in-alt"></i> Login
                 </a>
             </div>
         </div>
@@ -93,220 +93,201 @@
     <!-- Struktur Organisasi Content -->
     <section class="struktur-content">
         <div class="container">
-
-            <!-- PEMBINA YAYASAN -->
-            <div class="org-section">
-                <h2 class="section-title">PEMBINA YAYASAN</h2>
-                <div class="org-grid">
-                    <div class="org-card">
-                        <div class="org-name">Lukman Hakim, SH</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-name">Purnama Indra Laksmana</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-name">Ruli Rinaldi</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-name">Giri Kus Anggoro</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-name">Rudi Yuliswanto</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PENGAWAS YAYASAN -->
-            <div class="org-section">
-                <h2 class="section-title">PENGAWAS YAYASAN</h2>
-                <div class="org-grid">
-                    <div class="org-card">
-                        <div class="org-name">Nasrullah</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-name">Irawan Sudjana</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-name">Taufiq Shahab</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-name">Yayat Ahmad Hidayat</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- KETUA UMUM & SEKRETARIS -->
-            <div class="org-row">
-                <div class="org-card large">
-                    <div class="card-label">KETUA UMUM</div>
-                    <div class="org-name large">Fathur Rahman</div>
-                </div>
+            
+            <!-- ===== HIERARCHY CHART ===== -->
+            <div class="org-chart">
                 
-                <div class="org-card large">
-                    <div class="card-label">SEKRETARIS</div>
-                    <div class="org-name">Sekretaris Umum</div>
-                    <div class="org-name">Muhammad Muafiq</div>
-                    <div class="org-name mt-2">Sekretaris 1</div>
-                    <div class="org-name">Eko Rukmono Satwa</div>
+                <!-- Level 1: Pembina & Pengawas -->
+                <div class="org-level level-top">
+                    <div class="level-title">
+                        <span class="level-badge">DEWAN PENGURUS</span>
+                    </div>
+                    <div class="level-grid two-col">
+                        <div class="org-node node-pembina">
+                            <div class="node-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="node-label">PEMBINA YAYASAN</div>
+                            <div class="node-names">
+                                <span>Lukman Hakim, SH</span>
+                                <span>Purnama Indra Laksmana</span>
+                                <span>Ruli Rinaldi</span>
+                                <span>Giri Kus Anggoro</span>
+                                <span>Rudi Yuliswanto</span>
+                            </div>
+                        </div>
+                        <div class="org-node node-pengawas">
+                            <div class="node-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <div class="node-label">PENGAWAS YAYASAN</div>
+                            <div class="node-names">
+                                <span>Nasrullah</span>
+                                <span>Irawan Sudjana</span>
+                                <span>Taufiq Shahab</span>
+                                <span>Yayat Ahmad Hidayat</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- BENDAHARA -->
-            <div class="org-section">
-                <h2 class="section-title">BENDAHARA</h2>
-                <div class="org-grid">
-                    <div class="org-card">
-                        <div class="card-label">Bendahara Umum</div>
-                        <div class="org-name">Nana Sukmana</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="card-label">Bendahara 1</div>
-                        <div class="org-name">Yudhistira Nugraha</div>
-                    </div>
+                <!-- Connector Line -->
+                <div class="connector-line">
+                    <div class="line-vertical"></div>
+                    <div class="line-horizontal"></div>
                 </div>
-            </div>
 
-            <!-- DIREKTUR AHIS -->
-            <div class="org-section">
-                <div class="org-card center">
-                    <div class="card-label large">DIREKTUR AHIS</div>
-                    <div class="org-name large">Ust. Hasan Ishak, MA</div>
+                <!-- Level 2: Ketua Umum -->
+                <div class="org-level level-leader">
+                    <div class="level-title">
+                        <span class="level-badge">PIMPINAN INTI</span>
+                    </div>
+                    <div class="org-node node-ketua-umum">
+                        <div class="node-icon"><i class="fas fa-crown"></i></div>
+                        <div class="node-label">KETUA UMUM</div>
+                        <div class="node-name-large">Fathur Rahman</div>
+                        <div class="node-sub">Pimpinan Tertinggi Yayasan</div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- AL HIDAYAH ISLAMIC SCHOOL -->
-            <div class="org-section">
-                <div class="org-card center light">
-                    <div class="card-label large">AL HIDAYAH ISLAMIC SCHOOL</div>
-                    <div class="sub-text">(Sekolah di bawah naungan Yayasan Al-Hidayah)</div>
+                <!-- Connector to 3 columns -->
+                <div class="connector-line to-three">
+                    <div class="line-vertical"></div>
+                    <div class="line-horizontal-three">
+                        <span class="line-branch"></span>
+                        <span class="line-branch"></span>
+                        <span class="line-branch"></span>
+                    </div>
                 </div>
-            </div>
 
-            <!-- DKM AL-HIDAYAH -->
-            <div class="org-section">
-                <h2 class="section-title">DKM AL-HIDAYAH</h2>
-                <div class="org-row">
-                    <div class="org-card">
-                        <div class="card-label">Ketua</div>
-                        <div class="org-name">Asep Saepudin</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="card-label">Wakil</div>
-                        <div class="org-name">Kurniawan</div>
+                <!-- Level 3: Sekretaris, Bendahara, Direktur -->
+                <div class="org-level level-three">
+                    <div class="level-grid three-col">
+                        <!-- Sekretaris -->
+                        <div class="org-node node-sekretaris">
+                            <div class="node-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="node-label">SEKRETARIS</div>
+                            <div class="node-name">Sekretaris Umum</div>
+                            <div class="node-name-bold">Muhammad Muafiq</div>
+                            <div class="node-name mt-1">Sekretaris 1</div>
+                            <div class="node-name-bold">Eko Rukmono Satwa</div>
+                        </div>
+                        
+                        <!-- Bendahara -->
+                        <div class="org-node node-bendahara">
+                            <div class="node-icon"><i class="fas fa-coins"></i></div>
+                            <div class="node-label">BENDAHARA</div>
+                            <div class="node-name">Bendahara Umum</div>
+                            <div class="node-name-bold">Nana Sukmana</div>
+                            <div class="node-name mt-1">Bendahara 1</div>
+                            <div class="node-name-bold">Yudhistira Nugraha</div>
+                        </div>
+                        
+                        <!-- Direktur -->
+                        <div class="org-node node-direktur">
+                            <div class="node-icon"><i class="fas fa-building"></i></div>
+                            <div class="node-label">DIREKTUR AHIS</div>
+                            <div class="node-name-large">Ust. Hasan Ishak, MA</div>
+                            <div class="node-sub">Al Hidayah Islamic School</div>
+                        </div>
                     </div>
                 </div>
-                
-                <h3 class="subsection-title">ANGGOTA</h3>
-                <div class="org-grid dense">
-                    <div class="org-card small">Ulyas</div>
-                    <div class="org-card small">Yedi Rahmat</div>
-                    <div class="org-card small">Basuki Hascaryo</div>
-                    <div class="org-card small">Ary Maryadi</div>
-                    <div class="org-card small">Muzaffar Muchtar</div>
-                    <div class="org-card small">Hendry Bayu Nugroho</div>
-                    <div class="org-card small">Budi Santoso</div>
-                    <div class="org-card small">Eko Jatniko</div>
-                    <div class="org-card small">Imannurahman</div>
-                    <div class="org-card small">Rudi Firmansyah</div>
-                    <div class="org-card small">M Suzatob</div>
-                    <div class="org-card small">Aang Donny Soesatya</div>
-                    <div class="org-card small">Panji Bagus Pamungkas</div>
-                    <div class="org-card small">Paradityo Sasmoyo</div>
-                    <div class="org-card small">Sukirjo</div>
-                </div>
-            </div>
 
-            <!-- BID. EKONOMI DAN KESEJAHTERAAN UMAT -->
-            <div class="org-section">
-                <h2 class="section-title">BID. EKONOMI DAN KESEJAHTERAAN UMAT</h2>
-                <div class="org-row">
-                    <div class="org-card">
-                        <div class="card-label">Ketua</div>
-                        <div class="org-name">Iyos Edi</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="card-label">Wakil</div>
-                        <div class="org-name">Cipto Handoyo</div>
+                <!-- Connector to bottom -->
+                <div class="connector-line to-bottom">
+                    <div class="line-vertical"></div>
+                    <div class="line-horizontal-wide">
+                        <span class="line-branch"></span>
+                        <span class="line-branch"></span>
+                        <span class="line-branch"></span>
+                        <span class="line-branch"></span>
                     </div>
                 </div>
-                
-                <h3 class="subsection-title">ANGGOTA</h3>
-                <div class="org-grid">
-                    <div class="org-card">Asep Rohman</div>
-                    <div class="org-card">Idham Sugiarto</div>
-                    <div class="org-card">Suranto</div>
-                    <div class="org-card">Benny K. Haruni</div>
-                </div>
-            </div>
 
-            <!-- BID. SOSIAL DAN KEMASYARAKATAN -->
-            <div class="org-section">
-                <h2 class="section-title">BID. SOSIAL DAN KEMASYARAKATAN</h2>
-                <div class="org-row">
-                    <div class="org-card">
-                        <div class="card-label">Ketua</div>
-                        <div class="org-name">M Chawari</div>
+                <!-- Level 4: 5 Bidang Utama -->
+                <div class="org-level level-bidang">
+                    <div class="level-title">
+                        <span class="level-badge">BIDANG KERJA</span>
                     </div>
-                    <div class="org-card">
-                        <div class="card-label">Wakil</div>
-                        <div class="org-name">Gunadi</div>
+                    <div class="level-grid five-col">
+                        <div class="org-node node-bidang">
+                            <div class="node-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="node-label">EKONOMI &<br>KESEJAHTERAAN</div>
+                            <div class="node-name-bold">Iyos Edi</div>
+                            <div class="node-name-small">[ Ketua ]</div>
+                            <div class="node-name-bold">Cipto Handoyo</div>
+                            <div class="node-name-small">[ Wakil ]</div>
+                            <div class="node-members">
+                                <span>Asep Rohman</span>
+                                <span>Idham Sugiarto</span>
+                                <span>Suranto</span>
+                                <span>Benny K. Haruni</span>
+                            </div>
+                        </div>
+                        <div class="org-node node-bidang">
+                            <div class="node-icon"><i class="fas fa-users"></i></div>
+                            <div class="node-label">SOSIAL &<br>KEMASYARAKATAN</div>
+                            <div class="node-name-bold">M Chawari</div>
+                            <div class="node-name-small">[ Ketua ]</div>
+                            <div class="node-name-bold">Gunaidi</div>
+                            <div class="node-name-small">[ Wakil ]</div>
+                            <div class="node-members">
+                                <span>Anwari</span>
+                                <span>Albi Zulfikar</span>
+                                <span>Joko Tandyono</span>
+                                <span>Budi Hartono</span>
+                                <span>Wahyu Hargono</span>
+                                <span>Herman Azis</span>
+                                <span>Denny Mahendra</span>
+                                <span>Untung Supriatno</span>
+                            </div>
+                        </div>
+                        <div class="org-node node-bidang">
+                            <div class="node-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            <div class="node-label">DAARUSH<br>SHODAQOH</div>
+                            <div class="node-name-bold">Bambang Tejo L</div>
+                            <div class="node-name-small">[ Ketua ]</div>
+                            <div class="node-name-bold">Yunan</div>
+                            <div class="node-name-small">[ Wakil ]</div>
+                            <div class="node-members">
+                                <span>Trian BS H. Kholis</span>
+                            </div>
+                        </div>
+                        <div class="org-node node-bidang">
+                            <div class="node-icon"><i class="fas fa-hard-hat"></i></div>
+                            <div class="node-label">INFRA<br>STRUKTUR</div>
+                            <div class="node-name-bold">Gungun Trisna G.</div>
+                            <div class="node-name-small">[ Ketua ]</div>
+                            <div class="node-members">
+                                <span>Heri Sutari</span>
+                                <span>Sukamto</span>
+                                <span>Ariopandji M.</span>
+                            </div>
+                        </div>
+                        <div class="org-node node-bidang">
+                            <div class="node-icon"><i class="fas fa-mosque"></i></div>
+                            <div class="node-label">DKM<br>AL-HIDAYAH</div>
+                            <div class="node-name-bold">Asep Saepudin</div>
+                            <div class="node-name-small">[ Ketua ]</div>
+                            <div class="node-name-bold">Kurniawan</div>
+                            <div class="node-name-small">[ Wakil ]</div>
+                            <div class="node-members">
+                                <span>Kurniawan (Wakil)</span>
+                                <span>Ulyas, Yedi Rahmat</span>
+                                <span>Basuki H., Ary M.</span>
+                                <span>Muzaffar M., Hendry B.</span>
+                                <span>Budi S., Eko J.</span>
+                                <span>Imannurahman, Rudi F.</span>
+                                <span>M Suzatob, Aang D.</span>
+                                <span>Panji B., Paradityo S.</span>
+                                <span>Sukirjo</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <h3 class="subsection-title">ANGGOTA</h3>
-                <div class="org-grid dense">
-                    <div class="org-card small">Anwari</div>
-                    <div class="org-card small">Albi Zulfikar</div>
-                    <div class="org-card small">Joko Tandyono</div>
-                    <div class="org-card small">Budi Hartono</div>
-                    <div class="org-card small">Wahyu Hargono</div>
-                    <div class="org-card small">Herman Azis</div>
-                    <div class="org-card small">Denny Mahendra</div>
-                    <div class="org-card small">Untung Supriatno</div>
-                </div>
-            </div>
 
-            <!-- BID. DAARUSH SHODAQOH -->
-            <div class="org-section">
-                <h2 class="section-title">BID. DAARUSH SHODAQOH</h2>
-                <div class="org-row">
-                    <div class="org-card">
-                        <div class="card-label">Ketua</div>
-                        <div class="org-name">Bambang Tejo L</div>
-                    </div>
-                    <div class="org-card">
-                        <div class="card-label">Wakil</div>
-                        <div class="org-name">Yunan</div>
-                    </div>
-                </div>
-                
-                <h3 class="subsection-title">ANGGOTA</h3>
-                <div class="org-grid">
-                    <div class="org-card">Trian BS H. Kholis</div>
-                </div>
-            </div>
-
-            <!-- BID. INFRA STRUKTUR -->
-            <div class="org-section">
-                <h2 class="section-title">BID. INFRA STRUKTUR</h2>
-                <div class="org-row">
-                    <div class="org-card">
-                        <div class="card-label">Ketua</div>
-                        <div class="org-name">Gungun Trisna Ginanjar</div>
-                    </div>
-                </div>
-                
-                <h3 class="subsection-title">ANGGOTA</h3>
-                <div class="org-grid">
-                    <div class="org-card">Heri Sutari</div>
-                    <div class="org-card">Sukamto</div>
-                    <div class="org-card">Ariopandji Mintardjo</div>
-                </div>
             </div>
 
             <!-- Footer Date -->
             <div class="struktur-footer">
-                <p>Cikarang, 15 Februari 2025</p>
+                <p><i class="fas fa-calendar-alt"></i> Cikarang, 15 Februari 2025</p>
+                <p class="stamp">Ditetapkan oleh:<br><strong>Pimpinan Yayasan Al-Hidayah</strong></p>
             </div>
 
         </div>
