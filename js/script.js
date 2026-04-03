@@ -135,13 +135,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('videoAdNext');
     const dotsContainer = document.getElementById('videoAdDots');
     
+    // ===== CEK STORAGE =====
+    // Gunakan sessionStorage (hilang saat browser ditutup)
+    // atau localStorage (permanen sampai dihapus)
+    const adClosed = sessionStorage.getItem('videoAdClosed');
     
-    // Close button
-    if (closeBtn && adElement) {
-    closeBtn.addEventListener('click', function() {
+    if (adClosed === 'true' && adElement) {
         adElement.style.display = 'none';
-    });
-}
+    }
+    
+    // Close button - simpan ke storage
+    if (closeBtn && adElement) {
+        closeBtn.addEventListener('click', function() {
+            adElement.style.display = 'none';
+            // Simpan status bahwa iklan sudah ditutup
+            sessionStorage.setItem('videoAdClosed', 'true');
+        });
+    }
     
     // Carousel functionality
     if (!container || !prevBtn || !nextBtn) return;
@@ -230,3 +240,42 @@ setTimeout(function() {
         sessionStorage.setItem('bannerClosed', 'true');
     }
 }, 5 * 60 * 1000); // 15 menit
+
+
+// ===== WHATSAPP HELP CARD (MUNCUL 8 DETIK LALU HILANG) =====
+document.addEventListener('DOMContentLoaded', function() {
+    const helpCard = document.getElementById('whatsappHelpCard');
+    const closeBtn = document.getElementById('closeHelpCard');
+    
+    if (!helpCard) return;
+    
+    // Cek sessionStorage
+    const isClosed = sessionStorage.getItem('whatsappHelpClosed');
+    
+    if (isClosed === 'true') {
+        helpCard.style.display = 'none';
+    } else {
+        helpCard.style.display = 'block';
+        
+        // Auto hilang setelah 8 detik
+        setTimeout(function() {
+            if (helpCard && helpCard.style.display !== 'none') {
+                helpCard.classList.add('hide');
+                setTimeout(() => {
+                    helpCard.style.display = 'none';
+                }, 300);
+            }
+        }, 8000);
+    }
+    
+    // Tombol close
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            helpCard.classList.add('hide');
+            setTimeout(() => {
+                helpCard.style.display = 'none';
+            }, 300);
+            sessionStorage.setItem('whatsappHelpClosed', 'true');
+        });
+    }
+});
