@@ -1,5 +1,3 @@
-/* relawan.css - Halaman Relawan */
-
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -7,13 +5,59 @@
     color: white;
     text-align: center;
     margin-top: 80px;
-    border-radius: 10px 10px 100px 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-20px, -20px); }
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
 }
 
 .page-header h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
     font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.page-header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #D4AF37;
+    margin: 1rem auto 0;
+    border-radius: 2px;
 }
 
 .page-header p {
@@ -23,7 +67,7 @@
     margin: 0 auto;
 }
 
-/* Hero Relawan */
+/* ===== HERO RELAWAN ===== */
 .relawan-hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,7 +77,7 @@
 
 .relawan-hero-text {
     color: var(--gray);
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin: 1.5rem 0 2rem;
 }
@@ -41,117 +85,138 @@
 .relawan-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .relawan-stat {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.2rem;
     background: var(--light-gray);
     border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.relawan-stat:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: var(--shadow);
 }
 
 .relawan-stat h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
     color: var(--primary);
     margin-bottom: 0.25rem;
 }
 
 .relawan-stat p {
     color: var(--gray);
-    font-size: 0.9375rem;
+    font-size: 0.8rem;
     font-weight: 500;
 }
 
 .relawan-hero-image img {
     width: 100%;
-    height: 500px;
+    height: 450px;
     object-fit: cover;
     border-radius: 30px;
     box-shadow: var(--shadow-lg);
+    transition: transform 0.5s ease;
 }
 
-/* Manfaat Grid */
+.relawan-hero-image:hover img {
+    transform: scale(1.02);
+}
+
+/* ===== MANFAAT GRID ===== */
 .manfaat-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .manfaat-card {
     background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 30px;
+    padding: 2rem;
+    border-radius: 24px;
     text-align: center;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .manfaat-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
 .manfaat-card i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.manfaat-card:hover i {
+    transform: scale(1.1);
+    color: var(--secondary);
 }
 
 .manfaat-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
     color: var(--dark);
 }
 
 .manfaat-card p {
     color: var(--gray);
-    font-size: 0.9375rem;
+    font-size: 0.85rem;
     line-height: 1.6;
 }
 
-/* Bidang Grid */
+/* ===== BIDANG GRID ===== */
 .bidang-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .bidang-card {
     background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 30px;
+    padding: 2rem;
+    border-radius: 24px;
     text-align: center;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .bidang-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
 .bidang-card i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .bidang-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: var(--dark);
 }
 
 .bidang-card p {
     color: var(--gray);
-    font-size: 0.9375rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
 }
 
 .bidang-card ul {
@@ -163,44 +228,44 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: var(--gray);
-    font-size: 0.875rem;
+    font-size: 0.8rem;
 }
 
 .bidang-card li::before {
     content: "•";
     color: var(--primary);
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
-/* Testimoni Relawan */
+/* ===== TESTIMONI RELAWAN ===== */
 .testimoni-relawan-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .testimoni-relawan-card {
     background: white;
-    padding: 2rem;
-    border-radius: 30px;
+    padding: 1.8rem;
+    border-radius: 24px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
     text-align: center;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .testimoni-relawan-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
 .testimoni-relawan-card img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -208,14 +273,15 @@
 }
 
 .testimoni-relawan-card h4 {
-    font-size: 1.125rem;
-    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
     color: var(--dark);
 }
 
 .testimoni-bidang {
     color: var(--primary);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -224,99 +290,30 @@
     color: var(--gray);
     font-style: italic;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
 }
 
-.testimoni-footer i {
-    color: #ffc107;
-    font-size: 0.875rem;
-}
-
-/* Form Pendaftaran Relawan */
-.daftar-relawan-section {
-    background: white;
-    border-radius: 30px;
-    box-shadow: var(--shadow-lg);
-    padding: 3rem;
-    border: 1px solid var(--border);
-}
-
-.daftar-relawan-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.daftar-relawan-header h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: var(--dark);
-}
-
-.daftar-relawan-header p {
-    color: var(--gray);
-    font-size: 1.125rem;
-}
-
-.daftar-relawan-form {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Availability Options */
-.availability-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
-
-.availability-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.availability-item:hover {
-    border-color: var(--primary);
-    background: var(--primary-light);
-}
-
-.availability-item input[type="checkbox"] {
-    width: auto;
-    margin: 0;
-}
-
-.availability-item span {
-    font-size: 0.9375rem;
-    color: var(--dark);
-}
-
-/* Proses Grid */
+/* ===== PROSES GRID ===== */
 .proses-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .proses-card {
     background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 30px;
+    padding: 2rem;
+    border-radius: 24px;
     text-align: center;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
-    transition: var(--transition);
+    transition: all 0.3s ease;
     position: relative;
 }
 
 .proses-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -325,8 +322,8 @@
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: var(--secondary);
     color: white;
     border-radius: 50%;
@@ -334,47 +331,194 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
 .proses-card i {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--primary);
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 .proses-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
     color: var(--dark);
 }
 
 .proses-card p {
     color: var(--gray);
-    font-size: 0.9375rem;
+    font-size: 0.8rem;
     line-height: 1.6;
 }
 
-/* FAQ Relawan */
+/* ===== FORM PENDAFTARAN ===== */
+.daftar-relawan-section {
+    background: white;
+    border-radius: 30px;
+    box-shadow: var(--shadow-lg);
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.daftar-relawan-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.daftar-relawan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.daftar-relawan-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.daftar-relawan-header p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.daftar-relawan-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Availability Options */
+.availability-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.availability-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.availability-item:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.availability-item input {
+    width: auto;
+    margin: 0;
+}
+
+.availability-item span {
+    font-size: 0.8rem;
+    color: var(--dark);
+}
+
+.submit-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(10, 75, 122, 0.3);
+    gap: 1rem;
+}
+
+/* ===== FAQ RELAWAN ===== */
 .faq-relawan-grid {
     max-width: 800px;
-    margin: 3rem auto 0;
+    margin: 2rem auto 0;
 }
 
 .faq-relawan-item {
     background: white;
-    border-radius: 20px;
+    border-radius: 16px;
     margin-bottom: 1rem;
     border: 1px solid var(--border);
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .faq-relawan-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem 1.2rem;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -384,7 +528,7 @@
 }
 
 .faq-relawan-question h3 {
-    font-size: 1.125rem;
+    font-size: 0.95rem;
     color: var(--dark);
     font-weight: 600;
 }
@@ -400,48 +544,73 @@
 
 .faq-relawan-answer {
     max-height: 0;
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
     overflow: hidden;
     transition: all 0.3s;
 }
 
 .faq-relawan-item.active .faq-relawan-answer {
     max-height: 200px;
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1.2rem 1rem;
 }
 
 .faq-relawan-answer p {
     color: var(--gray);
     line-height: 1.6;
+    font-size: 0.85rem;
 }
 
-/* CTA Relawan */
+/* ===== CTA RELAWAN ===== */
 .cta-relawan {
     background: linear-gradient(135deg, var(--secondary) 0%, #c94a32 100%);
     padding: 5rem 0;
     color: white;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-relawan::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .cta-relawan-content {
+    position: relative;
+    z-index: 2;
     max-width: 700px;
     margin: 0 auto;
 }
 
 .cta-relawan h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .cta-relawan p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     opacity: 0.9;
     margin-bottom: 2rem;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
     .relawan-hero-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -453,11 +622,20 @@
     .proses-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
 }
 
 @media (max-width: 768px) {
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
     .page-header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .relawan-stats {
@@ -476,15 +654,19 @@
     }
     
     .daftar-relawan-section {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
     
     .cta-relawan h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
     .relawan-hero-image img {
         height: 300px;
     }

@@ -1942,3 +1942,240 @@ body {
         justify-content: flex-end;
     }
 }
+
+/* ========================= */
+/* FIX RESPONSIVE MOBILE REAL */
+/* ========================= */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+
+    .main-content {
+        margin-left: 70px !important;
+    }
+
+    .top-nav {
+        padding: 14px 16px;
+    }
+
+    .page-title h2 {
+        font-size: 18px;
+    }
+
+    .content-area {
+        padding: 14px;
+    }
+
+    .dashboard-stats,
+    .dashboard-grid,
+    .profile-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-mini {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .card-body,
+    .card-header {
+        padding: 16px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .main-content {
+        margin-left: 60px !important;
+    }
+
+    .page-title h2 {
+        font-size: 16px;
+    }
+
+    .top-nav-actions {
+        gap: 8px;
+    }
+
+    .admin-btn span {
+        display: none;
+    }
+
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table td:nth-child(2) {
+        min-width: 180px;
+    }
+
+    .btn-add,
+    .btn-edit {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content-toolbar {
+        gap: 12px;
+    }
+}
+
+/* ============================= */
+/* FIX OVERFLOW MOBILE 400PX */
+/* ============================= */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.content-area {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* semua card */
+.dashboard-card,
+.form-container,
+.stats-mini,
+.profile-card,
+.notifications-list {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* toolbar biar ga lebar */
+.content-toolbar,
+.toolbar-left,
+.toolbar-right {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* search dan select full */
+.search-box,
+.filter-select,
+.btn-add {
+    width: 100%;
+}
+
+/* table wrapper wajib */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+    min-width: 100%;
+}
+
+/* khusus hp */
+@media (max-width: 480px) {
+    .main-content {
+        margin-left: 60px !important;
+        width: calc(100% - 60px);
+    }
+
+    .content-area {
+        padding: 12px;
+    }
+
+    .card-header,
+    .card-body {
+        padding: 14px;
+    }
+
+    .data-table th,
+    .data-table td {
+        font-size: 12px;
+        padding: 8px 6px;
+    }
+
+    .btn-action {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ============================= */
+/* MOBILE TABLE TO CARD */
+/* ============================= */
+@media (max-width: 480px) {
+    .data-table,
+    .data-table thead,
+    .data-table tbody,
+    .data-table th,
+    .data-table td,
+    .data-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .data-table thead {
+        display: none;
+    }
+
+    .data-table tr {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 14px;
+        margin-bottom: 14px;
+    }
+
+    .data-table td {
+        border: none;
+        padding: 8px 0;
+        text-align: left;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .data-table td::before {
+        font-weight: 700;
+        color: var(--primary);
+        display: block;
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
+
+    /* pesan masuk */
+    .data-table td:nth-child(1)::before { content: "Pilih"; }
+    .data-table td:nth-child(2)::before { content: "Nama"; }
+    .data-table td:nth-child(3)::before { content: "Email / WA"; }
+    .data-table td:nth-child(4)::before { content: "Pesan"; }
+    .data-table td:nth-child(5)::before { content: "Status"; }
+    .data-table td:nth-child(6)::before { content: "Aksi"; }
+}

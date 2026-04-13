@@ -1,5 +1,3 @@
-/* donasi.css - Halaman Donasi */
-
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -7,13 +5,59 @@
     color: white;
     text-align: center;
     margin-top: 80px;
-    border-radius: 10px 10px 100px 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-20px, -20px); }
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
 }
 
 .page-header h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
     font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.page-header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #D4AF37;
+    margin: 1rem auto 0;
+    border-radius: 2px;
 }
 
 .page-header p {
@@ -23,7 +67,7 @@
     margin: 0 auto;
 }
 
-/* Why Donate */
+/* ===== WHY DONATE SECTION ===== */
 .why-donate-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,7 +77,7 @@
 
 .why-donate-text {
     color: var(--gray);
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin: 1.5rem 0 2rem;
 }
@@ -48,62 +92,81 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    padding: 1rem;
+    background: var(--light-gray);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.why-stat:hover {
+    transform: translateX(5px);
+    background: white;
+    box-shadow: var(--shadow);
 }
 
 .why-stat i {
-    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-light);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
     color: var(--primary);
 }
 
 .why-stat h4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    font-weight: 700;
     margin-bottom: 0.25rem;
     color: var(--dark);
 }
 
 .why-stat p {
     color: var(--gray);
-    font-size: 0.9375rem;
+    font-size: 0.85rem;
 }
 
 .why-donate-image img {
     width: 100%;
-    height: 500px;
+    height: 450px;
     object-fit: cover;
     border-radius: 30px;
     box-shadow: var(--shadow-lg);
+    transition: transform 0.5s ease;
 }
 
-/* Program Donasi Grid */
+.why-donate-image:hover img {
+    transform: scale(1.02);
+}
+
+/* ===== PROGRAM DONASI GRID ===== */
 .program-donasi-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .program-donasi-card {
     background: white;
-    padding: 2rem;
-    border-radius: 30px;
+    padding: 1.5rem;
+    border-radius: 20px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
-    transition: var(--transition);
+    transition: all 0.3s ease;
     position: relative;
 }
 
 .program-donasi-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
 .program-donasi-card.featured {
     border: 2px solid var(--secondary);
-    transform: scale(1.05);
-}
-
-.program-donasi-card.featured:hover {
-    transform: scale(1.05) translateY(-10px);
+    background: linear-gradient(135deg, white, var(--secondary-light));
 }
 
 .program-badge {
@@ -112,114 +175,128 @@
     right: 20px;
     background: var(--secondary);
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     border-radius: 50px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
 }
 
 .program-donasi-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.program-donasi-card:hover .program-donasi-icon {
+    transform: scale(1.05);
 }
 
 .program-donasi-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
     color: var(--dark);
 }
 
 .program-donasi-card p {
     color: var(--gray);
-    font-size: 0.9375rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 .program-donasi-target {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.75rem;
-}
-
-.target-info {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 0.5rem;
 }
 
 .target-info span {
-    font-size: 0.8125rem;
+    font-size: 0.65rem;
     color: var(--gray);
 }
 
 .target-info strong {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--dark);
 }
 
 .progress-bar {
     width: 100%;
-    height: 8px;
+    height: 6px;
     background: var(--light-gray);
     border-radius: 10px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     border-radius: 10px;
-    transition: width 0.3s;
 }
 
-/* Form Donasi */
+/* ===== FORM DONASI ===== */
 .donasi-form-section {
     background: white;
     border-radius: 30px;
     box-shadow: var(--shadow-lg);
-    padding: 3rem;
+    padding: 2.5rem;
     border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.donasi-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 .donasi-form-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .donasi-form-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--dark);
 }
 
 .donasi-form-header p {
     color: var(--gray);
-    font-size: 1.125rem;
+    font-size: 0.9rem;
 }
 
 .donasi-form-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 /* Nominal Donasi */
 .nominal-donasi {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .nominal-donasi label {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     font-weight: 600;
     color: var(--dark);
+    font-size: 0.85rem;
 }
 
 .nominal-options {
@@ -230,18 +307,23 @@
 }
 
 .nominal-btn {
-    padding: 1rem;
+    padding: 0.7rem;
     border: 2px solid var(--border);
     background: white;
-    border-radius: 16px;
+    border-radius: 12px;
     font-weight: 600;
     color: var(--gray);
     cursor: pointer;
-    transition: var(--transition);
-    font-size: 0.9375rem;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
 }
 
-.nominal-btn:hover,
+.nominal-btn:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
 .nominal-btn.active {
     background: var(--primary);
     color: white;
@@ -249,20 +331,63 @@
 }
 
 .nominal-custom {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+    position: relative;
 }
 
 .nominal-custom input {
     width: 100%;
-    padding: 1rem;
+    padding: 0.7rem 1rem 0.7rem 2rem;
     border: 2px solid var(--border);
-    border-radius: 16px;
-    font-size: 1rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
 }
 
-.nominal-custom input:focus {
+.nominal-custom span {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+    font-weight: 600;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 0;
 }
 
 /* Payment Methods */
@@ -277,11 +402,11 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 0.7rem;
     border: 2px solid var(--border);
-    border-radius: 16px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .payment-method:hover {
@@ -295,7 +420,7 @@
 }
 
 .payment-method span {
-    font-size: 0.9375rem;
+    font-size: 0.8rem;
     color: var(--dark);
 }
 
@@ -305,6 +430,8 @@
     align-items: center;
     gap: 0.75rem;
     cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--gray);
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -324,62 +451,75 @@
 /* Donasi Info */
 .donasi-info {
     background: var(--light-gray);
-    padding: 2rem;
-    border-radius: 30px;
+    padding: 1.5rem;
+    border-radius: 20px;
 }
 
 .donasi-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
     color: var(--dark);
 }
 
 .rekening-list {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .rekening-item {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    background: white;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.rekening-item:hover {
+    transform: translateX(3px);
+    box-shadow: var(--shadow);
 }
 
 .rekening-item i {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background: var(--primary-light);
-    color: var(--primary);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--primary);
 }
 
 .rekening-item h4 {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
     color: var(--dark);
 }
 
 .rekening-number {
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
 }
 
 .rekening-name {
-    font-size: 0.875rem;
+    font-size: 0.65rem;
     color: var(--gray);
 }
 
 .donasi-kepercayaan {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .donasi-kepercayaan h4 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
     color: var(--dark);
 }
 
@@ -390,22 +530,24 @@
 .donasi-kepercayaan li {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
     color: var(--gray);
-    font-size: 0.9375rem;
+    font-size: 0.75rem;
 }
 
 .donasi-kepercayaan li i {
-    color: var(--primary);
+    color: #10b981;
+    font-size: 0.7rem;
 }
 
 .donasi-contact p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--gray);
+    font-size: 0.8rem;
 }
 
-/* Wakaf Section */
+/* ===== WAKAF SECTION ===== */
 .wakaf-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -415,7 +557,7 @@
 
 .wakaf-text {
     color: var(--gray);
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin: 1.5rem 0 2rem;
 }
@@ -423,61 +565,74 @@
 .wakaf-features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
 .wakaf-feature {
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     background: var(--light-gray);
-    border-radius: 20px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.wakaf-feature:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: var(--shadow);
 }
 
 .wakaf-feature i {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .wakaf-feature h4 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
     color: var(--dark);
 }
 
 .wakaf-feature p {
-    font-size: 0.8125rem;
+    font-size: 0.65rem;
     color: var(--gray);
 }
 
 .wakaf-image img {
     width: 100%;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     border-radius: 30px;
     box-shadow: var(--shadow-lg);
+    transition: transform 0.5s ease;
 }
 
-/* Testimoni Donatur */
+.wakaf-image:hover img {
+    transform: scale(1.02);
+}
+
+/* ===== TESTIMONI DONATUR ===== */
 .testimoni-donatur-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .testimoni-donatur-card {
     background: white;
-    padding: 2rem;
-    border-radius: 30px;
+    padding: 1.5rem;
+    border-radius: 20px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .testimoni-donatur-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -485,25 +640,26 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .testimoni-donatur-header img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .testimoni-donatur-header h4 {
-    font-size: 1.125rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
     color: var(--dark);
 }
 
 .testimoni-donatur-header p {
     color: var(--primary);
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     font-weight: 500;
 }
 
@@ -511,27 +667,29 @@
     color: var(--gray);
     font-style: italic;
     line-height: 1.6;
+    font-size: 0.8rem;
 }
 
-/* FAQ Donasi */
+/* ===== FAQ DONASI ===== */
 .faq-donasi-grid {
     max-width: 800px;
-    margin: 3rem auto 0;
+    margin: 2rem auto 0;
 }
 
 .faq-donasi-item {
     background: white;
-    border-radius: 20px;
+    border-radius: 16px;
     margin-bottom: 1rem;
     border: 1px solid var(--border);
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .faq-donasi-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem 1.2rem;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -541,7 +699,7 @@
 }
 
 .faq-donasi-question h3 {
-    font-size: 1.125rem;
+    font-size: 0.95rem;
     color: var(--dark);
     font-weight: 600;
 }
@@ -557,37 +715,34 @@
 
 .faq-donasi-answer {
     max-height: 0;
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
     overflow: hidden;
     transition: all 0.3s;
 }
 
 .faq-donasi-item.active .faq-donasi-answer {
     max-height: 200px;
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1.2rem 1rem;
 }
 
 .faq-donasi-answer p {
     color: var(--gray);
     line-height: 1.6;
+    font-size: 0.8rem;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
     .program-donasi-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .program-donasi-card.featured {
-        transform: scale(1);
-    }
-    
-    .program-donasi-card.featured:hover {
-        transform: translateY(-10px);
-    }
 }
 
 @media (max-width: 992px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
     .why-donate-grid,
     .donasi-form-grid,
     .wakaf-section {
@@ -605,11 +760,33 @@
 }
 
 @media (max-width: 768px) {
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
     .page-header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .program-donasi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .donasi-form-section {
+        padding: 1.5rem;
+    }
+    
+    .donasi-form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .payment-methods {
         grid-template-columns: 1fr;
     }
     
@@ -617,19 +794,17 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .payment-methods {
+    .wakaf-features {
         grid-template-columns: 1fr;
     }
     
     .testimoni-donatur-grid {
         grid-template-columns: 1fr;
     }
-    
-    .wakaf-features {
-        grid-template-columns: 1fr;
-    }
-    
-    .donasi-form-section {
-        padding: 2rem 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 1.8rem;
     }
 }
