@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Struktur organisasi Yayasan Al-Hidayah Lembah Hijau periode 2025-2030. Dewan Pembina, Pengawas, dan Pengurus yayasan.">
     <title>Struktur Organisasi - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -10,6 +11,9 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/index.css">
@@ -19,12 +23,12 @@
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -42,7 +46,7 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -55,8 +59,8 @@
                                 Struktur <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="struktur-organisasi.html" class="active"><i class="fas fa-sitemap"></i> Struktur Organisasi</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="struktur-yayasan.html" class="active"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -74,15 +78,15 @@
                     </ul>
                 </nav>
 
-                <a href="admin/login.html" class="btn btn-primary btn-donate">
-                    <i class="fas fa-sign-in-alt"></i> Login
+                <a href="donation.html" class="btn btn-primary btn-donate">
+                    <i class="fas fa-hand-holding-heart"></i> Donasi
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>STRUKTUR ORGANISASI</h1>
             <p>YAYASAN AL-HIDAYAH LEMBAH HIJAU</p>
@@ -98,12 +102,12 @@
             <div class="org-chart">
                 
                 <!-- Level 1: Pembina & Pengawas -->
-                <div class="org-level level-top">
+                <div class="org-level level-top" data-aos="fade-up">
                     <div class="level-title">
                         <span class="level-badge">DEWAN PENGURUS</span>
                     </div>
                     <div class="level-grid two-col">
-                        <div class="org-node node-pembina">
+                        <div class="org-node node-pembina" data-aos="zoom-in" data-aos-delay="100">
                             <div class="node-icon"><i class="fas fa-shield-alt"></i></div>
                             <div class="node-label">PEMBINA YAYASAN</div>
                             <div class="node-names">
@@ -114,7 +118,7 @@
                                 <span>Rudi Yuliswanto</span>
                             </div>
                         </div>
-                        <div class="org-node node-pengawas">
+                        <div class="org-node node-pengawas" data-aos="zoom-in" data-aos-delay="200">
                             <div class="node-icon"><i class="fas fa-clipboard-list"></i></div>
                             <div class="node-label">PENGAWAS YAYASAN</div>
                             <div class="node-names">
@@ -128,17 +132,17 @@
                 </div>
 
                 <!-- Connector Line -->
-                <div class="connector-line">
+                <div class="connector-line" data-aos="fade-up" data-aos-delay="250">
                     <div class="line-vertical"></div>
                     <div class="line-horizontal"></div>
                 </div>
 
                 <!-- Level 2: Ketua Umum -->
-                <div class="org-level level-leader">
+                <div class="org-level level-leader" data-aos="fade-up" data-aos-delay="300">
                     <div class="level-title">
                         <span class="level-badge">PIMPINAN INTI</span>
                     </div>
-                    <div class="org-node node-ketua-umum">
+                    <div class="org-node node-ketua-umum" data-aos="zoom-in" data-aos-delay="350">
                         <div class="node-icon"><i class="fas fa-crown"></i></div>
                         <div class="node-label">KETUA UMUM</div>
                         <div class="node-name-large">Fathur Rahman</div>
@@ -147,7 +151,7 @@
                 </div>
 
                 <!-- Connector to 3 columns -->
-                <div class="connector-line to-three">
+                <div class="connector-line to-three" data-aos="fade-up" data-aos-delay="400">
                     <div class="line-vertical"></div>
                     <div class="line-horizontal-three">
                         <span class="line-branch"></span>
@@ -157,10 +161,10 @@
                 </div>
 
                 <!-- Level 3: Sekretaris, Bendahara, Direktur -->
-                <div class="org-level level-three">
+                <div class="org-level level-three" data-aos="fade-up" data-aos-delay="450">
                     <div class="level-grid three-col">
                         <!-- Sekretaris -->
-                        <div class="org-node node-sekretaris">
+                        <div class="org-node node-sekretaris" data-aos="zoom-in" data-aos-delay="500">
                             <div class="node-icon"><i class="fas fa-file-alt"></i></div>
                             <div class="node-label">SEKRETARIS</div>
                             <div class="node-name">Sekretaris Umum</div>
@@ -170,7 +174,7 @@
                         </div>
                         
                         <!-- Bendahara -->
-                        <div class="org-node node-bendahara">
+                        <div class="org-node node-bendahara" data-aos="zoom-in" data-aos-delay="550">
                             <div class="node-icon"><i class="fas fa-coins"></i></div>
                             <div class="node-label">BENDAHARA</div>
                             <div class="node-name">Bendahara Umum</div>
@@ -180,7 +184,7 @@
                         </div>
                         
                         <!-- Direktur -->
-                        <div class="org-node node-direktur">
+                        <div class="org-node node-direktur" data-aos="zoom-in" data-aos-delay="600">
                             <div class="node-icon"><i class="fas fa-building"></i></div>
                             <div class="node-label">DIREKTUR AHIS</div>
                             <div class="node-name-large">Ust. Hasan Ishak, MA</div>
@@ -190,7 +194,7 @@
                 </div>
 
                 <!-- Connector to bottom -->
-                <div class="connector-line to-bottom">
+                <div class="connector-line to-bottom" data-aos="fade-up" data-aos-delay="650">
                     <div class="line-vertical"></div>
                     <div class="line-horizontal-wide">
                         <span class="line-branch"></span>
@@ -201,12 +205,12 @@
                 </div>
 
                 <!-- Level 4: 5 Bidang Utama -->
-                <div class="org-level level-bidang">
+                <div class="org-level level-bidang" data-aos="fade-up" data-aos-delay="700">
                     <div class="level-title">
                         <span class="level-badge">BIDANG KERJA</span>
                     </div>
                     <div class="level-grid five-col">
-                        <div class="org-node node-bidang">
+                        <div class="org-node node-bidang" data-aos="flip-left" data-aos-delay="750">
                             <div class="node-icon"><i class="fas fa-chart-line"></i></div>
                             <div class="node-label">EKONOMI &<br>KESEJAHTERAAN</div>
                             <div class="node-name-bold">Iyos Edi</div>
@@ -220,7 +224,7 @@
                                 <span>Benny K. Haruni</span>
                             </div>
                         </div>
-                        <div class="org-node node-bidang">
+                        <div class="org-node node-bidang" data-aos="flip-left" data-aos-delay="800">
                             <div class="node-icon"><i class="fas fa-users"></i></div>
                             <div class="node-label">SOSIAL &<br>KEMASYARAKATAN</div>
                             <div class="node-name-bold">M Chawari</div>
@@ -238,7 +242,7 @@
                                 <span>Untung Supriatno</span>
                             </div>
                         </div>
-                        <div class="org-node node-bidang">
+                        <div class="org-node node-bidang" data-aos="flip-left" data-aos-delay="850">
                             <div class="node-icon"><i class="fas fa-hand-holding-heart"></i></div>
                             <div class="node-label">DAARUSH<br>SHODAQOH</div>
                             <div class="node-name-bold">Bambang Tejo L</div>
@@ -249,7 +253,7 @@
                                 <span>Trian BS H. Kholis</span>
                             </div>
                         </div>
-                        <div class="org-node node-bidang">
+                        <div class="org-node node-bidang" data-aos="flip-left" data-aos-delay="900">
                             <div class="node-icon"><i class="fas fa-hard-hat"></i></div>
                             <div class="node-label">INFRA<br>STRUKTUR</div>
                             <div class="node-name-bold">Gungun Trisna G.</div>
@@ -260,7 +264,7 @@
                                 <span>Ariopandji M.</span>
                             </div>
                         </div>
-                        <div class="org-node node-bidang">
+                        <div class="org-node node-bidang" data-aos="flip-left" data-aos-delay="950">
                             <div class="node-icon"><i class="fas fa-mosque"></i></div>
                             <div class="node-label">DKM<br>AL-HIDAYAH</div>
                             <div class="node-name-bold">Asep Saepudin</div>
@@ -285,7 +289,7 @@
             </div>
 
             <!-- Footer Date -->
-            <div class="struktur-footer">
+            <div class="struktur-footer" data-aos="fade-up">
                 <p><i class="fas fa-calendar-alt"></i> Cikarang, 15 Februari 2025</p>
                 <p class="stamp">Ditetapkan oleh:<br><strong>Pimpinan Yayasan Al-Hidayah</strong></p>
             </div>
@@ -325,7 +329,7 @@
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
                         <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
@@ -349,6 +353,15 @@
         </div>
     </footer>
     
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

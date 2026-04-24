@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Berita - Yayasan Al-Hidayah Lembah Hijau</title>
+    <meta name="description" content="Wisuda angkatan ke-26 Yayasan Al-Hidayah: 98% lulusan diterima di PTN favorit seperti UI, ITB, dan UGM.">
+    <title>Wisuda Angkatan ke-26 - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/index.css">
@@ -19,12 +23,12 @@
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -42,21 +46,21 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
                 <nav class="nav-menu" id="navMenu">
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Beranda</a></li>
-                        <li><a href="about.html" class="nav-link active">Tentang</a></li>
+                        <li><a href="about.html" class="nav-link">Tentang</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle">
                                 Struktur <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -68,7 +72,7 @@
                                 <li><a href="humanity.html"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
                             </ul>
                         </li>
-                        <li><a href="news.html" class="nav-link">Berita</a></li>
+                        <li><a href="news.html" class="nav-link active">Berita</a></li>
                         <li><a href="gallery.html" class="nav-link">Galeri</a></li>
                         <li><a href="contact.html" class="nav-link">Kontak</a></li>
                     </ul>
@@ -82,10 +86,10 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <div class="breadcrumb">
-                <a href="index.html">Beranda</a> / <a href="berita.html">Berita</a> / <span>Detail</span>
+                <a href="index.html">Beranda</a> / <a href="news.html">Berita</a> / <span>Detail</span>
             </div>
             <h1>Wisuda Angkatan ke-26: 98% Lulusan Diterima di PTN Favorit</h1>
             <div class="post-meta-header">
@@ -103,54 +107,54 @@
                 <!-- Main Content -->
                 <div class="berita-main">
                     <!-- Featured Image -->
-                    <div class="berita-featured-image">
+                    <div class="berita-featured-image" data-aos="fade-up">
                         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Wisuda">
                         <div class="image-caption">Suasana wisuda angkatan ke-26 di Balai Sidang Jakarta Convention Center</div>
                     </div>
 
                     <!-- Berita Content -->
-                    <div class="berita-content-wrapper">
+                    <div class="berita-content-wrapper" data-aos="fade-up">
                         <p class="berita-intro">
                             <strong>Jakarta, 15 Juni 2024</strong> - Yayasan Al-Hidayah Lembah Hijau menggelar wisuda angkatan ke-26 yang berlangsung meriah di Balai Sidang Jakarta Convention Center. Sebanyak 312 siswa SMA Islam Al-Hidayah diwisuda dengan prestasi gemilang, dan 306 di antaranya (98%) diterima di berbagai perguruan tinggi negeri (PTN) favorit di Indonesia.
                         </p>
 
                         <p>Acara wisuda tahun ini mengusung tema "Generasi Unggul, Berakhlak Mulia, Siap Membangun Negeri". Hadir dalam acara tersebut para orang tua siswa, dewan guru, pengurus yayasan, serta pejabat pendidikan dari Kementerian Pendidikan dan Kebudayaan.</p>
 
-                        <h2>Capaian Prestasi Membanggakan</h2>
+                        <h2 data-aos="fade-right">Capaian Prestasi Membanggakan</h2>
                         <p>Dari 312 siswa yang diwisuda, 98% berhasil diterima di PTN melalui berbagai jalur, termasuk SNBP (Seleksi Nasional Berdasarkan Prestasi), SNBT (Seleksi Nasional Berdasarkan Tes), dan jalur mandiri. Sebanyak 85 siswa diterima di Universitas Indonesia, 72 siswa di Institut Teknologi Bandung, 68 siswa di Universitas Gadjah Mada, dan sisanya tersebar di berbagai PTN favorit lainnya seperti IPB, ITS, UNPAD, dan UNDIP.</p>
 
-                        <blockquote>
+                        <blockquote data-aos="zoom-in">
                             "Prestasi ini adalah bukti bahwa pendidikan berbasis nilai-nilai Islam yang kami terapkan mampu menghasilkan lulusan yang tidak hanya unggul secara akademik, tetapi juga memiliki karakter yang kuat. Kami bangga dengan pencapaian para siswa."
                             <cite>— Dr. H. Ahmad Rifa'i, M.Pd., Ketua Yayasan Al-Hidayah Lembah Hijau</cite>
                         </blockquote>
 
-                        <h3>Program Unggulan yang Mendukung</h3>
+                        <h3 data-aos="fade-right">Program Unggulan yang Mendukung</h3>
                         <p>Keberhasilan ini tidak lepas dari berbagai program unggulan yang diterapkan di SMA Islam Al-Hidayah, antara lain:</p>
                         
-                        <ul>
+                        <ul data-aos="fade-up">
                             <li><strong>Kelas Riset dan Olimpiade:</strong> Siswa dibimbing secara intensif untuk mengikuti berbagai kompetisi sains, matematika, dan bahasa. Hasilnya, 45 medali berhasil diraih di tingkat nasional dan internasional.</li>
                             <li><strong>Program Bimbingan Intensif UTBK:</strong> Kerjasama dengan bimbingan belajar ternama untuk mempersiapkan siswa menghadapi UTBK-SNBT.</li>
                             <li><strong>Pengembangan Karakter dan Kepemimpinan:</strong> Melalui organisasi siswa, kegiatan kepemimpinan, dan program mentoring.</li>
                             <li><strong>Pembinaan Tahfidz Al-Qur'an:</strong> Dengan target hafalan minimal 5 juz untuk semua siswa.</li>
                         </ul>
 
-                        <div class="berita-image-grid">
+                        <div class="berita-image-grid" data-aos="fade-up">
                             <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Siswa berprestasi">
                             <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Penghargaan">
                         </div>
 
-                        <h3>Testimoni Alumni</h3>
+                        <h3 data-aos="fade-right">Testimoni Alumni</h3>
                         <p>Salah satu alumni berprestasi, Aisyah Putri Ramadhani, yang diterima di Fakultas Kedokteran Universitas Indonesia melalui jalur SNBP, berbagi cerita: "Selama di Al-Hidayah, saya tidak hanya mendapat ilmu akademik, tetapi juga dididik untuk disiplin, bertanggung jawab, dan memiliki akhlak yang baik. Guru-guru sangat mendukung dan selalu memotivasi kami untuk meraih mimpi setinggi-tingginya."</p>
 
                         <p>Sementara itu, Muhammad Fauzan, yang berhasil meraih medali emas di OSN Matematika dan diterima di ITB, menambahkan: "Program pembinaan olimpiade di Al-Hidayah sangat luar biasa. Kami dibimbing oleh guru-guru yang kompeten dan diberikan fasilitas yang memadai untuk belajar."</p>
 
-                        <h3>Rencana ke Depan</h3>
+                        <h3 data-aos="fade-right">Rencana ke Depan</h3>
                         <p>Ke depan, Yayasan Al-Hidayah berencana untuk mengembangkan program beasiswa bagi siswa berprestasi dari keluarga kurang mampu, serta memperluas kerjasama dengan berbagai perguruan tinggi dalam negeri maupun luar negeri.</p>
 
                         <p>"Kami ingin memastikan bahwa setiap anak Indonesia yang memiliki potensi dan semangat belajar, apapun latar belakang ekonominya, dapat mengakses pendidikan berkualitas di Al-Hidayah," tutup Dr. H. Ahmad Rifa'i.</p>
 
                         <!-- Tags -->
-                        <div class="berita-tags">
+                        <div class="berita-tags" data-aos="fade-up">
                             <span class="tag-label">Tags:</span>
                             <a href="#" class="tag">Wisuda</a>
                             <a href="#" class="tag">Pendidikan</a>
@@ -160,16 +164,16 @@
                         </div>
 
                         <!-- Share -->
-                        <div class="berita-share">
+                        <div class="berita-share" data-aos="fade-up">
                             <span>Bagikan:</span>
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="https://wa.me/?text=Wisuda%20Angkatan%20ke-26%3A%2098%25%20Lulusan%20Diterima%20di%20PTN%20Favorit" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?text=Wisuda%20Angkatan%20ke-26%3A%2098%25%20Lulusan%20Diterima%20di%20PTN%20Favorit" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://t.me/share/url?url=&text=Wisuda%20Angkatan%20ke-26%3A%2098%25%20Lulusan%20Diterima%20di%20PTN%20Favorit" target="_blank"><i class="fab fa-telegram"></i></a>
                         </div>
 
                         <!-- Navigation -->
-                        <div class="berita-navigation">
+                        <div class="berita-navigation" data-aos="fade-up">
                             <a href="#" class="nav-prev">
                                 <i class="fas fa-arrow-left"></i>
                                 <span>Berita Sebelumnya</span>
@@ -178,7 +182,7 @@
                             <a href="#" class="nav-next">
                                 <span>Berita Selanjutnya</span>
                                 <i class="fas fa-arrow-right"></i>
-                                <small>3 Guru Raih Penghargaan</small>
+                                <small>3 Guru Raih Penghargaan Inspiratif</small>
                             </a>
                         </div>
                     </div>
@@ -187,7 +191,7 @@
                 <!-- Sidebar -->
                 <div class="berita-sidebar">
                     <!-- Berita Terbaru -->
-                    <div class="sidebar-widget">
+                    <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
                         <h3 class="widget-title">Berita Terbaru</h3>
                         <div class="recent-news">
                             <a href="#" class="recent-item">
@@ -222,7 +226,7 @@
                     </div>
 
                     <!-- Kategori -->
-                    <div class="sidebar-widget">
+                    <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="150">
                         <h3 class="widget-title">Kategori</h3>
                         <ul class="category-list">
                             <li><a href="#">Pendidikan <span>(12)</span></a></li>
@@ -234,7 +238,7 @@
                     </div>
 
                     <!-- Tags Cloud -->
-                    <div class="sidebar-widget">
+                    <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
                         <h3 class="widget-title">Tags</h3>
                         <div class="tags-cloud">
                             <a href="#">Wisuda</a>
@@ -249,7 +253,7 @@
                     </div>
 
                     <!-- CTA Donasi -->
-                    <div class="sidebar-widget cta-widget">
+                    <div class="sidebar-widget cta-widget" data-aos="fade-left" data-aos-delay="250">
                         <h3>Dukung Program Kami</h3>
                         <p>Donasi Anda membantu ribuan anak meraih mimpi dan masyarakat yang membutuhkan.</p>
                         <a href="donation.html" class="btn btn-primary btn-block">Donasi Sekarang</a>
@@ -262,13 +266,13 @@
     <!-- Berita Terkait -->
     <section class="section section-light">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Berita Terkait</h2>
                 <p class="section-description">Berita lain yang mungkin menarik untuk Anda</p>
             </div>
 
             <div class="terkait-grid">
-                <div class="news-card">
+                <div class="news-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="news-image">
                         <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="OSN">
                         <span class="news-category">Prestasi</span>
@@ -279,7 +283,7 @@
                         <a href="#" class="news-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="news-card">
+                <div class="news-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="news-image">
                         <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Guru">
                         <span class="news-category">Pendidikan</span>
@@ -290,7 +294,7 @@
                         <a href="#" class="news-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="news-card">
+                <div class="news-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="news-image">
                         <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan">
                         <span class="news-category">Kemanusiaan</span>
@@ -311,7 +315,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <i class="fas fa-kaaba"></i>
+                        <img src="photo/logoYAYASAN.png" alt="Logo Yayasan Al-Hidayah">
                         <div>
                             <h4>YAYASAN AL-HIDAYAH</h4>
                             <p>Lembah Hijau</p>
@@ -337,7 +341,7 @@
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
                         <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
@@ -361,6 +365,15 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeri foto kegiatan pendidikan dan kemanusiaan Yayasan Al-Hidayah Lembah Hijau.">
     <title>Galeri - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -10,6 +11,9 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/index.css">
@@ -19,12 +23,12 @@
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -42,7 +46,7 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -56,7 +60,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -82,7 +86,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>Galeri Kegiatan</h1>
             <p>Dokumentasi momen-momen berharga kegiatan pendidikan dan kemanusiaan Yayasan Al-Hidayah</p>
@@ -94,7 +98,7 @@
         <div class="container">
             
             <!-- Filter & Search Bar -->
-            <div class="gallery-filter-section">
+            <div class="gallery-filter-section" data-aos="fade-up">
                 <div class="gallery-filter-wrapper">
                     <div class="gallery-filter">
                         <button class="gallery-filter-btn active" data-filter="all">
@@ -139,7 +143,7 @@
             <div class="gallery-grid" id="galleryGrid">
                 
                 <!-- Pendidikan - Kegiatan Belajar Mengajar -->
-                <div class="gallery-card" data-category="pendidikan">
+                <div class="gallery-card" data-category="pendidikan" data-aos="zoom-in" data-aos-delay="100">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kegiatan Belajar">
                         <div class="gallery-image-overlay"></div>
@@ -165,7 +169,7 @@
                 </div>
 
                 <!-- Kemanusiaan - Santunan Yatim -->
-                <div class="gallery-card" data-category="kemanusiaan">
+                <div class="gallery-card" data-category="kemanusiaan" data-aos="zoom-in" data-aos-delay="200">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Santunan Yatim">
                         <div class="gallery-image-overlay"></div>
@@ -191,7 +195,7 @@
                 </div>
 
                 <!-- Kemanusiaan - Layanan Kesehatan -->
-                <div class="gallery-card" data-category="kemanusiaan">
+                <div class="gallery-card" data-category="kemanusiaan" data-aos="zoom-in" data-aos-delay="300">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1584515933487-77982462f1f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Layanan Kesehatan">
                         <div class="gallery-image-overlay"></div>
@@ -217,11 +221,11 @@
                 </div>
 
                 <!-- Kegiatan - Olahraga -->
-                <div class="gallery-card" data-category="kegiatan">
+                <div class="gallery-card" data-category="kegiatan" data-aos="zoom-in" data-aos-delay="400">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f8f4be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Olahraga">
                         <div class="gallery-image-overlay"></div>
-                        <span class="gallery-category-badge olahraga">
+                        <span class="gallery-category-badge kegiatan">
                             <i class="fas fa-futbol"></i> Olahraga
                         </span>
                         <span class="gallery-photo-badge">
@@ -243,7 +247,7 @@
                 </div>
 
                 <!-- Fasilitas - Perpustakaan -->
-                <div class="gallery-card" data-category="fasilitas">
+                <div class="gallery-card" data-category="fasilitas" data-aos="zoom-in" data-aos-delay="500">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Perpustakaan">
                         <div class="gallery-image-overlay"></div>
@@ -255,7 +259,7 @@
                         </span>
                     </div>
                     <div class="gallery-card-content">
-                        <h3 class="gallery-card-title">Perpustakaan</h3>
+                        <h3 class="gallery-card-title">Perpustakaan Digital</h3>
                         <p class="gallery-card-desc">Koleksi buku lengkap dan ruang baca yang nyaman.</p>
                         <div class="gallery-card-footer">
                             <span class="gallery-photo-count">
@@ -269,7 +273,7 @@
                 </div>
 
                 <!-- Pendidikan - Praktikum Sains -->
-                <div class="gallery-card" data-category="pendidikan">
+                <div class="gallery-card" data-category="pendidikan" data-aos="zoom-in" data-aos-delay="600">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Praktikum Sains">
                         <div class="gallery-image-overlay"></div>
@@ -295,7 +299,7 @@
                 </div>
 
                 <!-- Kemanusiaan - Bantuan Bencana -->
-                <div class="gallery-card" data-category="kemanusiaan">
+                <div class="gallery-card" data-category="kemanusiaan" data-aos="zoom-in" data-aos-delay="700">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan Bencana">
                         <div class="gallery-image-overlay"></div>
@@ -320,86 +324,8 @@
                     </div>
                 </div>
 
-                <!-- Sosial - Kebersamaan -->
-                <div class="gallery-card" data-category="sosial">
-                    <div class="gallery-card-image">
-                        <img src="https://images.unsplash.com/photo-1488521787991-aa207e0c37dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kebersamaan">
-                        <div class="gallery-image-overlay"></div>
-                        <span class="gallery-category-badge sosial">
-                            <i class="fas fa-users"></i> Sosial
-                        </span>
-                        <span class="gallery-photo-badge">
-                            <i class="fas fa-images"></i> 14
-                        </span>
-                    </div>
-                    <div class="gallery-card-content">
-                        <h3 class="gallery-card-title">Kebersamaan Anak-anak</h3>
-                        <p class="gallery-card-desc">Kegiatan outbond dan rekreasi bersama anak-anak yatim.</p>
-                        <div class="gallery-card-footer">
-                            <span class="gallery-photo-count">
-                                <i class="far fa-calendar-alt"></i> 10 Feb 2024
-                            </span>
-                            <button class="gallery-view-btn">
-                                <i class="fas fa-search-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pendidikan - Wisuda -->
-                <div class="gallery-card" data-category="pendidikan">
-                    <div class="gallery-card-image">
-                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wisuda">
-                        <div class="gallery-image-overlay"></div>
-                        <span class="gallery-category-badge pendidikan">
-                            <i class="fas fa-graduation-cap"></i> Pendidikan
-                        </span>
-                        <span class="gallery-photo-badge">
-                            <i class="fas fa-images"></i> 25
-                        </span>
-                    </div>
-                    <div class="gallery-card-content">
-                        <h3 class="gallery-card-title">Wisuda Tahunan</h3>
-                        <p class="gallery-card-desc">Momen haru kelulusan siswa-siswi berprestasi.</p>
-                        <div class="gallery-card-footer">
-                            <span class="gallery-photo-count">
-                                <i class="far fa-calendar-alt"></i> 5 Feb 2024
-                            </span>
-                            <button class="gallery-view-btn">
-                                <i class="fas fa-search-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kegiatan - Pesantren Kilat -->
-                <div class="gallery-card" data-category="kegiatan">
-                    <div class="gallery-card-image">
-                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pesantren Kilat">
-                        <div class="gallery-image-overlay"></div>
-                        <span class="gallery-category-badge kegiatan">
-                            <i class="fas fa-mosque"></i> Kegiatan
-                        </span>
-                        <span class="gallery-photo-badge">
-                            <i class="fas fa-images"></i> 18
-                        </span>
-                    </div>
-                    <div class="gallery-card-content">
-                        <h3 class="gallery-card-title">Pesantren Kilat Ramadhan</h3>
-                        <p class="gallery-card-desc">Kegiatan keagamaan dan pembinaan akhlak selama Ramadhan.</p>
-                        <div class="gallery-card-footer">
-                            <span class="gallery-photo-count">
-                                <i class="far fa-calendar-alt"></i> 1 Feb 2024
-                            </span>
-                            <button class="gallery-view-btn">
-                                <i class="fas fa-search-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Fasilitas - Masjid -->
-                <div class="gallery-card" data-category="fasilitas">
+                <div class="gallery-card" data-category="fasilitas" data-aos="zoom-in" data-aos-delay="800">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Masjid">
                         <div class="gallery-image-overlay"></div>
@@ -425,7 +351,7 @@
                 </div>
 
                 <!-- Fasilitas - Lab Komputer -->
-                <div class="gallery-card" data-category="fasilitas">
+                <div class="gallery-card" data-category="fasilitas" data-aos="zoom-in" data-aos-delay="900">
                     <div class="gallery-card-image">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lab Komputer">
                         <div class="gallery-image-overlay"></div>
@@ -499,7 +425,7 @@
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
                         <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
@@ -533,6 +459,10 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
     <script src="js/script.js"></script>
     
     <!-- Gallery Filter & Lightbox Script -->
@@ -591,22 +521,26 @@
                 });
                 
                 // Update UI
-                visibleCountSpan.textContent = visibleCount;
+                if (visibleCountSpan) visibleCountSpan.textContent = visibleCount;
                 
                 // Show/hide reset button
-                if (currentFilter !== 'all' || searchTerm !== '') {
-                    resetFiltersBtn.style.display = 'flex';
-                } else {
-                    resetFiltersBtn.style.display = 'none';
+                if (resetFiltersBtn) {
+                    if (currentFilter !== 'all' || searchTerm !== '') {
+                        resetFiltersBtn.style.display = 'flex';
+                    } else {
+                        resetFiltersBtn.style.display = 'none';
+                    }
                 }
                 
                 // Handle no results
-                if (visibleCount === 0) {
-                    galleryGrid.style.display = 'none';
-                    noResultsEl.style.display = 'block';
-                } else {
-                    galleryGrid.style.display = 'grid';
-                    noResultsEl.style.display = 'none';
+                if (galleryGrid && noResultsEl) {
+                    if (visibleCount === 0) {
+                        galleryGrid.style.display = 'none';
+                        noResultsEl.style.display = 'block';
+                    } else {
+                        galleryGrid.style.display = 'grid';
+                        noResultsEl.style.display = 'none';
+                    }
                 }
             }
             
@@ -614,8 +548,8 @@
             function resetFilters() {
                 currentFilter = 'all';
                 searchTerm = '';
-                searchInput.value = '';
-                searchClearBtn.style.display = 'none';
+                if (searchInput) searchInput.value = '';
+                if (searchClearBtn) searchClearBtn.style.display = 'none';
                 
                 filterBtns.forEach(btn => {
                     btn.classList.remove('active');
@@ -646,10 +580,12 @@
                     clearTimeout(debounceTimer);
                     
                     const value = this.value.trim();
-                    if (value) {
-                        searchClearBtn.style.display = 'flex';
-                    } else {
-                        searchClearBtn.style.display = 'none';
+                    if (searchClearBtn) {
+                        if (value) {
+                            searchClearBtn.style.display = 'flex';
+                        } else {
+                            searchClearBtn.style.display = 'none';
+                        }
                     }
                     
                     debounceTimer = setTimeout(() => {
@@ -663,7 +599,7 @@
                     if (e.key === 'Escape') {
                         this.value = '';
                         searchTerm = '';
-                        searchClearBtn.style.display = 'none';
+                        if (searchClearBtn) searchClearBtn.style.display = 'none';
                         filterItems();
                         this.blur();
                     }
@@ -673,11 +609,13 @@
             // Clear search
             if (searchClearBtn) {
                 searchClearBtn.addEventListener('click', function() {
-                    searchInput.value = '';
-                    searchTerm = '';
-                    this.style.display = 'none';
-                    filterItems();
-                    searchInput.focus();
+                    if (searchInput) {
+                        searchInput.value = '';
+                        searchTerm = '';
+                        this.style.display = 'none';
+                        filterItems();
+                        searchInput.focus();
+                    }
                 });
             }
             
@@ -726,23 +664,25 @@
                     });
                 }
                 
-                img.addEventListener('click', () => {
-                    currentIndex = index;
-                    openLightbox(currentIndex);
-                });
+                if (img) {
+                    img.addEventListener('click', () => {
+                        currentIndex = index;
+                        openLightbox(currentIndex);
+                    });
+                }
             });
 
             function openLightbox(index) {
                 if (!galleryImages.length) return;
                 const img = galleryImages[index];
-                lightboxImg.src = img.src;
-                lightboxCaption.innerHTML = `<strong>${img.title}</strong><br><small>${img.desc}</small>`;
-                lightboxEl.classList.add('show');
+                if (lightboxImg) lightboxImg.src = img.src;
+                if (lightboxCaption) lightboxCaption.innerHTML = `<strong>${img.title}</strong><br><small>${img.desc}</small>`;
+                if (lightboxEl) lightboxEl.classList.add('show');
                 document.body.style.overflow = 'hidden';
             }
 
             function closeLightbox() {
-                lightboxEl.classList.remove('show');
+                if (lightboxEl) lightboxEl.classList.remove('show');
                 document.body.style.overflow = '';
             }
 
@@ -779,12 +719,14 @@
             document.addEventListener('keydown', (e) => {
                 if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                     e.preventDefault();
-                    searchInput.focus();
-                    searchInput.style.transition = 'all 0.3s ease';
-                    searchInput.style.boxShadow = '0 0 0 4px var(--primary-light)';
-                    setTimeout(() => {
-                        searchInput.style.boxShadow = '';
-                    }, 500);
+                    if (searchInput) {
+                        searchInput.focus();
+                        searchInput.style.transition = 'all 0.3s ease';
+                        searchInput.style.boxShadow = '0 0 0 4px var(--primary-light)';
+                        setTimeout(() => {
+                            if (searchInput) searchInput.style.boxShadow = '';
+                        }, 500);
+                    }
                 }
             });
         });

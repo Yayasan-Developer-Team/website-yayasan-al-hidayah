@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yayasan Al-Hidayah Lembah Hijau membina pendidikan TK, SD, SMP, dan SMA Islam Al-Hidayah. Informasi lengkap di website resmi sekolah.">
+    <meta name="description" content="Yayasan Al-Hidayah Lembah Hijau membina TK, SD, SMP, dan SMA Islam Al-Hidayah. Program beasiswa, pelatihan guru, dan pengembangan sarana pendidikan.">
     <title>Program Pendidikan - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -12,10 +12,13 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Global CSS (Root, Header, Footer) -->
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Global CSS (desain utama website) -->
     <link rel="stylesheet" href="css/index.css">
     
-    <!-- Page Specific CSS -->
+    <!-- Halaman Pendidikan CSS (hanya tambahan spesifik) -->
     <link rel="stylesheet" href="css/education.css">
 </head>
 <body>
@@ -29,7 +32,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Header (Sesuaikan dengan index.html) -->
+    <!-- Header (salin persis dari index.html) -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -82,153 +85,192 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Education -->
     <section class="education-hero">
         <div class="container">
-            <h1>Program Pendidikan</h1>
-            <p>Membina TK, SD, SMP & SMA Islam Al-Hidayah</p>
+            <div class="education-hero-content" data-aos="fade-up">
+                <div class="education-hero-badge">
+                    <i class="fas fa-graduation-cap"></i> Program Pendidikan
+                </div>
+                <h1>Membangun Generasi <span class="text-gradient">Cerdas & Berakhlak Mulia</span></h1>
+                <p>Yayasan Al-Hidayah Lembah Hijau membina TK, SD, SMP, dan SMA Islam Al-Hidayah dengan standar mutu terbaik dan nilai-nilai Islam yang kuat.</p>
+                <div class="education-hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">4</span>
+                        <span class="hero-stat-label">Jenjang</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">1.200+</span>
+                        <span class="hero-stat-label">Siswa</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">120+</span>
+                        <span class="hero-stat-label">Guru</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">98%</span>
+                        <span class="hero-stat-label">Lulusan PTN</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Peran Yayasan Section -->
-    <section class="role-section">
+    <section class="section">
         <div class="container">
-            <div class="role-badge">
-                <i class="fas fa-landmark"></i> Peran Yayasan
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tagline">Peran Yayasan</span>
+                <h2 class="section-title">Sebagai <span class="text-gradient">Pembina & Pengawas</span></h2>
+                <p class="section-description">Memastikan setiap unit pendidikan berjalan dengan standar mutu tertinggi</p>
             </div>
-            <h2>Sebagai Pembina & Pengawas</h2>
-            <p class="role-description">
-                Yayasan Al-Hidayah Lembah Hijau berperan sebagai <strong>pembina dan pengawas</strong> 
-                unit-unit pendidikan di bawah naungan kami. Kami memastikan setiap jenjang pendidikan 
-                berjalan dengan standar mutu terbaik dan nilai-nilai Islam yang kuat.
-            </p>
-            <div class="role-stats">
-                <div class="stat-item">
-                    <span class="stat-number">4</span>
-                    <span class="stat-label">Jenjang Pendidikan</span>
+            <div class="role-grid">
+                <div class="role-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="role-card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Standarisasi Mutu</h3>
+                    <p>Memastikan seluruh unit pendidikan memenuhi akreditasi A dan standar nasional pendidikan.</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">1.200+</span>
-                    <span class="stat-label">Siswa Aktif</span>
+                <div class="role-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="role-card-icon"><i class="fas fa-book-quran"></i></div>
+                    <h3>Integrasi Nilai Islam</h3>
+                    <p>Mengawal penerapan kurikulum diniyah, tahfidz, dan pembentukan karakter islami.</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">120+</span>
-                    <span class="stat-label">Tenaga Pendidik</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Lulusan PTN</span>
+                <div class="role-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="role-card-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3>Pengawasan & Evaluasi</h3>
+                    <p>Monitoring berkala terhadap proses belajar mengajar dan pengembangan tenaga pendidik.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Redirect Info Section -->
-    <section class="redirect-section">
+    <!-- Redirect ke Website Sekolah -->
+    <section class="section section-light">
         <div class="container">
-            <div class="redirect-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Informasi Lengkap tentang Penerimaan, Biaya, Kurikulum & Kegiatan Sekolah</h3>
-                <p>Seluruh informasi detail mengenai TK, SD, SMP, dan SMA Islam Al-Hidayah tersedia di website resmi sekolah.</p>
-                <a href="https://ahis.sch.id/" class="btn-school" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i> Kunjungi Website Resmi Sekolah
-                    <span>ahis.sch.id</span>
+            <div class="redirect-card" data-aos="zoom-in">
+                <i class="fas fa-school"></i>
+                <h3>Informasi Lengkap Unit Pendidikan</h3>
+                <p>Detail tentang PPDB, biaya pendidikan, kurikulum, fasilitas, dan kegiatan ekstrakurikuler TK, SD, SMP, & SMA Islam Al-Hidayah tersedia di website resmi sekolah.</p>
+                <a href="https://ahis.sch.id/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Kunjungi Website Resmi Sekolah <i class="fas fa-arrow-right"></i>
                 </a>
+                <div class="redirect-domain">ahis.sch.id</div>
             </div>
         </div>
     </section>
 
     <!-- Program Yayasan untuk Pendidikan -->
-    <section class="program-section">
+    <section class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tagline">PROGRAM YAYASAN</span>
-                <h2 class="section-title">Dukungan Pengembangan Pendidikan</h2>
-                <p class="section-description">
-                    Ini adalah program yang dijalankan langsung oleh Yayasan Al-Hidayah untuk mendukung mutu pendidikan.
-                </p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tagline">Program Strategis</span>
+                <h2 class="section-title">Dukungan <span class="text-gradient">Pengembangan Pendidikan</span></h2>
+                <p class="section-description">Program yang dijalankan langsung oleh Yayasan Al-Hidayah untuk meningkatkan mutu pendidikan</p>
             </div>
-
             <div class="program-grid">
-                <div class="program-card">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-medal"></i>
                     <h3>Beasiswa Prestasi & Dhuafa</h3>
-                    <p>Beasiswa penuh untuk siswa berprestasi dari keluarga kurang mampu.</p>
-                    <div class="program-stats">100+ penerima aktif</div>
+                    <p>Beasiswa penuh untuk siswa berprestasi dari keluarga kurang mampu serta beasiswa tahfidz.</p>
+                    <div class="program-meta"><i class="fas fa-users"></i> 100+ penerima aktif</div>
                 </div>
-                <div class="program-card">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-chalkboard-user"></i>
                     <h3>Pelatihan & Sertifikasi Guru</h3>
-                    <p>Program peningkatan kompetensi tenaga pendidik secara berkala.</p>
-                    <div class="program-stats">120+ guru tersertifikasi</div>
+                    <p>Program peningkatan kompetensi tenaga pendidik melalui workshop, seminar, dan studi banding.</p>
+                    <div class="program-meta"><i class="fas fa-certificate"></i> 120+ guru tersertifikasi</div>
                 </div>
-                <div class="program-card">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-laptop-code"></i>
                     <h3>Bantuan Sarana Prasarana</h3>
-                    <p>Pengadaan lab, perpustakaan digital, dan renovasi ruang kelas.</p>
-                    <div class="program-stats">6 laboratorium modern</div>
+                    <p>Pengadaan laboratorium, perpustakaan digital, smart classroom, dan renovasi ruang kelas.</p>
+                    <div class="program-meta"><i class="fas fa-microscope"></i> 6 laboratorium modern</div>
                 </div>
-                <div class="program-card">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="400">
                     <i class="fas fa-hand-holding-usd"></i>
                     <h3>Bantuan Operasional Sekolah</h3>
-                    <p>Subsidi biaya operasional untuk meringankan beban orang tua.</p>
-                    <div class="program-stats">Rp 2,5M+ (2024)</div>
+                    <p>Subsidi biaya operasional untuk meringankan beban orang tua dan meningkatkan layanan.</p>
+                    <div class="program-meta"><i class="fas fa-chart-simple"></i> Rp 2,5 M+ (2024)</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Prestasi Section -->
-    <section class="achievement-section">
+    <section class="section section-light">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tagline">PRESTASI</span>
-                <h2 class="section-title">Capaian Lembaga Binaan</h2>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tagline">Prestasi & Capaian</span>
+                <h2 class="section-title">Penghargaan <span class="text-gradient">Lembaga Binaan</span></h2>
+                <p class="section-description">Kerja keras kita bersama telah membuahkan hasil yang membanggakan</p>
             </div>
             <div class="achievement-grid">
-                <div class="achievement-card">
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="100">
                     <i class="fas fa-trophy"></i>
                     <h4>Akreditasi A</h4>
-                    <p>Semua jenjang terakreditasi A dari BAN-S/M</p>
+                    <p>Seluruh jenjang pendidikan terakreditasi A dari BAN-S/M</p>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-award"></i>
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fas fa-leaf"></i>
                     <h4>Sekolah Adiwiyata</h4>
                     <p>Sekolah berwawasan lingkungan tingkat provinsi</p>
                 </div>
-                <div class="achievement-card">
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="300">
                     <i class="fas fa-medal"></i>
                     <h4>30+ Medali OSN</h4>
                     <p>Olimpiade Sains Nasional tingkat provinsi & nasional</p>
                 </div>
-                <div class="achievement-card">
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="400">
                     <i class="fas fa-quran"></i>
                     <h4>Program Tahfidz</h4>
-                    <p>Santri hafidz 30 juz setiap tahun</p>
+                    <p>Santri hafidz 30 juz setiap tahunnya</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- Trust Badges (sertifikasi) -->
+    <section class="section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ingin Mendaftar atau Mendukung Pendidikan?</h2>
-                <p>Pendaftaran siswa baru melalui website sekolah. Donasi untuk beasiswa melalui yayasan.</p>
-                <div class="cta-buttons">
-                    <a href="https://ahis.sch.id/ppdb" class="btn btn-primary" target="_blank">
+            <div class="trust-badges">
+                <div class="trust-item"><i class="fas fa-check-circle"></i> Terdaftar di Kemenkumham</div>
+                <div class="trust-item"><i class="fas fa-check-circle"></i> Terakreditasi A</div>
+                <div class="trust-item"><i class="fas fa-check-circle"></i> Terdaftar di BAZNAS</div>
+                <div class="trust-item"><i class="fas fa-check-circle"></i> Laporan Transparan</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-premium">
+        <div class="container">
+            <div class="cta-premium-content" data-aos="fade-up">
+                <div class="cta-premium-badge">
+                    <i class="fas fa-heart"></i>
+                    <span>Bersama Wujudkan Pendidikan Berkualitas</span>
+                </div>
+                <h2 class="cta-premium-title">Daftarkan Putra-Putri Anda <span class="text-gradient-light">atau Dukung Program Beasiswa</span></h2>
+                <p class="cta-premium-description">Pendaftaran siswa baru melalui website sekolah. Donasi untuk beasiswa melalui yayasan.</p>
+                <div class="cta-premium-buttons">
+                    <a href="https://ahis.sch.id/ppdb" class="cta-btn-primary" target="_blank">
                         <i class="fas fa-user-graduate"></i> Pendaftaran Siswa Baru
+                        <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="donation.html" class="btn btn-outline">
+                    <a href="donation.html" class="cta-btn-secondary">
                         <i class="fas fa-hand-holding-heart"></i> Donasi Pendidikan
+                        <i class="fas fa-arrow-right"></i>
                     </a>
+                </div>
+                <div class="cta-premium-trust">
+                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> Transparan & Terpercaya</div>
+                    <div class="trust-badge"><i class="fas fa-receipt"></i> Bukti Donasi Resmi</div>
+                    <div class="trust-badge"><i class="fas fa-chart-line"></i> Laporan Berkala</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Sesuaikan dengan index.html) -->
+    <!-- Footer (salin persis dari index.html) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -284,6 +326,10 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

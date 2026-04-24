@@ -1,10 +1,16 @@
+/* ========================================
+   EDUCATION PAGE - Yayasan Al-Hidayah
+   Mengikuti desain utama dari index.css
+   ======================================== */
 
+/* ----------------------------------------
+   EDUCATION HERO SECTION
+---------------------------------------- */
 .education-hero {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     padding: 8rem 0 5rem;
-    color: white;
-    text-align: center;
     margin-top: 80px;
+    text-align: center;
     position: relative;
     overflow: hidden;
 }
@@ -12,11 +18,11 @@
 .education-hero::before {
     content: '';
     position: absolute;
-    top: -40%;
-    right: -5%;
+    top: -30%;
+    right: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
     border-radius: 50%;
     animation: floatHero 20s ease-in-out infinite;
 }
@@ -25,10 +31,10 @@
     content: '';
     position: absolute;
     bottom: -30%;
-    left: -5%;
+    left: -10%;
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
     border-radius: 50%;
     animation: floatHero 25s ease-in-out infinite reverse;
 }
@@ -38,124 +44,163 @@
     50% { transform: translate(-20px, -20px); }
 }
 
-.education-hero .container {
+.education-hero-content {
     position: relative;
     z-index: 2;
+}
+
+.education-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .education-hero h1 {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    letter-spacing: -0.02em;
+    color: white;
+    line-height: 1.2;
 }
 
-.education-hero h1::after {
-    content: '';
-    display: block;
-    width: 70px;
-    height: 4px;
-    background: #D4AF37;
-    margin: 1rem auto 0;
-    border-radius: 2px;
+.education-hero h1 .text-gradient {
+    background: linear-gradient(135deg, #D4AF37, #F5E6A3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .education-hero p {
-    font-size: 1.2rem;
-    opacity: 0.92;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: white;
 }
 
-/* ----------------------------------------
-   ROLE SECTION (Peran Yayasan)
----------------------------------------- */
-.role-section {
-    padding: 5rem 0;
-    background: white;
-}
-
-.role-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(53, 121, 64, 0.1);
-    color: var(--primary);
-    padding: 0.5rem 1.2rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-.role-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 1.2rem;
-    line-height: 1.3;
-}
-
-.role-description {
-    max-width: 700px;
-    color: var(--gray);
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    font-size: 1rem;
-}
-
-.role-stats {
+.education-hero-stats {
     display: flex;
+    justify-content: center;
+    gap: 3rem;
     flex-wrap: wrap;
-    gap: 2.5rem;
 }
 
-.stat-item {
-    text-align: left;
-    border-left: 3px solid var(--primary);
-    padding-left: 1.2rem;
+.hero-stat {
+    text-align: center;
 }
 
-.stat-number {
+.hero-stat-number {
     display: block;
     font-size: 2rem;
     font-weight: 800;
-    color: var(--primary);
-    line-height: 1.2;
-    margin-bottom: 0.25rem;
+    color: #D4AF37;
 }
 
-.stat-label {
-    font-size: 0.85rem;
-    color: var(--gray);
-    font-weight: 500;
+.hero-stat-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    color: white;
 }
 
 /* ----------------------------------------
-   REDIRECT SECTION
+   ROLE GRID (mengikuti gaya index.css)
 ---------------------------------------- */
-.redirect-section {
-    padding: 2rem 0 4rem;
-    background: var(--light-gray);
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
+.role-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 24px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.role-card-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    transition: var(--transition);
+}
+
+.role-card:hover .role-card-icon {
+    background: var(--primary);
+}
+
+.role-card-icon i {
+    font-size: 2rem;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.role-card:hover .role-card-icon i {
+    color: white;
+}
+
+.role-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+}
+
+.role-card p {
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* ----------------------------------------
+   REDIRECT CARD
+---------------------------------------- */
 .redirect-card {
-    background: white;
+    background: var(--white);
     border-radius: 28px;
-    padding: 3rem 2rem;
+    padding: 3rem;
     text-align: center;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.redirect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .redirect-card i {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--primary);
     margin-bottom: 1rem;
 }
 
 .redirect-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--dark);
     margin-bottom: 1rem;
@@ -163,66 +208,42 @@
 
 .redirect-card p {
     color: var(--gray);
-    max-width: 500px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
+    max-width: 550px;
+    margin: 0 auto 1.8rem;
+    line-height: 1.7;
 }
 
-.btn-school {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    background: var(--primary);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.btn-school:hover {
-    background: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-}
-
-.btn-school span {
+.redirect-domain {
     font-size: 0.7rem;
-    opacity: 0.8;
-    font-weight: normal;
+    color: var(--gray);
+    margin-top: 1rem;
+    opacity: 0.7;
 }
 
 /* ----------------------------------------
-   PROGRAM SECTION (Yayasan's Programs)
+   PROGRAM GRID
 ---------------------------------------- */
-.program-section {
-    padding: 5rem 0;
-    background: white;
-}
-
 .program-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .program-card {
     background: var(--light-gray);
-    padding: 2rem 1.5rem;
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
+    padding: 2rem;
+    border-radius: 24px;
+    transition: var(--transition);
     border: 1px solid var(--border);
+    text-align: center;
 }
 
 .program-card:hover {
-    transform: translateY(-6px);
-    background: white;
-    box-shadow: var(--shadow);
-    border-color: transparent;
+    transform: translateY(-8px);
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
 }
 
 .program-card i {
@@ -242,43 +263,43 @@
     color: var(--gray);
     line-height: 1.6;
     font-size: 0.85rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
-.program-stats {
+.program-meta {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     padding-top: 0.8rem;
     border-top: 1px dashed var(--border);
 }
 
 /* ----------------------------------------
-   ACHIEVEMENT SECTION
+   ACHIEVEMENT GRID
 ---------------------------------------- */
-.achievement-section {
-    padding: 5rem 0;
-    background: var(--light-gray);
-}
-
 .achievement-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.8rem;
     margin-top: 2rem;
 }
 
 .achievement-card {
-    background: white;
-    padding: 2rem 1rem;
+    background: var(--white);
+    padding: 2rem 1.5rem;
     border-radius: 20px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .achievement-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -302,89 +323,162 @@
 }
 
 /* ----------------------------------------
-   CTA SECTION
+   TRUST BADGES
 ---------------------------------------- */
-.cta-section {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-    color: white;
-    text-align: center;
-}
-
-.cta-content h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.cta-content p {
-    opacity: 0.9;
-    max-width: 550px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
-}
-
-.cta-buttons {
+.trust-badges {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 0;
 }
 
-.cta-buttons .btn-primary {
-    background: white;
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.trust-item i {
     color: var(--primary);
-    border: none;
-}
-
-.cta-buttons .btn-primary:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-2px);
-}
-
-.cta-buttons .btn-outline {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-}
-
-.cta-buttons .btn-outline:hover {
-    background: white;
-    color: var(--primary);
-    transform: translateY(-2px);
+    font-size: 1rem;
 }
 
 /* ----------------------------------------
-   SECTION HEADER (Reusable)
+   CTA PREMIUM (mengikuti gaya cta-premium di index.css)
 ---------------------------------------- */
-.section-header {
+.cta-premium {
+    position: relative;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
     text-align: center;
-    margin-bottom: 3rem;
+    overflow: hidden;
 }
 
-.section-tagline {
-    display: inline-block;
-    background: rgba(53, 121, 64, 0.1);
-    color: var(--primary);
-    padding: 0.4rem 1.2rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 1rem;
-}
-
-.section-description {
-    color: var(--gray);
-    max-width: 600px;
+.cta-premium-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
     margin: 0 auto;
+}
+
+.cta-premium-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.cta-premium-badge i {
+    font-size: 0.9rem;
+    animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.cta-premium-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.text-gradient-light {
+    background: linear-gradient(135deg, #D4AF37, #FBBF24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-premium-description {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
     line-height: 1.6;
+}
+
+.cta-premium-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    color: var(--primary);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.cta-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    gap: 1rem;
+}
+
+.cta-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.cta-btn-secondary:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+    gap: 1rem;
+}
+
+.cta-premium-trust {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.trust-badge i {
+    font-size: 1rem;
+    color: #D4AF37;
 }
 
 /* ----------------------------------------
@@ -395,14 +489,18 @@
         font-size: 2.5rem;
     }
     
-    .role-stats {
-        gap: 1.5rem;
+    .redirect-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .cta-premium-title {
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 768px) {
     .education-hero {
-        padding: 6rem 0 3.5rem;
+        padding: 6rem 0 4rem;
         margin-top: 70px;
     }
     
@@ -411,64 +509,82 @@
     }
     
     .education-hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
-    .role-section h2 {
-        font-size: 1.6rem;
+    .education-hero-stats {
+        gap: 1.5rem;
     }
     
-    .role-stats {
-        flex-direction: column;
-        gap: 1rem;
+    .hero-stat-number {
+        font-size: 1.5rem;
     }
     
-    .stat-item {
-        border-left: none;
-        border-bottom: 2px solid var(--primary);
-        padding-left: 0;
-        padding-bottom: 0.8rem;
+    .role-grid,
+    .program-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .redirect-card {
+        padding: 2rem 1.5rem;
     }
     
     .redirect-card h3 {
         font-size: 1.2rem;
     }
     
-    .program-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .achievement-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .cta-buttons {
+    .trust-badges {
+        gap: 1rem;
         flex-direction: column;
         align-items: center;
     }
     
-    .cta-buttons .btn {
-        width: 100%;
-        max-width: 260px;
-        text-align: center;
+    .cta-premium {
+        padding: 3rem 0;
     }
     
-    .section-title {
-        font-size: 1.6rem;
+    .cta-premium-title {
+        font-size: 1.5rem;
+    }
+    
+    .cta-premium-description {
+        font-size: 0.95rem;
+    }
+    
+    .cta-premium-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        width: 100%;
+        max-width: 260px;
+        justify-content: center;
+    }
+    
+    .cta-premium-trust {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .education-hero h1 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
     
-    .redirect-card {
-        padding: 2rem 1rem;
+    .hero-stat-number {
+        font-size: 1.2rem;
     }
     
-    .btn-school {
-        font-size: 0.85rem;
-        padding: 0.8rem 1.2rem;
+    .hero-stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .role-card {
+        padding: 1.5rem;
     }
 }

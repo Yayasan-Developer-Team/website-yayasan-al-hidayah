@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Program kemanusiaan Yayasan Al-Hidayah: bantuan bencana, santunan anak yatim, layanan kesehatan, dan pemberdayaan ekonomi.">
     <title>Program Kemanusiaan - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -10,6 +11,9 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/index.css">
@@ -19,17 +23,17 @@
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Header -->
-     <header class="header">
+    <header class="header">
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
@@ -42,7 +46,7 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -56,7 +60,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -82,7 +86,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>Program Kemanusiaan</h1>
             <p>Meringankan beban sesama, menebar manfaat untuk umat</p>
@@ -93,22 +97,22 @@
     <section class="section section-light">
         <div class="container">
             <div class="kemanusiaan-stats">
-                <div class="kemanusiaan-stat-card">
+                <div class="kemanusiaan-stat-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-hand-holding-heart"></i>
                     <h3>15.000+</h3>
                     <p>Penerima Manfaat</p>
                 </div>
-                <div class="kemanusiaan-stat-card">
+                <div class="kemanusiaan-stat-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-map-marked-alt"></i>
                     <h3>12</h3>
                     <p>Provinsi</p>
                 </div>
-                <div class="kemanusiaan-stat-card">
+                <div class="kemanusiaan-stat-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-users"></i>
                     <h3>250+</h3>
                     <p>Relawan Aktif</p>
                 </div>
-                <div class="kemanusiaan-stat-card">
+                <div class="kemanusiaan-stat-card" data-aos="fade-up" data-aos-delay="400">
                     <i class="fas fa-calendar-alt"></i>
                     <h3>50+</h3>
                     <p>Program Tahunan</p>
@@ -121,7 +125,7 @@
     <section class="section">
         <div class="container">
             <div class="program-kemanusiaan-grid">
-                <div class="program-kemanusiaan-content">
+                <div class="program-kemanusiaan-content" data-aos="fade-right">
                     <span class="program-tagline">TANGGAP BENCANA</span>
                     <h2>Bantuan Bencana Alam</h2>
                     <p class="program-desc">
@@ -140,7 +144,7 @@
                     
                     <a href="donation.html" class="btn btn-primary">Donasi untuk Bencana</a>
                 </div>
-                <div class="program-kemanusiaan-image">
+                <div class="program-kemanusiaan-image" data-aos="fade-left" data-aos-delay="200">
                     <img src="https://i.pinimg.com/736x/fa/ff/c4/faffc4e39b8c10b02f0b298f3303fd6c.jpg" alt="Bantuan Bencana">
                 </div>
             </div>
@@ -151,10 +155,10 @@
     <section class="section section-light">
         <div class="container">
             <div class="program-kemanusiaan-grid reverse">
-                <div class="program-kemanusiaan-image">
+                <div class="program-kemanusiaan-image" data-aos="fade-right">
                     <img src="https://i.pinimg.com/736x/db/32/89/db3289702acdef95c4443e4acc1d8298.jpg" alt="Santunan Anak Yatim">
                 </div>
-                <div class="program-kemanusiaan-content">
+                <div class="program-kemanusiaan-content" data-aos="fade-left" data-aos-delay="200">
                     <span class="program-tagline">PEDULI YATIM</span>
                     <h2>Santunan Anak Yatim</h2>
                     <p class="program-desc">
@@ -163,21 +167,21 @@
                     </p>
                     
                     <div class="program-highlight-list">
-                        <div class="highlight-list-item">
+                        <div class="highlight-list-item" data-aos="fade-up" data-aos-delay="100">
                             <i class="fas fa-child"></i>
                             <div>
                                 <h4>250 Anak Yatim</h4>
                                 <p>Santunan rutin setiap bulan</p>
                             </div>
                         </div>
-                        <div class="highlight-list-item">
+                        <div class="highlight-list-item" data-aos="fade-up" data-aos-delay="200">
                             <i class="fas fa-school"></i>
                             <div>
                                 <h4>Beasiswa Pendidikan</h4>
                                 <p>Untuk 75 anak yatim berprestasi</p>
                             </div>
                         </div>
-                        <div class="highlight-list-item">
+                        <div class="highlight-list-item" data-aos="fade-up" data-aos-delay="300">
                             <i class="fas fa-heart"></i>
                             <div>
                                 <h4>Bimbingan Rohani</h4>
@@ -196,7 +200,7 @@
     <section class="section">
         <div class="container">
             <div class="program-kemanusiaan-grid">
-                <div class="program-kemanusiaan-content">
+                <div class="program-kemanusiaan-content" data-aos="fade-right">
                     <span class="program-tagline">LAYANAN KESEHATAN</span>
                     <h2>Klinik & Layanan Kesehatan Gratis</h2>
                     <p class="program-desc">
@@ -205,19 +209,19 @@
                     </p>
                     
                     <div class="program-features">
-                        <div class="feature-item">
+                        <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
                             <i class="fas fa-stethoscope"></i>
                             <span>Poli Umum</span>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
                             <i class="fas fa-tooth"></i>
                             <span>Poli Gigi</span>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
                             <i class="fas fa-baby"></i>
                             <span>Poli Anak</span>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" data-aos="zoom-in" data-aos-delay="400">
                             <i class="fas fa-heartbeat"></i>
                             <span>Penyuluhan</span>
                         </div>
@@ -225,7 +229,7 @@
                     
                     <a href="klinik.html" class="btn btn-outline">Info Lebih Lanjut</a>
                 </div>
-                <div class="program-kemanusiaan-image">
+                <div class="program-kemanusiaan-image" data-aos="fade-left" data-aos-delay="200">
                     <img src="https://i.pinimg.com/736x/b0/e0/b6/b0e0b6374e098c0f614bff2e6953b78c.jpg" alt="Layanan Kesehatan">
                 </div>
             </div>
@@ -236,10 +240,10 @@
     <section class="section section-light">
         <div class="container">
             <div class="program-kemanusiaan-grid reverse">
-                <div class="program-kemanusiaan-image">
+                <div class="program-kemanusiaan-image" data-aos="fade-right">
                     <img src="https://i.pinimg.com/1200x/7d/ec/4f/7dec4fd80a43502c9fe7857f5f760f34.jpg" alt="Pemberdayaan Ekonomi">
                 </div>
-                <div class="program-kemanusiaan-content">
+                <div class="program-kemanusiaan-content" data-aos="fade-left" data-aos-delay="200">
                     <span class="program-tagline">PEMBERDAYAAN</span>
                     <h2>Ekonomi Produktif</h2>
                     <p class="program-desc">
@@ -248,15 +252,15 @@
                     </p>
                     
                     <div class="program-numbers">
-                        <div class="number-item">
+                        <div class="number-item" data-aos="fade-up" data-aos-delay="100">
                             <h3>350+</h3>
                             <p>Penerima Manfaat</p>
                         </div>
-                        <div class="number-item">
+                        <div class="number-item" data-aos="fade-up" data-aos-delay="200">
                             <h3>85%</h3>
                             <p>Usaha Berhasil</p>
                         </div>
-                        <div class="number-item">
+                        <div class="number-item" data-aos="fade-up" data-aos-delay="300">
                             <h3>5</h3>
                             <p>Jenis Pelatihan</p>
                         </div>
@@ -268,9 +272,8 @@
         </div>
     </section>
 
-
     <!-- CTA Donasi -->
-    <section class="cta-donasi">
+    <section class="cta-donasi" data-aos="zoom-in">
         <div class="container">
             <div class="cta-donasi-content">
                 <h2>Bersama Wujudkan Senyuman Mereka</h2>
@@ -315,7 +318,7 @@
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
                         <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
@@ -339,6 +342,11 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

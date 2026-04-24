@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daftar guru dan tenaga kependidikan Yayasan Al-Hidayah Lembah Hijau untuk TK, SD, SMP, dan SMA Islam Al-Hidayah.">
     <title>Guru & Staff - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -11,20 +12,23 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/index.css">
     
     <!-- Page CSS -->
-    <link rel="stylesheet" href="css/teacher$staff.css">
+    <link rel="stylesheet" href="css/teacher-staff.css">
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -42,7 +46,7 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -51,21 +55,21 @@
                         <li><a href="index.html" class="nav-link">Beranda</a></li>
                         <li><a href="about.html" class="nav-link">Tentang</a></li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
+                            <a href="#" class="nav-link dropdown-toggle active">
                                 Struktur <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="teacher-staff.html" class="active"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active">
+                            <a href="#" class="nav-link dropdown-toggle">
                                 Program <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
-                                <li><a href="humanity.html" class="active"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                                <li><a href="humanity.html"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
                             </ul>
                         </li>
                         <li><a href="news.html" class="nav-link">Berita</a></li>
@@ -82,7 +86,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>Guru & Tenaga Kependidikan</h1>
             <p>Para pendidik profesional yang berdedikasi membentuk generasi unggul</p>
@@ -92,7 +96,7 @@
     <!-- Filter Section -->
     <section class="section section-light">
         <div class="container">
-            <div class="filter-section">
+            <div class="filter-section" data-aos="fade-up">
                 <div class="filter-header">
                     <h3>Filter berdasarkan jenjang</h3>
                     <div class="filter-buttons">
@@ -105,26 +109,26 @@
                     </div>
                 </div>
                 <div class="filter-search">
-                    <input type="text" placeholder="Cari nama guru..." id="searchInput">
+                    <input type="text" id="searchInput" placeholder="Cari nama guru atau jabatan...">
                     <i class="fas fa-search"></i>
                 </div>
             </div>
 
             <!-- Statistik Guru -->
             <div class="guru-stats">
-                <div class="guru-stat-card">
+                <div class="guru-stat-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>100+</h3>
                     <p>Total Guru & Staff</p>
                 </div>
-                <div class="guru-stat-card">
+                <div class="guru-stat-card" data-aos="fade-up" data-aos-delay="200">
                     <h3>85%</h3>
                     <p>Sertifikasi Pendidik</p>
                 </div>
-                <div class="guru-stat-card">
+                <div class="guru-stat-card" data-aos="fade-up" data-aos-delay="300">
                     <h3>45%</h3>
                     <p>Gelar Magister & Doktor</p>
                 </div>
-                <div class="guru-stat-card">
+                <div class="guru-stat-card" data-aos="fade-up" data-aos-delay="400">
                     <h3>12+</h3>
                     <p>Rata-rata Pengalaman</p>
                 </div>
@@ -135,9 +139,9 @@
     <!-- Guru TK -->
     <section class="section" data-category="tk">
         <div class="container">
-            <h2 class="jenjang-title">TK Islam Al-Hidayah</h2>
+            <h2 class="jenjang-title" data-aos="fade-right">TK Islam Al-Hidayah</h2>
             <div class="guru-grid">
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Siti Aminah">
                     </div>
@@ -152,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="150">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Dewi Lestari">
                     </div>
@@ -167,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Rina Wulandari">
                     </div>
@@ -182,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="250">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Maya Sari">
                     </div>
@@ -204,9 +208,9 @@
     <!-- Guru SD -->
     <section class="section section-light" data-category="sd">
         <div class="container">
-            <h2 class="jenjang-title">SD Islam Al-Hidayah</h2>
+            <h2 class="jenjang-title" data-aos="fade-right">SD Islam Al-Hidayah</h2>
             <div class="guru-grid">
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Drs. H. Ahmad Fauzi">
                     </div>
@@ -221,7 +225,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="150">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Nurhayati">
                     </div>
@@ -236,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Hasan Basri">
                     </div>
@@ -251,7 +255,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="250">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Siti Khadijah">
                     </div>
@@ -266,7 +270,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Mahmud">
                     </div>
@@ -281,7 +285,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="350">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Fatimah">
                     </div>
@@ -303,9 +307,9 @@
     <!-- Guru SMP -->
     <section class="section" data-category="smp">
         <div class="container">
-            <h2 class="jenjang-title">SMP Islam Al-Hidayah</h2>
+            <h2 class="jenjang-title" data-aos="fade-right">SMP Islam Al-Hidayah</h2>
             <div class="guru-grid">
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. H. Syamsul Ma'arif">
                     </div>
@@ -320,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="150">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Laila Sari">
                     </div>
@@ -335,7 +339,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Joko Susilo">
                     </div>
@@ -350,7 +354,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="250">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Dian Permatasari">
                     </div>
@@ -372,9 +376,9 @@
     <!-- Guru SMA -->
     <section class="section section-light" data-category="sma">
         <div class="container">
-            <h2 class="jenjang-title">SMA Islam Al-Hidayah</h2>
+            <h2 class="jenjang-title" data-aos="fade-right">SMA Islam Al-Hidayah</h2>
             <div class="guru-grid">
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Prof. Dr. H. Ahmad Zaini">
                     </div>
@@ -389,7 +393,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="150">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1494790108777-223d9f035db8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. Nuriya Hasanah">
                     </div>
@@ -404,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Fahmi Alamsyah">
                     </div>
@@ -419,7 +423,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="250">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Ratna Dewi">
                     </div>
@@ -441,9 +445,9 @@
     <!-- Staff Yayasan -->
     <section class="section" data-category="staff">
         <div class="container">
-            <h2 class="jenjang-title">Staff Yayasan & Tenaga Kependidikan</h2>
+            <h2 class="jenjang-title" data-aos="fade-right">Staff Yayasan & Tenaga Kependidikan</h2>
             <div class="guru-grid">
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Siti Maemunah">
                     </div>
@@ -454,7 +458,7 @@
                         <p class="guru-pengalaman">Pengalaman: 18 tahun</p>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="150">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Mahmud Syarif">
                     </div>
@@ -465,7 +469,7 @@
                         <p class="guru-pengalaman">Pengalaman: 12 tahun</p>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ibu Laila Hasanah">
                     </div>
@@ -476,7 +480,7 @@
                         <p class="guru-pengalaman">Pengalaman: 10 tahun</p>
                     </div>
                 </div>
-                <div class="guru-card">
+                <div class="guru-card" data-aos="zoom-in" data-aos-delay="250">
                     <div class="guru-image">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bapak Rizki Fauzi">
                     </div>
@@ -523,7 +527,7 @@
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
                         <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
@@ -547,8 +551,16 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
     <script src="js/script.js"></script>
-        <script src="js/script.js"></script>
     
     <!-- Filter & Search Script -->
     <script>
@@ -560,7 +572,7 @@
             
             const filterBtns = document.querySelectorAll('.filter-btn');
             const searchInput = document.getElementById('searchInput');
-            const jenjangSections = document.querySelectorAll('.jenjang-section, [data-category]');
+            const jenjangSections = document.querySelectorAll('[data-category]');
             const guruCards = document.querySelectorAll('.guru-card');
             
             let currentFilter = 'all';
@@ -575,8 +587,10 @@
                     
                     if (currentFilter === 'all' || category === currentFilter) {
                         section.classList.remove('hidden');
+                        section.style.display = 'block';
                     } else {
                         section.classList.add('hidden');
+                        section.style.display = 'none';
                     }
                 });
                 
@@ -586,7 +600,7 @@
                 guruCards.forEach(card => {
                     const section = card.closest('[data-category]');
                     const sectionCategory = section ? section.getAttribute('data-category') : null;
-                    const sectionVisible = section ? !section.classList.contains('hidden') : true;
+                    const sectionVisible = section ? section.style.display !== 'none' : true;
                     
                     const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
                     const jabatan = card.querySelector('.guru-jabatan')?.textContent.toLowerCase() || '';
@@ -613,21 +627,17 @@
                     }
                 });
                 
-                // Update stats count jika ada
+                // Update stats count
                 updateStatsCount(visibleCount);
             }
             
             // Update stats
             function updateStatsCount(visibleCount) {
-                const statCards = document.querySelectorAll('.guru-stat-card');
-                if (statCards.length > 0 && statCards[0].querySelector('h3')) {
-                    // Update total count di stat pertama
-                    const totalEl = statCards[0].querySelector('h3');
-                    if (currentFilter === 'all' && searchTerm === '') {
-                        totalEl.textContent = '100+';
-                    } else {
-                        totalEl.textContent = visibleCount;
-                    }
+                const totalStat = document.querySelector('.guru-stat-card:first-child h3');
+                if (totalStat && currentFilter === 'all' && searchTerm === '') {
+                    totalStat.textContent = '100+';
+                } else if (totalStat) {
+                    totalStat.textContent = visibleCount;
                 }
             }
             
@@ -645,7 +655,7 @@
                     filterGuru();
                     
                     // Scroll ke section pertama yang visible
-                    const firstVisibleSection = document.querySelector('[data-category]:not(.hidden), .jenjang-section:not(.hidden)');
+                    const firstVisibleSection = document.querySelector('[data-category]:not(.hidden)');
                     if (firstVisibleSection && currentFilter !== 'all') {
                         setTimeout(() => {
                             firstVisibleSection.scrollIntoView({ 
@@ -697,6 +707,5 @@
             filterGuru();
         });
     </script>
-</body>
 </body>
 </html>

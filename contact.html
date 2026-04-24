@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Yayasan Al-Hidayah Lembah Hijau untuk informasi pendidikan, donasi, dan program kemanusiaan.">
     <title>Kontak - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -10,6 +11,9 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/index.css">
@@ -19,12 +23,12 @@
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -42,7 +46,7 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -56,7 +60,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -65,12 +69,12 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
-                                <li><a href="humanity.html" class="active"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                                <li><a href="humanity.html"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
                             </ul>
                         </li>
                         <li><a href="news.html" class="nav-link">Berita</a></li>
                         <li><a href="gallery.html" class="nav-link">Galeri</a></li>
-                        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                        <li><a href="contact.html" class="nav-link active">Kontak</a></li>
                     </ul>
                 </nav>
 
@@ -82,7 +86,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>Hubungi Kami</h1>
             <p>Kami siap membantu Anda dengan informasi yang dibutuhkan</p>
@@ -93,7 +97,7 @@
     <section class="section">
         <div class="container">
             <div class="contact-info-grid">
-                <div class="contact-info-card">
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Alamat Kantor</h3>
                     <p>Jl. Dahlia Raya No. 1, Perumahan Taman Lembah Hijau, Lippo Cikarang, <br> Desa Sukaresmi/Serang, Kec. Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530</p>
@@ -101,7 +105,7 @@
                         <i class="fas fa-directions"></i> Petunjuk Arah
                     </a>
                 </div>
-                <div class="contact-info-card">
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-phone-alt"></i>
                     <h3>Telepon & WhatsApp</h3>
                     <p>(021) 89901706<br>0812-1234-5678</p>
@@ -109,15 +113,15 @@
                         <i class="fab fa-whatsapp"></i> Chat via WhatsApp
                     </a>
                 </div>
-                <div class="contact-info-card">
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>info@ahis.sch.id<br>YayasanAhis@gmail.com</p>
+                    <p>info@alhidayah.or.id<br>yayasan@alhidayah.or.id</p>
                     <a href="mailto:info@alhidayah.or.id" class="contact-link">
                         <i class="fas fa-envelope"></i> Kirim Email
                     </a>
                 </div>
-                <div class="contact-info-card">
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="400">
                     <i class="fas fa-clock"></i>
                     <h3>Jam Operasional</h3>
                     <p>Senin - Jumat: 07.30 - 16.00</p>
@@ -132,12 +136,12 @@
         <div class="container">
             <div class="contact-grid">
                 <!-- Map -->
-                <div class="contact-map">
-                    "<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.556267734047!2d107.13844117499139!3d-6.345666293644128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699a8b2cd58ce7%3A0x1a987b3e7d005f6a!2sAl-Hidayah%20Islamic%20School%20(Kindergarten%20-%20Primary)!5e1!3m2!1sid!2sid!4v1775117882291!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="contact-map" data-aos="fade-right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.556267734047!2d107.13844117499139!3d-6.345666293644128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699a8b2cd58ce7%3A0x1a987b3e7d005f6a!2sAl-Hidayah%20Islamic%20School%20(Kindergarten%20-%20Primary)!5e1!3m2!1sid!2sid!4v1775117882291!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <!-- Form -->
-                <div class="contact-form-container">
+                <div class="contact-form-container" data-aos="fade-left" data-aos-delay="200">
                     <h3>Kirim Pesan</h3>
                     <form id="contactForm">
                         <div class="form-row">
@@ -179,21 +183,21 @@
     <!-- Cabang Lain -->
     <section class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-tagline">CABANG LAIN</span>
                 <h2 class="section-title">Kantor Cabang & Unit Sekolah</h2>
-                <p class="section-description">Kami hadir  untuk melayani Anda</p>
+                <p class="section-description">Kami hadir untuk melayani Anda</p>
             </div>
 
             <div class="cabang-grid">
-                <div class="cabang-card">
+                <div class="cabang-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>Cikarang Selatan</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Jl. Dahlia Raya No. 1, Perumahan Taman Lembah Hijau, Lippo Cikarang, Desa Sukaresmi/Serang, Kec. Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Dahlia Raya No. 1, Perumahan Taman Lembah Hijau, Lippo Cikarang</p>
                     <p><i class="fas fa-phone-alt"></i> (021) 89901706</p>
                 </div>
-                <div class="cabang-card">
+                <div class="cabang-card" data-aos="fade-up" data-aos-delay="200">
                     <h3>Cikarang Barat</h3>
-                    <p><i class="fas fa-map-marker-alt"></i>(menyusul)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> (Segera hadir)</p>
                     <p><i class="fas fa-phone-alt"></i> (021) 5678-9012</p>
                 </div>
             </div>
@@ -203,25 +207,25 @@
     <!-- Social Media -->
     <section class="section section-light">
         <div class="container">
-            <div class="social-media-section">
+            <div class="social-media-section" data-aos="zoom-in">
                 <h3>Ikuti Media Sosial Kami</h3>
                 <p>Dapatkan update terbaru melalui media sosial</p>
                 <div class="social-media-large">
-                    <a href="instagram.com/ahis_cikarang/" class="social-item instagram">
+                    <a href="https://instagram.com/ahis_cikarang/" target="_blank" class="social-item instagram" data-aos="zoom-in" data-aos-delay="100">
                         <i class="fab fa-instagram"></i>
                         <span>@ahis.cikarang</span>
                     </a>
-                    <a href="https://www.facebook.com/ahislippo/" class="social-item facebook">
+                    <a href="https://www.facebook.com/ahislippo/" target="_blank" class="social-item facebook" data-aos="zoom-in" data-aos-delay="200">
                         <i class="fab fa-facebook-f"></i>
                         <span>Yayasan Al-Hidayah</span>
                     </a>
-                    <a href="https://www.youtube.com/@AHISMEDIA_CKRG" class="social-item youtube">
+                    <a href="https://www.youtube.com/@AHISMEDIA_CKRG" target="_blank" class="social-item youtube" data-aos="zoom-in" data-aos-delay="300">
                         <i class="fab fa-youtube"></i>
-                        <span>Al Hidayah Islamic School Official (AHIS)</span>
+                        <span>AHIS Official</span>
                     </a>
-                    <a href="#" class="social-item tiktok">
+                    <a href="#" class="social-item tiktok" data-aos="zoom-in" data-aos-delay="400">
                         <i class="fab fa-tiktok"></i>
-                        <span>@alhidayah.official (menyusul)</span>
+                        <span>@alhidayah.official</span>
                     </a>
                 </div>
             </div>
@@ -260,7 +264,7 @@
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
                         <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
@@ -284,6 +288,15 @@
         </div>
     </footer>
     
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

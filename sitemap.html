@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peta situs Yayasan Al-Hidayah Lembah Hijau - Navigasi lengkap semua halaman website untuk memudahkan Anda menemukan informasi.">
     <title>Peta Situs - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -10,6 +11,9 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/index.css">
@@ -19,16 +23,16 @@
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Header (sama seperti sebelumnya) -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -42,7 +46,7 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -55,8 +59,8 @@
                                 Struktur <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="struktur-organisasi.html"><i class="fas fa-sitemap"></i> Struktur Organisasi</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -74,15 +78,15 @@
                     </ul>
                 </nav>
 
-                <a href="admin/login.html" class="btn btn-primary btn-donate">
-                    <i class="fas fa-sign-in-alt"></i> Login
+                <a href="donation.html" class="btn btn-primary btn-donate">
+                    <i class="fas fa-hand-holding-heart"></i> Donasi
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>PETA SITUS</h1>
             <p>YAYASAN AL-HIDAYAH LEMBAH HIJAU</p>
@@ -96,7 +100,7 @@
             <div class="sitemap-grid">
                 
                 <!-- Main Pages -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="100">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-home"></i>
@@ -113,21 +117,21 @@
                 </div>
 
                 <!-- Structure Pages -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="150">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-sitemap"></i>
                             <h2>Struktur Yayasan</h2>
                         </div>
                         <ul>
-                            <li><a href="struktur-organisasi.html"><i class="fas fa-chevron-right"></i> Struktur Organisasi</a></li>
-                            <li><a href="teacher&staff.html"><i class="fas fa-chevron-right"></i> Guru & Staff Pengajar</a></li>
+                            <li><a href="struktur-yayasan.html"><i class="fas fa-chevron-right"></i> Struktur Yayasan</a></li>
+                            <li><a href="teacher-staff.html"><i class="fas fa-chevron-right"></i> Guru & Staff Pengajar</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Program Pages -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="200">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-chalkboard"></i>
@@ -141,7 +145,7 @@
                 </div>
 
                 <!-- Support Pages -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="250">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-hand-holding-heart"></i>
@@ -155,7 +159,7 @@
                 </div>
 
                 <!-- News & Events -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="300">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-newspaper"></i>
@@ -170,7 +174,7 @@
                 </div>
 
                 <!-- Legal Pages -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="350">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-gavel"></i>
@@ -185,7 +189,7 @@
                 </div>
 
                 <!-- Admin Section -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="400">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-user-shield"></i>
@@ -198,7 +202,7 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div class="sitemap-col">
+                <div class="sitemap-col" data-aos="fade-up" data-aos-delay="450">
                     <div class="sitemap-category">
                         <div class="category-header">
                             <i class="fas fa-link"></i>
@@ -217,12 +221,12 @@
 
             <!-- Sitemap Info -->
             <div class="sitemap-info">
-                <div class="info-card">
+                <div class="info-card" data-aos="fade-right" data-aos-delay="500">
                     <i class="fas fa-map"></i>
                     <h3>Total Halaman: 15+</h3>
                     <p>Peta situs ini memudahkan Anda menemukan informasi yang dibutuhkan. Seluruh halaman telah dioptimalkan untuk pengalaman browsing terbaik.</p>
                 </div>
-                <div class="info-card">
+                <div class="info-card" data-aos="fade-left" data-aos-delay="600">
                     <i class="fas fa-search"></i>
                     <h3>Butuh Bantuan?</h3>
                     <p>Jika Anda kesulitan menemukan halaman tertentu, silakan <a href="contact.html">hubungi kami</a> atau <a href="https://wa.me/6281212345678">chat via WhatsApp</a>.</p>
@@ -231,7 +235,7 @@
         </div>
     </section>
 
-    <!-- Footer (sama seperti sebelumnya) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -262,8 +266,8 @@
                     <h4>Tentang</h4>
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
-                        <li><a href="struktur-organisasi.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
@@ -287,6 +291,15 @@
         </div>
     </footer>
     
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
