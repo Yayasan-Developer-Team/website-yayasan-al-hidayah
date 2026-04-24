@@ -548,5 +548,155 @@
     </footer>
 
     <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
+    
+    <!-- Filter & Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // ============================================
+            // FILTER BERDASARKAN JENJANG
+            // ============================================
+            
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const searchInput = document.getElementById('searchInput');
+            const jenjangSections = document.querySelectorAll('.jenjang-section, [data-category]');
+            const guruCards = document.querySelectorAll('.guru-card');
+            
+            let currentFilter = 'all';
+            let searchTerm = '';
+            let debounceTimer = null;
+            
+            // Filter function
+            function filterGuru() {
+                // Filter sections (show/hide whole section)
+                jenjangSections.forEach(section => {
+                    const category = section.getAttribute('data-category');
+                    
+                    if (currentFilter === 'all' || category === currentFilter) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+                
+                // Filter individual cards based on search
+                let visibleCount = 0;
+                
+                guruCards.forEach(card => {
+                    const section = card.closest('[data-category]');
+                    const sectionCategory = section ? section.getAttribute('data-category') : null;
+                    const sectionVisible = section ? !section.classList.contains('hidden') : true;
+                    
+                    const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                    const jabatan = card.querySelector('.guru-jabatan')?.textContent.toLowerCase() || '';
+                    
+                    const matchesSearch = searchTerm === '' || 
+                        name.includes(searchTerm.toLowerCase()) || 
+                        jabatan.includes(searchTerm.toLowerCase());
+                    
+                    if (sectionVisible && matchesSearch) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                        visibleCount++;
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            if (card.style.opacity === '0') {
+                                card.style.display = 'none';
+                            }
+                        }, 200);
+                    }
+                });
+                
+                // Update stats count jika ada
+                updateStatsCount(visibleCount);
+            }
+            
+            // Update stats
+            function updateStatsCount(visibleCount) {
+                const statCards = document.querySelectorAll('.guru-stat-card');
+                if (statCards.length > 0 && statCards[0].querySelector('h3')) {
+                    // Update total count di stat pertama
+                    const totalEl = statCards[0].querySelector('h3');
+                    if (currentFilter === 'all' && searchTerm === '') {
+                        totalEl.textContent = '100+';
+                    } else {
+                        totalEl.textContent = visibleCount;
+                    }
+                }
+            }
+            
+            // Filter button click
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update filter
+                    currentFilter = filter;
+                    filterGuru();
+                    
+                    // Scroll ke section pertama yang visible
+                    const firstVisibleSection = document.querySelector('[data-category]:not(.hidden), .jenjang-section:not(.hidden)');
+                    if (firstVisibleSection && currentFilter !== 'all') {
+                        setTimeout(() => {
+                            firstVisibleSection.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'start' 
+                            });
+                        }, 300);
+                    }
+                });
+            });
+            
+            // Search input
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    clearTimeout(debounceTimer);
+                    debounceTimer = setTimeout(() => {
+                        searchTerm = this.value.trim();
+                        filterGuru();
+                    }, 300);
+                });
+                
+                // Clear on Escape
+                searchInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        this.value = '';
+                        searchTerm = '';
+                        filterGuru();
+                        this.blur();
+                    }
+                });
+            }
+            
+            // Keyboard shortcut Ctrl+K untuk fokus search
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    if (searchInput) {
+                        searchInput.focus();
+                        searchInput.style.transition = 'all 0.3s ease';
+                        searchInput.style.boxShadow = '0 0 0 4px var(--primary-light)';
+                        setTimeout(() => {
+                            searchInput.style.boxShadow = '';
+                        }, 500);
+                    }
+                }
+            });
+            
+            // Initial: tampilkan semua
+            filterGuru();
+        });
+    </script>
+</body>
 </body>
 </html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru & Staff - Admin Yayasan Al-Hidayah</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../../photo/logoYAYASAN.png" alt="Logo Yayasan Al-Hidayah" class="logo-img">
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="../contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-users"></i>
+                                <span>Guru & Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="../profile.html">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Guru & Tenaga Kependidikan</h2>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Stats Mini -->
+                <div class="stats-mini">
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Total Guru & Staff</span>
+                        <span class="stat-value">24</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Guru Aktif</span>
+                        <span class="stat-value">20</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Staff Yayasan</span>
+                        <span class="stat-value">4</span>
+                    </div>
+                    <div class="stat-mini-item">
+                        <span class="stat-label">Sertifikasi</span>
+                        <span class="stat-value">85%</span>
+                    </div>
+                </div>
+                
+                <!-- Toolbar -->
+                <div class="content-toolbar">
+                    <div class="toolbar-left">
+                        <a href="create.html" class="btn-add">
+                            <i class="fas fa-plus"></i> Tambah Guru/Staff
+                        </a>
+                    </div>
+                    
+                    <div class="toolbar-right">
+                        <div class="view-toggle">
+                            <button class="view-toggle-btn active" onclick="setView('grid')" id="gridViewBtn">
+                                <i class="fas fa-grid-2"></i>
+                            </button>
+                            <button class="view-toggle-btn" onclick="setView('list')" id="listViewBtn">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="search-box">
+                            <input type="text" id="searchTeacher" placeholder="Cari guru/staff...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Filter Bar -->
+                <div class="teacher-filter-bar">
+                    <div class="filter-group">
+                        <label><i class="fas fa-layer-group"></i> Unit:</label>
+                        <select class="filter-select-sm" id="filterUnit">
+                            <option value="">Semua Unit</option>
+                            <option value="tk">TK Islam Al-Hidayah</option>
+                            <option value="sd">SD Islam Al-Hidayah</option>
+                            <option value="smp">SMP Islam Al-Hidayah</option>
+                            <option value="sma">SMA Islam Al-Hidayah</option>
+                            <option value="staff">Staff Yayasan</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label><i class="fas fa-briefcase"></i> Jabatan:</label>
+                        <select class="filter-select-sm" id="filterJabatan">
+                            <option value="">Semua Jabatan</option>
+                            <option value="kepala">Kepala Sekolah</option>
+                            <option value="guru">Guru</option>
+                            <option value="staff">Staff</option>
+                            <option value="kepala-staff">Kepala Staff</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label><i class="fas fa-circle"></i> Status:</label>
+                        <div class="filter-chips">
+                            <span class="filter-chip-sm active" data-status="">Semua</span>
+                            <span class="filter-chip-sm" data-status="active">Aktif</span>
+                            <span class="filter-chip-sm" data-status="inactive">Non-Aktif</span>
+                            <span class="filter-chip-sm" data-status="cuti">Cuti</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grid View -->
+                <div id="gridView">
+                    <!-- TK Section -->
+                    <div class="section-title">
+                        <i class="fas fa-child"></i>
+                        <h3>TK Islam Al-Hidayah</h3>
+                        <span class="badge-count">4 Guru</span>
+                    </div>
+                    
+                    <div class="teacher-cards-grid">
+                        <!-- Siti Aminah -->
+                        <div class="teacher-admin-card" data-unit="tk" data-jabatan="kepala" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop" alt="Siti Aminah">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Siti Aminah, S.Pd.</h4>
+                                    <div class="teacher-position">Kepala TK</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-school"></i> TK Islam Al-Hidayah
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S1 PAUD, UNJ</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 15 tahun</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>siti.aminah@alhidayah.sch.id</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=1" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=1" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(1)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dewi Lestari -->
+                        <div class="teacher-admin-card" data-unit="tk" data-jabatan="guru" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop" alt="Dewi Lestari">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Dewi Lestari, S.Pd.</h4>
+                                    <div class="teacher-position">Guru Kelas</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-school"></i> TK Islam Al-Hidayah
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S1 PAUD, UIN Jakarta</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 10 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=2" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=2" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(2)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rina Wulandari -->
+                        <div class="teacher-admin-card" data-unit="tk" data-jabatan="guru" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Rina Wulandari">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Rina Wulandari, S.Pd.</h4>
+                                    <div class="teacher-position">Guru Pendamping</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-school"></i> TK Islam Al-Hidayah
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S1 Psikologi, UI</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 8 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=3" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=3" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(3)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Maya Sari -->
+                        <div class="teacher-admin-card" data-unit="tk" data-jabatan="guru" data-status="cuti">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Maya Sari">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Maya Sari, S.Pd.</h4>
+                                    <div class="teacher-position">Guru Tahfidz</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-school"></i> TK Islam Al-Hidayah
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-quran"></i>
+                                    <span>Hafidzah 15 Juz</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 7 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator warning"></span>
+                                    <span>Cuti</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=4" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=4" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(4)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SD Section -->
+                    <div class="section-title mt-4">
+                        <i class="fas fa-pencil"></i>
+                        <h3>SD Islam Al-Hidayah</h3>
+                        <span class="badge-count">6 Guru</span>
+                    </div>
+                    
+                    <div class="teacher-cards-grid">
+                        <!-- Ahmad Fauzi -->
+                        <div class="teacher-admin-card" data-unit="sd" data-jabatan="kepala" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" alt="Ahmad Fauzi">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Drs. H. Ahmad Fauzi</h4>
+                                    <div class="teacher-position">Kepala SD</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-school"></i> SD Islam Al-Hidayah
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S2 Manajemen Pendidikan, UNJ</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 22 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=5" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=5" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(5)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Nurhayati -->
+                        <div class="teacher-admin-card" data-unit="sd" data-jabatan="guru" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop" alt="Nurhayati">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Nurhayati, S.Pd., M.Pd.</h4>
+                                    <div class="teacher-position">Guru Matematika</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-school"></i> SD Islam Al-Hidayah
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S2 Pendidikan Matematika, UPI</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 18 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=6" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=6" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(6)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hasan Basri -->
+                        <div class="teacher-admin-card" data-unit="sd" data-jabatan="guru" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Hasan Basri">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Hasan Basri, S.Pd.I.</h4>
+                                    <div class="teacher-position">Guru Al-Qur'an</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-school"></i> SD Islam Al-Hidayah
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>LIPIA Jakarta</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 12 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=7" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=7" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(7)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Staff Yayasan Section -->
+                    <div class="section-title mt-4">
+                        <i class="fas fa-building"></i>
+                        <h3>Staff Yayasan & Tenaga Kependidikan</h3>
+                        <span class="badge-count">4 Staff</span>
+                    </div>
+                    
+                    <div class="teacher-cards-grid">
+                        <!-- Siti Maemunah -->
+                        <div class="teacher-admin-card" data-unit="staff" data-jabatan="kepala-staff" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop" alt="Siti Maemunah">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Siti Maemunah, S.E.</h4>
+                                    <div class="teacher-position">Kepala Administrasi</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-building"></i> Staff Yayasan
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S1 Manajemen, Univ. Pancasila</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 18 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=17" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=17" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(17)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mahmud Syarif -->
+                        <div class="teacher-admin-card" data-unit="staff" data-jabatan="kepala-staff" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Mahmud Syarif">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Mahmud Syarif, S.Kom.</h4>
+                                    <div class="teacher-position">Kepala IT</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-building"></i> Staff Yayasan
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S1 Teknik Informatika, UIN Jakarta</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 12 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=18" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=18" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(18)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Laila Hasanah -->
+                        <div class="teacher-admin-card" data-unit="staff" data-jabatan="staff" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Laila Hasanah">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Laila Hasanah, A.Md.</h4>
+                                    <div class="teacher-position">Staff Keuangan</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-building"></i> Staff Yayasan
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>D3 Akuntansi, STAN</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 10 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=19" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=19" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(19)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rizki Fauzi -->
+                        <div class="teacher-admin-card" data-unit="staff" data-jabatan="staff" data-status="active">
+                            <div class="teacher-card-header">
+                                <div class="teacher-photo">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="Rizki Fauzi">
+                                </div>
+                                <div class="teacher-basic-info">
+                                    <h4>Rizki Fauzi, S.Sos.</h4>
+                                    <div class="teacher-position">Humas & Kerjasama</div>
+                                    <div class="teacher-unit">
+                                        <i class="fas fa-building"></i> Staff Yayasan
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teacher-card-body">
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>S1 Ilmu Komunikasi, UIN Jakarta</span>
+                                </div>
+                                <div class="teacher-detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Pengalaman: 8 tahun</span>
+                                </div>
+                            </div>
+                            <div class="teacher-card-footer">
+                                <div class="teacher-status">
+                                    <span class="status-indicator"></span>
+                                    <span>Aktif</span>
+                                </div>
+                                <div class="teacher-actions">
+                                    <a href="show.html?id=20" class="btn-action btn-view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="edit.html?id=20" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="btn-action btn-delete" onclick="deleteTeacher(20)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- List View (Hidden) -->
+                <div id="listView" style="display: none;">
+                    <div class="dashboard-card">
+                        <div class="card-body">
+                            <div class="table-wrapper">
+                                <table class="data-table teacher-table-view">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" id="selectAll"></th>
+                                            <th>Nama / Jabatan</th>
+                                            <th>Unit</th>
+                                            <th>Pendidikan</th>
+                                            <th>Pengalaman</th>
+                                            <th>Status</th>
+                                            <th>Sertifikasi</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="item-checkbox"></td>
+                                            <td>
+                                                <div class="teacher-info-cell">
+                                                    <div class="teacher-avatar-sm">
+                                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop" alt="Siti Aminah">
+                                                    </div>
+                                                    <div class="teacher-name-role">
+                                                        <strong>Siti Aminah, S.Pd.</strong>
+                                                        <small>Kepala TK</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>TK Islam Al-Hidayah</td>
+                                            <td>S1 PAUD, UNJ</td>
+                                            <td>15 tahun</td>
+                                            <td><span class="badge badge-success">Aktif</span></td>
+                                            <td><span class="badge badge-primary">Tersertifikasi</span></td>
+                                            <td>
+                                                <a href="show.html?id=1" class="btn-action btn-view"><i class="fas fa-eye"></i></a>
+                                                <a href="edit.html?id=1" class="btn-action btn-edit"><i class="fas fa-edit"></i></a>
+                                                <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="item-checkbox"></td>
+                                            <td>
+                                                <div class="teacher-info-cell">
+                                                    <div class="teacher-avatar-sm">
+                                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop" alt="Ahmad Fauzi">
+                                                    </div>
+                                                    <div class="teacher-name-role">
+                                                        <strong>Drs. H. Ahmad Fauzi</strong>
+                                                        <small>Kepala SD</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>SD Islam Al-Hidayah</td>
+                                            <td>S2 Manajemen Pendidikan, UNJ</td>
+                                            <td>22 tahun</td>
+                                            <td><span class="badge badge-success">Aktif</span></td>
+                                            <td><span class="badge badge-primary">Tersertifikasi</span></td>
+                                            <td>
+                                                <a href="show.html?id=5" class="btn-action btn-view"><i class="fas fa-eye"></i></a>
+                                                <a href="edit.html?id=5" class="btn-action btn-edit"><i class="fas fa-edit"></i></a>
+                                                <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="item-checkbox"></td>
+                                            <td>
+                                                <div class="teacher-info-cell">
+                                                    <div class="teacher-avatar-sm">
+                                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop" alt="Siti Maemunah">
+                                                    </div>
+                                                    <div class="teacher-name-role">
+                                                        <strong>Siti Maemunah, S.E.</strong>
+                                                        <small>Kepala Administrasi</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Staff Yayasan</td>
+                                            <td>S1 Manajemen, Univ. Pancasila</td>
+                                            <td>18 tahun</td>
+                                            <td><span class="badge badge-success">Aktif</span></td>
+                                            <td>-</td>
+                                            <td>
+                                                <a href="show.html?id=17" class="btn-action btn-view"><i class="fas fa-eye"></i></a>
+                                                <a href="edit.html?id=17" class="btn-action btn-edit"><i class="fas fa-edit"></i></a>
+                                                <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+    // Sidebar Toggle
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+        });
+    }
+    
+    // View Toggle
+    function setView(view) {
+        const gridView = document.getElementById('gridView');
+        const listView = document.getElementById('listView');
+        const gridBtn = document.getElementById('gridViewBtn');
+        const listBtn = document.getElementById('listViewBtn');
+        
+        if (view === 'grid') {
+            gridView.style.display = 'block';
+            listView.style.display = 'none';
+            gridBtn.classList.add('active');
+            listBtn.classList.remove('active');
+            initDragScroll();
+        } else {
+            gridView.style.display = 'none';
+            listView.style.display = 'block';
+            gridBtn.classList.remove('active');
+            listBtn.classList.add('active');
+        }
+    }
+    
+    // ===== DRAG TO SCROLL (SWIPE) =====
+    function initDragScroll() {
+        const grids = document.querySelectorAll('.teacher-cards-grid');
+        
+        grids.forEach(grid => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            grid.addEventListener('mousedown', (e) => {
+                isDown = true;
+                grid.classList.add('dragging');
+                startX = e.pageX - grid.offsetLeft;
+                scrollLeft = grid.scrollLeft;
+            });
+            
+            grid.addEventListener('mouseleave', () => {
+                isDown = false;
+                grid.classList.remove('dragging');
+            });
+            
+            grid.addEventListener('mouseup', () => {
+                isDown = false;
+                grid.classList.remove('dragging');
+            });
+            
+            grid.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - grid.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                grid.scrollLeft = scrollLeft - walk;
+            });
+            
+            // Touch events untuk mobile
+            grid.addEventListener('touchstart', (e) => {
+                isDown = true;
+                grid.classList.add('dragging');
+                startX = e.touches[0].pageX - grid.offsetLeft;
+                scrollLeft = grid.scrollLeft;
+            });
+            
+            grid.addEventListener('touchend', () => {
+                isDown = false;
+                grid.classList.remove('dragging');
+            });
+            
+            grid.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX - grid.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                grid.scrollLeft = scrollLeft - walk;
+            });
+        });
+    }
+    
+    // ===== FILTER FUNCTION =====
+    function filterTeachers() {
+        const unit = document.getElementById('filterUnit')?.value || '';
+        const jabatan = document.getElementById('filterJabatan')?.value || '';
+        const statusChip = document.querySelector('.filter-chip-sm.active');
+        const status = statusChip ? statusChip.dataset.status : '';
+        const searchTerm = document.getElementById('searchTeacher')?.value.toLowerCase() || '';
+        
+        const cards = document.querySelectorAll('.teacher-admin-card');
+        
+        cards.forEach(card => {
+            let show = true;
+            
+            if (unit && card.dataset.unit !== unit) show = false;
+            if (jabatan && card.dataset.jabatan !== jabatan) show = false;
+            if (status && card.dataset.status !== status) show = false;
+            
+            if (searchTerm) {
+                const name = card.querySelector('h4')?.textContent.toLowerCase() || '';
+                const position = card.querySelector('.teacher-position')?.textContent.toLowerCase() || '';
+                const unitText = card.querySelector('.teacher-unit')?.textContent.toLowerCase() || '';
+                
+                if (!name.includes(searchTerm) && !position.includes(searchTerm) && !unitText.includes(searchTerm)) {
+                    show = false;
+                }
+            }
+            
+            card.style.display = show ? 'block' : 'none';
+        });
+        
+        // Update section titles dan badge count
+        document.querySelectorAll('.section-title').forEach(title => {
+            const nextGrid = title.nextElementSibling;
+            if (nextGrid && nextGrid.classList.contains('teacher-cards-grid')) {
+                const visibleCards = nextGrid.querySelectorAll('.teacher-admin-card[style*="display: block"], .teacher-admin-card:not([style*="display"])');
+                const badgeCount = title.querySelector('.badge-count');
+                
+                if (visibleCards.length > 0) {
+                    title.style.display = 'flex';
+                    nextGrid.style.display = 'grid';
+                    if (badgeCount) {
+                        badgeCount.textContent = visibleCards.length + ' Guru';
+                    }
+                } else {
+                    title.style.display = 'none';
+                    nextGrid.style.display = 'none';
+                }
+            }
+        });
+    }
+    
+    // ===== FILTER CHIPS =====
+    document.querySelectorAll('.filter-chip-sm').forEach(chip => {
+        chip.addEventListener('click', function() {
+            document.querySelectorAll('.filter-chip-sm').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            filterTeachers();
+        });
+    });
+    
+    // ===== EVENT LISTENERS =====
+    document.getElementById('filterUnit')?.addEventListener('change', filterTeachers);
+    document.getElementById('filterJabatan')?.addEventListener('change', filterTeachers);
+    document.getElementById('searchTeacher')?.addEventListener('keyup', filterTeachers);
+    
+    // ===== DELETE FUNCTION =====
+    function deleteTeacher(id) {
+        if(confirm('Hapus data guru/staff ini?')) {
+            alert('Data berhasil dihapus (demo)');
+        }
+    }
+    
+    // ===== IMPORT/EXPORT =====
+    function importData() {
+        alert('Fitur import data (demo)');
+    }
+    
+    function exportData() {
+        alert('Fitur export data (demo)');
+    }
+    
+    // ===== SELECT ALL =====
+    document.getElementById('selectAll')?.addEventListener('change', function() {
+        document.querySelectorAll('.item-checkbox').forEach(cb => {
+            cb.checked = this.checked;
+        });
+    });
+    
+    // ===== AUTO SLIDER (Opsional) =====
+    function startAutoSlide() {
+        const grids = document.querySelectorAll('.teacher-cards-grid');
+        
+        grids.forEach(grid => {
+            let scrollInterval;
+            let direction = 1;
+            
+            const autoSlide = () => {
+                if (grid.matches(':hover')) return;
+                
+                grid.scrollLeft += direction * 2;
+                
+                if (grid.scrollLeft >= grid.scrollWidth - grid.clientWidth - 10) {
+                    direction = -1;
+                } else if (grid.scrollLeft <= 10) {
+                    direction = 1;
+                }
+            };
+            
+            scrollInterval = setInterval(autoSlide, 50);
+            
+            grid.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+            grid.addEventListener('mouseleave', () => {
+                clearInterval(scrollInterval);
+                scrollInterval = setInterval(autoSlide, 50);
+            });
+        });
+    }
+    
+    // ===== INITIALIZATION =====
+    document.addEventListener('DOMContentLoaded', function() {
+        initDragScroll();
+        // Uncomment baris di bawah untuk mengaktifkan auto-slide
+        // startAutoSlide();
+        
+        // Update badge counts awal
+        document.querySelectorAll('.section-title').forEach(title => {
+            const nextGrid = title.nextElementSibling;
+            if (nextGrid && nextGrid.classList.contains('teacher-cards-grid')) {
+                const cards = nextGrid.querySelectorAll('.teacher-admin-card');
+                const badgeCount = title.querySelector('.badge-count');
+                if (badgeCount) {
+                    badgeCount.textContent = cards.length + ' Guru';
+                }
+            }
+        });
+    });
+    
+    // Re-init drag scroll setelah filter
+    const originalFilter = filterTeachers;
+    filterTeachers = function() {
+        originalFilter();
+        setTimeout(initDragScroll, 100);
+    };
+</script>
+</body>
+</html>

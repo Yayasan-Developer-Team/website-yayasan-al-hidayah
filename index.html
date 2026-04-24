@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yayasan Al-Hidayah Lembah Hijau | Pendidikan & Kemanusiaan</title>
-    
+
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <!-- WhatsApp Float -->
     <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    
+
     <!-- ===== FLOATING WHATSAPP HELP CARD ===== -->
-<div class="whatsapp-help-card" id="whatsappHelpCard">
-    <div class="help-card-header">
-        <div class="help-card-avatar">
-            <i class="fas fa-headset"></i>
+    <div class="whatsapp-help-card" id="whatsappHelpCard">
+        <div class="help-card-header">
+            <div class="help-card-avatar">
+                <i class="fas fa-headset"></i>
+            </div>
+            <div class="help-card-title">
+                <h4>Service Team</h4>
+                <p>Halo! 😊</p>
+            </div>
+            <button class="help-card-close" id="closeHelpCard">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="help-card-title">
-            <h4>Service Team</h4>
-            <p>Halo! 😊</p>
+
+        <div class="help-card-body">
+            <div class="help-card-question">
+                <i class="fas fa-question-circle"></i>
+                <span>Ada yang bisa kami bantu?</span>
+            </div>
+            <div class="help-card-contact">
+                <i class="fas fa-headset"></i>
+                <span>Hubungi Kami</span>
+            </div>
         </div>
-        <button class="help-card-close" id="closeHelpCard">
-            <i class="fas fa-times"></i>
-        </button>
+
+        <div class="help-card-footer">
+            <a href="https://wa.me/6281212345678?text=Assalamualaikum%20Admin,%20saya%20mau%20bertanya%20tentang%20..."
+                class="help-card-wa-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Chat via WhatsApp
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
-    
-    <div class="help-card-body">
-        <div class="help-card-question">
-            <i class="fas fa-question-circle"></i>
-            <span>Ada yang bisa kami bantu?</span>
-        </div>
-        <div class="help-card-contact">
-            <i class="fas fa-headset"></i>
-            <span>Hubungi Kami</span>
-        </div>
-    </div>
-    
-    <div class="help-card-footer">
-        <a href="https://wa.me/6281212345678?text=Assalamualaikum%20Admin,%20saya%20mau%20bertanya%20tentang%20..." 
-           class="help-card-wa-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            Chat via WhatsApp
-            <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
-</div>
 
     <!-- Back to Top -->
     <button class="back-to-top" id="backToTop">
@@ -86,18 +89,20 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link active">Beranda</a></li>
                         <li><a href="#about" class="nav-link">Tentang</a></li>
-                        
+
                         <!-- Dropdown Struktur -->
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle">
                                 Struktur <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a>
+                                </li>
+                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a>
+                                </li>
                             </ul>
                         </li>
-                        
+
                         <li><a href="#program" class="nav-link">Program</a></li>
                         <li><a href="#berita" class="nav-link">Berita</a></li>
                         <li><a href="#gallery" class="nav-link">Galeri</a></li>
@@ -114,373 +119,377 @@
     </header>
 
     <!-- Banner Iklan Atas -->
-<div class="simple-banner" id="simpleBanner">
-    <div class="simple-banner-inner">
-        <div class="banner-icon">
-            <i class="fas fa-graduation-cap"></i>
+    <div class="simple-banner" id="simpleBanner">
+        <div class="simple-banner-inner">
+            <div class="banner-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="banner-text">
+                <strong>Penerimaan Siswa Baru 2026/2027</strong>
+                <span>Daftar sekarang! Diskon 50% untuk 100 pendaftar pertama.</span>
+            </div>
+            <a href="#" class="banner-link">Daftar →</a>
+            <button class="banner-x" id="closeBanner">✕</button>
         </div>
-        <div class="banner-text">
-            <strong>Penerimaan Siswa Baru 2026/2027</strong>
-            <span>Daftar sekarang! Diskon 50% untuk 100 pendaftar pertama.</span>
-        </div>
-        <a href="#" class="banner-link">Daftar →</a>
-        <button class="banner-x" id="closeBanner">✕</button>
     </div>
-</div>
 
     <!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="container">
-        <div class="hero-grid">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-icon">✦</span>
-                    <span class="badge-text">YAYASAN PENDIDIKAN & KEMANUSIAAN</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    Membangun Generasi 
-                    <span class="text-gradient">Cerdas</span> & 
-                    <span class="text-gradient">Berakhlak Mulia</span>
-                </h1>
-                
-                <p class="hero-description">
-                    Sejak 2010, Yayasan Al-Hidayah Lembah Hijau hadir untuk mencerdaskan kehidupan bangsa 
-                    melalui pendidikan berkualitas dan program kemanusiaan yang menjangkau ribuan keluarga.
-                </p>
-                
-                <div class="hero-buttons">
-                    <a href="#program" class="btn-primary-modern">
-                        <span>Jelajahi Program</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#video" class="btn-outline-modern">
-                        <i class="fas fa-play"></i>
-                        <span>Video Profil</span>
-                    </a>
-                </div>
-                
-                <div class="hero-trust">
-                    <div class="trust-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Terdaftar Resmi</span>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">✦</span>
+                        <span class="badge-text">YAYASAN PENDIDIKAN & KEMANUSIAAN</span>
                     </div>
-                    <div class="trust-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Laporan Transparan</span>
+
+                    <h1 class="hero-title">
+                        Membangun Generasi
+                        <span class="text-gradient">Cerdas</span> &
+                        <span class="text-gradient">Berakhlak Mulia</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Sejak 2010, Yayasan Al-Hidayah Lembah Hijau hadir untuk mencerdaskan kehidupan bangsa
+                        melalui pendidikan berkualitas dan program kemanusiaan yang menjangkau ribuan keluarga.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#program" class="btn-primary-modern">
+                            <span>Jelajahi Program</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#video" class="btn-outline-modern">
+                            <i class="fas fa-play"></i>
+                            <span>Video Profil</span>
+                        </a>
                     </div>
-                    <div class="trust-item">
-                        <i class="fas fa-clock"></i>
-                        <span>24/7 Donasi Online</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="https://i.pinimg.com/1200x/ef/a8/57/efa857ee73b26862a3aeddfdeadc2689.jpg" alt="Anak-anak belajar">
-                    <div class="image-overlay"></div>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-calendar-alt"></i>
+
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Terdaftar Resmi</span>
                         </div>
-                        <div class="stat-info">
-                            <span class="stat-number">20+</span>
-                            <span class="stat-label">Tahun Mengabdi</span>
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Laporan Transparan</span>
                         </div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">700+</span>
-                            <span class="stat-label">Siswa</span>
-                        </div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-hand-holding-heart"></i>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number">15K+</span>
-                            <span class="stat-label">Penerima Manfaat</span>
+                        <div class="trust-item">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Donasi Online</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="floating-card">
-                    <div class="floating-icon">
-                        <i class="fas fa-graduation-cap"></i>
+
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="https://i.pinimg.com/1200x/ef/a8/57/efa857ee73b26862a3aeddfdeadc2689.jpg"
+                            alt="Anak-anak belajar">
+                        <div class="image-overlay"></div>
                     </div>
-                    <div class="floating-text">
-                        <strong>100%</strong>
-                        <span>Siswa Berprestasi</span>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Tahun Mengabdi</span>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">700+</span>
+                                <span class="stat-label">Siswa</span>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">15K+</span>
+                                <span class="stat-label">Penerima Manfaat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floating-card">
+                        <div class="floating-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="floating-text">
+                            <strong>100%</strong>
+                            <span>Siswa Berprestasi</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Wave Decoration -->
-    <div class="hero-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
-            <path fill="#ffffff" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
-        </svg>
-    </div>
-</section>
+
+        <!-- Wave Decoration -->
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+                <path fill="#ffffff" fill-opacity="1"
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z">
+                </path>
+            </svg>
+        </div>
+    </section>
 
     <!-- About Section - Premium Version -->
-<section id="about" class="about-premium">
-    <div class="container">
-        <div class="about-premium-grid">
-            <!-- Left Side - Image with Floating Elements -->
-            <div class="about-premium-image">
-                <div class="about-image-wrapper">
-                    <img src="https://i.pinimg.com/736x/82/16/7c/82167c64d1e9d3340c0feed94edbdec9.jpg" alt="Kegiatan sosial Yayasan Al-Hidayah">
-                    <div class="about-image-overlay"></div>
-                </div>
-                
-                <!-- Floating Experience Card -->
-                <div class="about-experience-card">
-                    <div class="exp-icon">
-                        <i class="fas fa-calendar-check"></i>
+    <section id="about" class="about-premium">
+        <div class="container">
+            <div class="about-premium-grid">
+                <!-- Left Side - Image with Floating Elements -->
+                <div class="about-premium-image">
+                    <div class="about-image-wrapper">
+                        <img src="https://i.pinimg.com/736x/82/16/7c/82167c64d1e9d3340c0feed94edbdec9.jpg"
+                            alt="Kegiatan sosial Yayasan Al-Hidayah">
+                        <div class="about-image-overlay"></div>
                     </div>
-                    <div class="exp-text">
-                        <strong>20+ Tahun</strong>
-                        <span>Pengalaman Mengabdi</span>
-                    </div>
-                </div>
-                
-                <!-- Floating Award Card -->
-                <div class="about-award-card">
-                    <div class="award-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="award-text">
-                        <strong>Terakreditasi A</strong>
-                        <span>Lembaga Terpercaya</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right Side - Content -->
-            <div class="about-premium-content">
-                <!-- Badge -->
-                <div class="about-premium-badge">
-                    <span class="badge-icon">✦</span>
-                    <span class="badge-text">TENTANG KAMI</span>
-                </div>
-                
-                <!-- Title -->
-                <h2 class="about-premium-title">
-                    Lebih dari Sekedar 
-                    <span class="text-gradient">Lembaga Pendidikan</span>
-                </h2>
-                
-                <!-- Description -->
-                <p class="about-premium-text">
-                    Yayasan Al-Hidayah Lembah Hijau hadir dengan dua pilar utama: pendidikan Islam terpadu 
-                    dan program kemanusiaan. Kami percaya bahwa membangun peradaban berarti mencerdaskan 
-                    akal dan memuliakan kemanusiaan.
-                </p>
-                
-                <!-- Stats Grid Modern -->
-                <div class="about-premium-stats">
-                    <div class="premium-stat-item">
-                        <div class="stat-icon-circle">
-                            <i class="fas fa-chalkboard-user"></i>
+
+                    <!-- Floating Experience Card -->
+                    <div class="about-experience-card">
+                        <div class="exp-icon">
+                            <i class="fas fa-calendar-check"></i>
                         </div>
-                        <div class="stat-content">
-                            <span class="stat-number">120+</span>
-                            <span class="stat-label">Tenaga Pendidik</span>
+                        <div class="exp-text">
+                            <strong>20+ Tahun</strong>
+                            <span>Pengalaman Mengabdi</span>
                         </div>
                     </div>
-                    <div class="premium-stat-item">
-                        <div class="stat-icon-circle">
-                            <i class="fas fa-school"></i>
+
+                    <!-- Floating Award Card -->
+                    <div class="about-award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <div class="stat-content">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">Unit Sekolah</span>
-                        </div>
-                    </div>
-                    <div class="premium-stat-item">
-                        <div class="stat-icon-circle">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="stat-number">7</span>
-                            <span class="stat-label">Provinsi</span>
+                        <div class="award-text">
+                            <strong>Terakreditasi A</strong>
+                            <span>Lembaga Terpercaya</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Features Grid -->
-                <div class="about-premium-features">
-                    <div class="premium-feature">
-                        <div class="feature-check">
-                            <i class="fas fa-check-circle"></i>
+
+                <!-- Right Side - Content -->
+                <div class="about-premium-content">
+                    <!-- Badge -->
+                    <div class="about-premium-badge">
+                        <span class="badge-icon">✦</span>
+                        <span class="badge-text">TENTANG KAMI</span>
+                    </div>
+
+                    <!-- Title -->
+                    <h2 class="about-premium-title">
+                        Lebih dari Sekedar
+                        <span class="text-gradient">Lembaga Pendidikan</span>
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="about-premium-text">
+                        Yayasan Al-Hidayah Lembah Hijau hadir dengan dua pilar utama: pendidikan Islam terpadu
+                        dan program kemanusiaan. Kami percaya bahwa membangun peradaban berarti mencerdaskan
+                        akal dan memuliakan kemanusiaan.
+                    </p>
+
+                    <!-- Stats Grid Modern -->
+                    <div class="about-premium-stats">
+                        <div class="premium-stat-item">
+                            <div class="stat-icon-circle">
+                                <i class="fas fa-chalkboard-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">120+</span>
+                                <span class="stat-label">Tenaga Pendidik</span>
+                            </div>
                         </div>
-                        <div class="feature-info">
-                            <h4>Terakreditasi A</h4>
-                            <p>Sekolah unggulan dengan akreditasi tertinggi</p>
+                        <div class="premium-stat-item">
+                            <div class="stat-icon-circle">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Unit Sekolah</span>
+                            </div>
+                        </div>
+                        <div class="premium-stat-item">
+                            <div class="stat-icon-circle">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">7</span>
+                                <span class="stat-label">Provinsi</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="premium-feature">
-                        <div class="feature-check">
-                            <i class="fas fa-check-circle"></i>
+
+                    <!-- Features Grid -->
+                    <div class="about-premium-features">
+                        <div class="premium-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Terakreditasi A</h4>
+                                <p>Sekolah unggulan dengan akreditasi tertinggi</p>
+                            </div>
                         </div>
-                        <div class="feature-info">
-                            <h4>Lembaga Terpercaya</h4>
-                            <p>Terdaftar resmi dan diawasi pemerintah</p>
+                        <div class="premium-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Lembaga Terpercaya</h4>
+                                <p>Terdaftar resmi dan diawasi pemerintah</p>
+                            </div>
+                        </div>
+                        <div class="premium-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Zakat & Wakaf</h4>
+                                <p>Salurkan zakat dan wakaf melalui kami</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="premium-feature">
-                        <div class="feature-check">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="feature-info">
-                            <h4>Zakat & Wakaf</h4>
-                            <p>Salurkan zakat dan wakaf melalui kami</p>
-                        </div>
-                    </div>
+
+                    <!-- Button -->
+                    <a href="about.html" class="about-premium-btn">
+                        <span>Selengkapnya</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                
-                <!-- Button -->
-                <a href="about.html" class="about-premium-btn">
-                    <span>Selengkapnya</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
         </div>
-    </div>
-    
-    <!-- Background Decoration -->
-    <div class="about-bg-decoration">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(10,75,122,0.03)" stroke-width="2"/>
-            <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(10,75,122,0.04)" stroke-width="2"/>
-            <circle cx="100" cy="100" r="40" fill="none" stroke="rgba(10,75,122,0.05)" stroke-width="2"/>
-        </svg>
-    </div>
-</section>
+
+        <!-- Background Decoration -->
+        <div class="about-bg-decoration">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(10,75,122,0.03)" stroke-width="2" />
+                <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(10,75,122,0.04)" stroke-width="2" />
+                <circle cx="100" cy="100" r="40" fill="none" stroke="rgba(10,75,122,0.05)" stroke-width="2" />
+            </svg>
+        </div>
+    </section>
 
     <!-- Program Section - Premium Version -->
-<section id="program" class="program-premium">
-    <div class="container">
-        <div class="program-premium-header">
-            <span class="program-premium-tagline">PROGRAM KAMI</span>
-            <h2 class="program-premium-title">
-                Dua Pilar Utama <br>
-                <span class="text-gradient">Yayasan Al-Hidayah</span>
-            </h2>
-            <p class="program-premium-description">
-                Pendidikan dan kemanusiaan adalah dua sisi mata uang yang sama dalam membangun peradaban.
-            </p>
-        </div>
-
-        <div class="programs-premium-grid">
-            <!-- Card 1 - Pendidikan -->
-            <div class="program-premium-card">
-                <div class="card-glow"></div>
-                <div class="card-icon-wrapper">
-                    <div class="card-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                </div>
-                
-                <h3 class="card-title">Pendidikan Islam Terpadu</h3>
-                <p class="card-desc">
-                    TK, SD, SMP, dan SMA dengan kurikulum nasional plus nilai-nilai Islam. 
-                    Fasilitas modern dan tenaga pendidik profesional.
+    <section id="program" class="program-premium">
+        <div class="container">
+            <div class="program-premium-header">
+                <span class="program-premium-tagline">PROGRAM KAMI</span>
+                <h2 class="program-premium-title">
+                    Dua Pilar Utama <br>
+                    <span class="text-gradient">Yayasan Al-Hidayah</span>
+                </h2>
+                <p class="program-premium-description">
+                    Pendidikan dan kemanusiaan adalah dua sisi mata uang yang sama dalam membangun peradaban.
                 </p>
-                
-                <ul class="card-list">
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Kurikulum Nasional Plus</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Program Tahfidz</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Lab Sains & Bahasa</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Beasiswa Prestasi</span>
-                    </li>
-                </ul>
-                
-                <a href="education.html" class="card-btn">
-                    <span>Pelajari Program</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
 
-            <!-- Card 2 - Kemanusiaan (Featured) -->
-            <div class="program-premium-card featured">
-                <div class="card-glow"></div>
-                <div class="featured-ribbon">
-                    <span>Program Unggulan</span>
-                    <i class="fas fa-star"></i>
-                </div>
-                <div class="card-icon-wrapper">
-                    <div class="card-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
+            <div class="programs-premium-grid">
+                <!-- Card 1 - Pendidikan -->
+                <div class="program-premium-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
                     </div>
+
+                    <h3 class="card-title">Pendidikan Islam Terpadu</h3>
+                    <p class="card-desc">
+                        TK, SD, SMP, dan SMA dengan kurikulum nasional plus nilai-nilai Islam.
+                        Fasilitas modern dan tenaga pendidik profesional.
+                    </p>
+
+                    <ul class="card-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Kurikulum Nasional Plus</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Program Tahfidz</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Lab Sains & Bahasa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Beasiswa Prestasi</span>
+                        </li>
+                    </ul>
+
+                    <a href="education.html" class="card-btn">
+                        <span>Pelajari Program</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                
-                <h3 class="card-title">Kemanusiaan & Sosial</h3>
-                <p class="card-desc">
-                    Bantuan kemanusiaan untuk daerah bencana, santunan anak yatim, 
-                    serta pemberdayaan ekonomi masyarakat prasejahtera.
-                </p>
-                
-                <ul class="card-list">
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Bantuan Bencana Alam</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Santunan Anak Yatim</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Pemberdayaan Ekonomi</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span>Layanan Kesehatan Gratis</span>
-                    </li>
-                </ul>
-                
-                <a href="humanity.html" class="card-btn featured-btn">
-                    <span>Pelajari Program</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+
+                <!-- Card 2 - Kemanusiaan (Featured) -->
+                <div class="program-premium-card featured">
+                    <div class="card-glow"></div>
+                    <div class="featured-ribbon">
+                        <span>Program Unggulan</span>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="card-title">Kemanusiaan & Sosial</h3>
+                    <p class="card-desc">
+                        Bantuan kemanusiaan untuk daerah bencana, santunan anak yatim,
+                        serta pemberdayaan ekonomi masyarakat prasejahtera.
+                    </p>
+
+                    <ul class="card-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bantuan Bencana Alam</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Santunan Anak Yatim</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pemberdayaan Ekonomi</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Layanan Kesehatan Gratis</span>
+                        </li>
+                    </ul>
+
+                    <a href="humanity.html" class="card-btn featured-btn">
+                        <span>Pelajari Program</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Background Decoration -->
-    <div class="program-bg-decoration">
-        <div class="bg-circle bg-circle-1"></div>
-        <div class="bg-circle bg-circle-2"></div>
-        <div class="bg-circle bg-circle-3"></div>
-    </div>
-</section>
 
-      
+        <!-- Background Decoration -->
+        <div class="program-bg-decoration">
+            <div class="bg-circle bg-circle-1"></div>
+            <div class="bg-circle bg-circle-2"></div>
+            <div class="bg-circle bg-circle-3"></div>
+        </div>
+    </section>
+
+
     <!-- News Section - Horizontal Scroll Premium -->
     <section id="berita" class="news-horizontal">
         <div class="container">
@@ -500,13 +509,14 @@
                 <button class="scroll-arrow scroll-left" id="scrollLeftBtn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                
+
                 <div class="news-horizontal-wrapper" id="newsHorizontalWrapper">
                     <div class="news-horizontal-track" id="newsHorizontalTrack">
                         <!-- News Card 1 -->
                         <div class="news-horizontal-card">
                             <div class="news-card-image">
-                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wisuda">
+                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Wisuda">
                                 <div class="news-image-overlay"></div>
                                 <span class="news-category-badge pendidikan">
                                     <i class="fas fa-graduation-cap"></i> Pendidikan
@@ -524,7 +534,8 @@
                                     </div>
                                 </div>
                                 <h3 class="news-title">
-                                    <a href="wisuda-news.html">Wisuda Angkatan ke-26: 98% Lulusan Diterima di PTN Favorit</a>
+                                    <a href="wisuda-news.html">Wisuda Angkatan ke-26: 98% Lulusan Diterima di PTN
+                                        Favorit</a>
                                 </h3>
                                 <p class="news-excerpt">
                                     Sebanyak 312 siswa SMA Islam Al-Hidayah diwisuda dengan prestasi gemilang...
@@ -541,7 +552,8 @@
                         <!-- News Card 2 -->
                         <div class="news-horizontal-card">
                             <div class="news-card-image">
-                                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan kemanusiaan">
+                                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Bantuan kemanusiaan">
                                 <div class="news-image-overlay"></div>
                                 <span class="news-category-badge kemanusiaan">
                                     <i class="fas fa-hand-holding-heart"></i> Kemanusiaan
@@ -562,7 +574,8 @@
                                     <a href="#">Penyaluran Bantuan untuk Korban Bencana di Cianjur</a>
                                 </h3>
                                 <p class="news-excerpt">
-                                    Yayasan menyalurkan bantuan sembako, pakaian, dan layanan medis untuk 500 keluarga...
+                                    Yayasan menyalurkan bantuan sembako, pakaian, dan layanan medis untuk 500
+                                    keluarga...
                                 </p>
                                 <div class="news-footer">
                                     <a href="#" class="news-read-more">
@@ -576,7 +589,8 @@
                         <!-- News Card 3 -->
                         <div class="news-horizontal-card">
                             <div class="news-card-image">
-                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Guru berprestasi">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Guru berprestasi">
                                 <div class="news-image-overlay"></div>
                                 <span class="news-category-badge prestasi">
                                     <i class="fas fa-trophy"></i> Prestasi
@@ -597,7 +611,8 @@
                                     <a href="#">3 Guru Al-Hidayah Raih Penghargaan Guru Inspiratif 2024</a>
                                 </h3>
                                 <p class="news-excerpt">
-                                    Penghargaan diberikan oleh Dinas Pendidikan atas dedikasi dan metode pembelajaran inovatif...
+                                    Penghargaan diberikan oleh Dinas Pendidikan atas dedikasi dan metode pembelajaran
+                                    inovatif...
                                 </p>
                                 <div class="news-footer">
                                     <a href="#" class="news-read-more">
@@ -611,7 +626,8 @@
                         <!-- News Card 4 -->
                         <div class="news-horizontal-card">
                             <div class="news-card-image">
-                                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beasiswa">
+                                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Beasiswa">
                                 <div class="news-image-overlay"></div>
                                 <span class="news-category-badge pendidikan">
                                     <i class="fas fa-graduation-cap"></i> Pendidikan
@@ -632,7 +648,8 @@
                                     <a href="#">Beasiswa Prestasi 2024 Dibuka untuk 100 Siswa Berprestasi</a>
                                 </h3>
                                 <p class="news-excerpt">
-                                    Yayasan membuka pendaftaran beasiswa bagi siswa berprestasi dari keluarga kurang mampu...
+                                    Yayasan membuka pendaftaran beasiswa bagi siswa berprestasi dari keluarga kurang
+                                    mampu...
                                 </p>
                                 <div class="news-footer">
                                     <a href="#" class="news-read-more">
@@ -646,7 +663,8 @@
                         <!-- News Card 5 -->
                         <div class="news-horizontal-card">
                             <div class="news-card-image">
-                                <img src="https://images.unsplash.com/photo-1532622785990-d2c36a394f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan pangan">
+                                <img src="https://images.unsplash.com/photo-1532622785990-d2c36a394f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Bantuan pangan">
                                 <div class="news-image-overlay"></div>
                                 <span class="news-category-badge kemanusiaan">
                                     <i class="fas fa-hand-holding-heart"></i> Kemanusiaan
@@ -667,7 +685,8 @@
                                     <a href="#">Pembagian 1000 Paket Sembako untuk Masyarakat Prasejahtera</a>
                                 </h3>
                                 <p class="news-excerpt">
-                                    Kegiatan berbagi sembako rutin setiap bulan menjangkau 5 kelurahan di sekitar yayasan...
+                                    Kegiatan berbagi sembako rutin setiap bulan menjangkau 5 kelurahan di sekitar
+                                    yayasan...
                                 </p>
                                 <div class="news-footer">
                                     <a href="#" class="news-read-more">
@@ -679,7 +698,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <button class="scroll-arrow scroll-right" id="scrollRightBtn">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -698,140 +717,140 @@
     </section>
 
     <!-- Impact Section - Premium Version -->
-<section class="impact-premium">
-    <div class="container">
-        <div class="impact-premium-header">
-            <div class="impact-header-left">
-                <span class="impact-premium-tagline">DAMPAK KAMI</span>
-                <h2 class="impact-premium-title">
-                    Yang Telah <span class="text-gradient">Kami Capai</span>
-                </h2>
-                <p class="impact-premium-subtitle">
-                    Lebih dari dua dekade mengabdi untuk bangsa.
-                </p>
+    <section class="impact-premium">
+        <div class="container">
+            <div class="impact-premium-header">
+                <div class="impact-header-left">
+                    <span class="impact-premium-tagline">DAMPAK KAMI</span>
+                    <h2 class="impact-premium-title">
+                        Yang Telah <span class="text-gradient">Kami Capai</span>
+                    </h2>
+                    <p class="impact-premium-subtitle">
+                        Lebih dari dua dekade mengabdi untuk bangsa.
+                    </p>
+                </div>
+                <div class="impact-header-right">
+                    <div class="impact-quote">
+                        <i class="fas fa-quote-right"></i>
+                        <p>Setiap angka adalah cerita tentang perubahan nyata</p>
+                    </div>
+                </div>
             </div>
-            <div class="impact-header-right">
-                <div class="impact-quote">
-                    <i class="fas fa-quote-right"></i>
-                    <p>Setiap angka adalah cerita tentang perubahan nyata</p>
+
+            <div class="impact-premium-grid">
+                <!-- Card 1 -->
+                <div class="impact-premium-card">
+                    <div class="impact-card-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="impact-card-content">
+                        <h3 class="impact-number">
+                            <span class="counter" data-target="6">0</span>
+                        </h3>
+                        <p class="impact-label">Unit Sekolah</p>
+                        <div class="impact-progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="impact-premium-card">
+                    <div class="impact-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="impact-card-content">
+                        <h3 class="impact-number">
+                            <span class="counter" data-target="700">0</span>
+                            <span class="suffix">+</span>
+                        </h3>
+                        <p class="impact-label">Siswa Aktif</p>
+                        <div class="impact-progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="impact-premium-card">
+                    <div class="impact-card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="impact-card-content">
+                        <h3 class="impact-number">
+                            <span class="counter" data-target="120">0</span>
+                            <span class="suffix">+</span>
+                        </h3>
+                        <p class="impact-label">Tenaga Pendidik</p>
+                        <div class="impact-progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="impact-premium-card">
+                    <div class="impact-card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="impact-card-content">
+                        <h3 class="impact-number">
+                            <span class="counter" data-target="15000">0</span>
+                            <span class="suffix">+</span>
+                        </h3>
+                        <p class="impact-label">Penerima Bantuan</p>
+                        <div class="impact-progress">
+                            <div class="progress-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="impact-premium-card">
+                    <div class="impact-card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="impact-card-content">
+                        <h3 class="impact-number">
+                            <span class="counter" data-target="7">0</span>
+                        </h3>
+                        <p class="impact-label">Provinsi</p>
+                        <div class="impact-progress">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="impact-premium-card featured">
+                    <div class="impact-card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="impact-card-content">
+                        <h3 class="impact-number">
+                            <span class="counter" data-target="75">0</span>
+                            <span class="suffix">%</span>
+                        </h3>
+                        <p class="impact-label">Lulusan PTN</p>
+                        <div class="impact-progress">
+                            <div class="progress-bar" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="impact-badge">
+                        <i class="fas fa-star"></i> Prestasi Tertinggi
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="impact-premium-grid">
-            <!-- Card 1 -->
-            <div class="impact-premium-card">
-                <div class="impact-card-icon">
-                    <i class="fas fa-school"></i>
-                </div>
-                <div class="impact-card-content">
-                    <h3 class="impact-number">
-                        <span class="counter" data-target="6">0</span>
-                    </h3>
-                    <p class="impact-label">Unit Sekolah</p>
-                    <div class="impact-progress">
-                        <div class="progress-bar" style="width: 100%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="impact-premium-card">
-                <div class="impact-card-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div class="impact-card-content">
-                    <h3 class="impact-number">
-                        <span class="counter" data-target="700">0</span>
-                        <span class="suffix">+</span>
-                    </h3>
-                    <p class="impact-label">Siswa Aktif</p>
-                    <div class="impact-progress">
-                        <div class="progress-bar" style="width: 85%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="impact-premium-card">
-                <div class="impact-card-icon">
-                    <i class="fas fa-user-graduate"></i>
-                </div>
-                <div class="impact-card-content">
-                    <h3 class="impact-number">
-                        <span class="counter" data-target="120">0</span>
-                        <span class="suffix">+</span>
-                    </h3>
-                    <p class="impact-label">Tenaga Pendidik</p>
-                    <div class="impact-progress">
-                        <div class="progress-bar" style="width: 90%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="impact-premium-card">
-                <div class="impact-card-icon">
-                    <i class="fas fa-hand-holding-heart"></i>
-                </div>
-                <div class="impact-card-content">
-                    <h3 class="impact-number">
-                        <span class="counter" data-target="15000">0</span>
-                        <span class="suffix">+</span>
-                    </h3>
-                    <p class="impact-label">Penerima Bantuan</p>
-                    <div class="impact-progress">
-                        <div class="progress-bar" style="width: 95%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="impact-premium-card">
-                <div class="impact-card-icon">
-                    <i class="fas fa-building"></i>
-                </div>
-                <div class="impact-card-content">
-                    <h3 class="impact-number">
-                        <span class="counter" data-target="7">0</span>
-                    </h3>
-                    <p class="impact-label">Provinsi</p>
-                    <div class="impact-progress">
-                        <div class="progress-bar" style="width: 70%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="impact-premium-card featured">
-                <div class="impact-card-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <div class="impact-card-content">
-                    <h3 class="impact-number">
-                        <span class="counter" data-target="75">0</span>
-                        <span class="suffix">%</span>
-                    </h3>
-                    <p class="impact-label">Lulusan PTN</p>
-                    <div class="impact-progress">
-                        <div class="progress-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="impact-badge">
-                    <i class="fas fa-star"></i> Prestasi Tertinggi
-                </div>
-            </div>
+        <!-- Background Decoration -->
+        <div class="impact-bg-decoration">
+            <div class="impact-bg-circle"></div>
+            <div class="impact-bg-dots"></div>
         </div>
-    </div>
-    
-    <!-- Background Decoration -->
-    <div class="impact-bg-decoration">
-        <div class="impact-bg-circle"></div>
-        <div class="impact-bg-dots"></div>
-    </div>
-</section>
+    </section>
 
-<!-- Gallery Section - Horizontal Scroll Premium -->
+    <!-- Gallery Section - Horizontal Scroll Premium -->
     <section id="gallery" class="gallery-horizontal">
         <div class="container">
             <div class="gallery-horizontal-header">
@@ -849,13 +868,14 @@
                 <button class="gallery-scroll-arrow gallery-scroll-left" id="galleryScrollLeftBtn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                
+
                 <div class="gallery-horizontal-wrapper" id="galleryHorizontalWrapper">
                     <div class="gallery-horizontal-track" id="galleryHorizontalTrack">
                         <!-- Gallery Item 1 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kegiatan belajar">
+                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Kegiatan belajar">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge pendidikan">
                                     <i class="fas fa-graduation-cap"></i> Pendidikan
@@ -863,7 +883,8 @@
                             </div>
                             <div class="gallery-card-content">
                                 <h3 class="gallery-title">Kegiatan Belajar Mengajar</h3>
-                                <p class="gallery-desc">Suasana belajar yang interaktif dan menyenangkan di dalam kelas.</p>
+                                <p class="gallery-desc">Suasana belajar yang interaktif dan menyenangkan di dalam kelas.
+                                </p>
                                 <div class="gallery-footer">
                                     <span class="gallery-photo-count">
                                         <i class="fas fa-images"></i> 15 Foto
@@ -878,7 +899,8 @@
                         <!-- Gallery Item 2 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan bencana">
+                                <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Bantuan bencana">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge kemanusiaan">
                                     <i class="fas fa-hand-holding-heart"></i> Kemanusiaan
@@ -901,7 +923,8 @@
                         <!-- Gallery Item 3 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Anak yatim">
+                                <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Anak yatim">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge sosial">
                                     <i class="fas fa-users"></i> Sosial
@@ -909,7 +932,8 @@
                             </div>
                             <div class="gallery-card-content">
                                 <h3 class="gallery-title">Santunan Anak Yatim</h3>
-                                <p class="gallery-desc">Kegiatan berbagi kebahagiaan dengan anak-anak yatim dan dhuafa.</p>
+                                <p class="gallery-desc">Kegiatan berbagi kebahagiaan dengan anak-anak yatim dan dhuafa.
+                                </p>
                                 <div class="gallery-footer">
                                     <span class="gallery-photo-count">
                                         <i class="fas fa-images"></i> 8 Foto
@@ -924,7 +948,8 @@
                         <!-- Gallery Item 4 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Suasana kelas">
+                                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Suasana kelas">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge pendidikan">
                                     <i class="fas fa-graduation-cap"></i> Pendidikan
@@ -932,7 +957,8 @@
                             </div>
                             <div class="gallery-card-content">
                                 <h3 class="gallery-title">Suasana Kelas Interaktif</h3>
-                                <p class="gallery-desc">Kelas modern dengan fasilitas lengkap dan nyaman untuk belajar.</p>
+                                <p class="gallery-desc">Kelas modern dengan fasilitas lengkap dan nyaman untuk belajar.
+                                </p>
                                 <div class="gallery-footer">
                                     <span class="gallery-photo-count">
                                         <i class="fas fa-images"></i> 20 Foto
@@ -947,7 +973,8 @@
                         <!-- Gallery Item 5 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wisuda">
+                                <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Wisuda">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge prestasi">
                                     <i class="fas fa-trophy"></i> Prestasi
@@ -970,7 +997,8 @@
                         <!-- Gallery Item 6 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1532622785990-d2c36a394f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bantuan pangan">
+                                <img src="https://images.unsplash.com/photo-1532622785990-d2c36a394f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Bantuan pangan">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge kemanusiaan">
                                     <i class="fas fa-hand-holding-heart"></i> Kemanusiaan
@@ -993,7 +1021,8 @@
                         <!-- Gallery Item 7 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1488521787991-aa207e0c37dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Anak-anak">
+                                <img src="https://images.unsplash.com/photo-1488521787991-aa207e0c37dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Anak-anak">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge sosial">
                                     <i class="fas fa-users"></i> Sosial
@@ -1016,7 +1045,8 @@
                         <!-- Gallery Item 8 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Olimpiade">
+                                <img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Olimpiade">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge prestasi">
                                     <i class="fas fa-trophy"></i> Prestasi
@@ -1024,7 +1054,8 @@
                             </div>
                             <div class="gallery-card-content">
                                 <h3 class="gallery-title">Juara Olimpiade Sains</h3>
-                                <p class="gallery-desc">Siswa berhasil meraih medali emas di ajang olimpiade tingkat nasional.</p>
+                                <p class="gallery-desc">Siswa berhasil meraih medali emas di ajang olimpiade tingkat
+                                    nasional.</p>
                                 <div class="gallery-footer">
                                     <span class="gallery-photo-count">
                                         <i class="fas fa-images"></i> 6 Foto
@@ -1039,7 +1070,8 @@
                         <!-- Gallery Item 9 -->
                         <div class="gallery-horizontal-card">
                             <div class="gallery-card-image">
-                                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beasiswa">
+                                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Beasiswa">
                                 <div class="gallery-image-overlay"></div>
                                 <span class="gallery-category-badge pendidikan">
                                     <i class="fas fa-graduation-cap"></i> Pendidikan
@@ -1060,7 +1092,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <button class="gallery-scroll-arrow gallery-scroll-right" id="galleryScrollRightBtn">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -1077,318 +1109,305 @@
             </div>
         </div>
     </section>
-      
+
     <!-- GALLERY LIGHTBOX MODAL -->
-<div class="gallery-lightbox" id="galleryLightbox">
-    <button class="lightbox-close" id="lightboxClose">&times;</button>
-    <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
-    <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
-    <img class="lightbox-image" id="lightboxImage" src="" alt="">
-    <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
+    <div class="gallery-lightbox" id="galleryLightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
 
     <!-- CTA Section - Premium Version -->
-<section class="cta-premium">
-    <div class="container">
-        <div class="cta-premium-content">
-            <!-- Badge -->
-            <div class="cta-premium-badge">
-                <i class="fas fa-hand-holding-heart"></i>
-                <span>#BersamaBisa</span>
-            </div>
-            
-            <!-- Title -->
-            <h2 class="cta-premium-title">
-                Bersama <span class="text-gradient-light">Wujudkan Harapan</span>
-            </h2>
-            
-            <!-- Description -->
-            <p class="cta-premium-description">
-                Setiap kontribusi Anda berarti bagi masa depan mereka yang membutuhkan.
-                Mari bergandengan tangan membangun peradaban yang lebih baik.
-            </p>
-            
-            <!-- Buttons -->
-            <div class="cta-premium-buttons">
-                <a href="donation.html" class="cta-btn-primary">
+    <section class="cta-premium">
+        <div class="container">
+            <div class="cta-premium-content">
+                <!-- Badge -->
+                <div class="cta-premium-badge">
                     <i class="fas fa-hand-holding-heart"></i>
-                    <span>Donasi Sekarang</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="relawan.html" class="cta-btn-secondary">
-                    <i class="fas fa-users"></i>
-                    <span>Jadi Relawan</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <!-- Trust Badges -->
-            <div class="cta-premium-trust">
-                <div class="trust-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Transparan & Terpercaya</span>
+                    <span>#BersamaBisa</span>
                 </div>
-                <div class="trust-badge">
-                    <i class="fas fa-receipt"></i>
-                    <span>Bukti Donasi Resmi</span>
+
+                <!-- Title -->
+                <h2 class="cta-premium-title">
+                    Bersama <span class="text-gradient-light">Wujudkan Harapan</span>
+                </h2>
+
+                <!-- Description -->
+                <p class="cta-premium-description">
+                    Setiap kontribusi Anda berarti bagi masa depan mereka yang membutuhkan.
+                    Mari bergandengan tangan membangun peradaban yang lebih baik.
+                </p>
+
+                <!-- Buttons -->
+                <div class="cta-premium-buttons">
+                    <a href="donation.html" class="cta-btn-primary">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Donasi Sekarang</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="relawan.html" class="cta-btn-secondary">
+                        <i class="fas fa-users"></i>
+                        <span>Jadi Relawan</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="trust-badge">
-                    <i class="fas fa-clock"></i>
-                    <span>Laporan Berkala</span>
+
+                <!-- Trust Badges -->
+                <div class="cta-premium-trust">
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Transparan & Terpercaya</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-receipt"></i>
+                        <span>Bukti Donasi Resmi</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Laporan Berkala</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Animated Background Elements -->
-    <div class="cta-bg-animation">
-        <div class="bg-particle particle-1"></div>
-        <div class="bg-particle particle-2"></div>
-        <div class="bg-particle particle-3"></div>
-        <div class="bg-particle particle-4"></div>
-        <div class="bg-particle particle-5"></div>
-    </div>
-</section>
+
+        <!-- Animated Background Elements -->
+        <div class="cta-bg-animation">
+            <div class="bg-particle particle-1"></div>
+            <div class="bg-particle particle-2"></div>
+            <div class="bg-particle particle-3"></div>
+            <div class="bg-particle particle-4"></div>
+            <div class="bg-particle particle-5"></div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-   <!-- Contact Section - Premium Version -->
-<section id="contact" class="contact-premium">
-    <div class="container">
-        <div class="contact-premium-grid">
-            <!-- Left Side - Contact Info -->
-            <div class="contact-premium-info">
-                <div class="contact-premium-header">
-                    <span class="contact-premium-tagline">HUBUNGI KAMI</span>
-                    <h2 class="contact-premium-title">
-                        Terhubung <span class="text-gradient">Dengan Kami</span>
-                    </h2>
-                    <p class="contact-premium-text">
-                        Silakan hubungi kami untuk informasi lebih lanjut tentang program 
-                        pendidikan, kemanusiaan, atau cara berkontribusi.
-                    </p>
-                </div>
+    <!-- Contact Section - Premium Version -->
+    <section id="contact" class="contact-premium">
+        <div class="container">
+            <div class="contact-premium-grid">
+                <!-- Left Side - Contact Info -->
+                <div class="contact-premium-info">
+                    <div class="contact-premium-header">
+                        <span class="contact-premium-tagline">HUBUNGI KAMI</span>
+                        <h2 class="contact-premium-title">
+                            Terhubung <span class="text-gradient">Dengan Kami</span>
+                        </h2>
+                        <p class="contact-premium-text">
+                            Silakan hubungi kami untuk informasi lebih lanjut tentang program
+                            pendidikan, kemanusiaan, atau cara berkontribusi.
+                        </p>
+                    </div>
 
-                <!-- Contact Cards -->
-                <div class="contact-premium-cards">
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-card-info">
-                            <h4>Alamat</h4>
-                            <p>Jl. Dahlia Raya No. 1, Perumahan Taman Lembah Hijau, Lippo Cikarang, Desa Sukaresmi/Serang, Kec. Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-card-info">
-                            <h4>Telepon</h4>
-                            <p>(021) 89901706</p>
-                            <small>Senin - Jumat, 07.30 - 16.00</small>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-card-info">
-                            <h4>Email</h4>
-                            <p>info@alhidayah.or.id</p>
-                            <small>support@alhidayah.or.id</small>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-card-info">
-                            <h4>Jam Operasional</h4>
-                            <p>Senin - Jumat: 07.30 - 16.00</p>
-                            <small>Sabtu & Minggu: Tutup</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Social Links -->
-                <div class="contact-premium-social">
-                    <h4>Ikuti Kami</h4>
-                    <div class="social-links-premium">
-                        <a href="https://instagram.com/ahis_cikarang/" class="social-link instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/ahislippo/" class="social-link facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@AHISMEDIA_CKRG" class="social-link youtube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-link whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="social-link tiktok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Side - Contact Form -->
-            <div class="contact-premium-form-wrapper" id="contactForm">
-                <div class="contact-premium-form">
-                    <div class="form-header">
-                        <i class="fas fa-paper-plane"></i>
-                        <h3>Kirim Pesan</h3>
-                        <p>Kami akan merespon dalam 1x24 jam</p>
-                    </div>
-                    
-                    <form id="contactPremiumForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" placeholder="Nama Lengkap" required>
-                                <i class="fas fa-user"></i>
+                    <!-- Contact Cards -->
+                    <div class="contact-premium-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Email" required>
+                            <div class="contact-card-info">
+                                <h4>Alamat</h4>
+                                <p>Jl. Dahlia Raya No. 1, Perumahan Taman Lembah Hijau, Lippo Cikarang, Desa
+                                    Sukaresmi/Serang, Kec. Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17530</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <h4>Telepon</h4>
+                                <p>(021) 89901706</p>
+                                <small>Senin - Jumat, 07.30 - 16.00</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
+                            <div class="contact-card-info">
+                                <h4>Email</h4>
+                                <p>info@alhidayah.or.id</p>
+                                <small>support@alhidayah.or.id</small>
+                            </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="tel" placeholder="No. WhatsApp">
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Jumat: 07.30 - 16.00</p>
+                                <small>Sabtu & Minggu: Tutup</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="contact-premium-social">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links-premium">
+                            <a href="https://instagram.com/ahis_cikarang/" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/ahislippo/" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@AHISMEDIA_CKRG" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link whatsapp">
                                 <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="form-group">
-                                <select>
-                                    <option value="">Pilih Subjek</option>
-                                    <option value="pendidikan">Informasi Pendidikan</option>
-                                    <option value="kemanusiaan">Program Kemanusiaan</option>
-                                    <option value="donasi">Donasi & Wakaf</option>
-                                    <option value="lainnya">Lainnya</option>
-                                </select>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
+                            </a>
+                            <a href="#" class="social-link tiktok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
-                        <div class="form-group full">
-                            <textarea rows="5" placeholder="Pesan" required></textarea>
-                            <i class="fas fa-comment-dots"></i>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <span>Kirim Pesan</span>
+                    </div>
+                </div>
+
+                <!-- Right Side - Contact Form -->
+                <div class="contact-premium-form-wrapper" id="contactForm">
+                    <div class="contact-premium-form">
+                        <div class="form-header">
                             <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                    
-                    <div class="form-footer">
-                        <p><i class="fas fa-lock"></i> Data Anda aman bersama kami</p>
+                            <h3>Kirim Pesan</h3>
+                            <p>Kami akan merespon dalam 1x24 jam</p>
+                        </div>
+
+                        <form id="contactPremiumForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Nama Lengkap" required>
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email" required>
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="tel" placeholder="No. WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="form-group">
+                                    <select>
+                                        <option value="">Pilih Subjek</option>
+                                        <option value="pendidikan">Informasi Pendidikan</option>
+                                        <option value="kemanusiaan">Program Kemanusiaan</option>
+                                        <option value="donasi">Donasi & Wakaf</option>
+                                        <option value="lainnya">Lainnya</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-group full">
+                                <textarea rows="5" placeholder="Pesan" required></textarea>
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Kirim Pesan</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+
+                        <div class="form-footer">
+                            <p><i class="fas fa-lock"></i> Data Anda aman bersama kami</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Map Background -->
-    <div class="contact-bg-map">
-        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-            <path d="M400,0 C500,100 600,200 700,150 C750,125 800,150 800,200 L800,600 L0,600 L0,100 C50,50 100,0 200,50 C300,100 350,0 400,0Z" fill="rgba(10,75,122,0.03)"/>
-        </svg>
-    </div>
-</section>
 
-    <!-- ===== FLOATING VIDEO AD (DISMISSIBLE) ===== -->
-<div class="video-ad" id="videoAd">
-    <div class="video-ad-content">
-        <button class="video-ad-close" id="closeVideoAd">
-            <i class="fas fa-times"></i>
-        </button>
+        <!-- Map Background -->
+        <div class="contact-bg-map">
+            <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M400,0 C500,100 600,200 700,150 C750,125 800,150 800,200 L800,600 L0,600 L0,100 C50,50 100,0 200,50 C300,100 350,0 400,0Z"
+                    fill="rgba(10,75,122,0.03)" />
+            </svg>
+        </div>
+    </section>
+
+ 
+
+<!-- WIDGET KEGIATAN -->
+<!-- ICON TRIGGER -->
+<div class="trigger-icon" id="triggerIcon">
+    <div class="circle">
+        <i class="fas fa-play"></i>
+    </div>
+    <span>Kegiatan</span>
+</div>
+
+<!-- WIDGET KEGIATAN -->
+<div class="kegiatan-widget" id="kegiatanWidget">
+    <div class="widget-box">
+        <button class="btn-close" id="btnClose">✕</button>
         
-        <div class="video-ad-header">
-            <i class="fas fa-video"></i>
-            <span>Kegiatan Terbaru</span>
+        <div class="widget-header">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Kegiatan Terbaru</h3>
         </div>
         
-        <div class="video-ad-carousel">
-            <div class="video-ad-container" id="videoAdCarousel">
-                
+        <div class="carousel-area">
+            <div class="carousel-container" id="carouselContainer">
                 <!-- Video 1 -->
-                <div class="video-ad-card">
-                    <div class="video-ad-thumb">
-                        <iframe 
-                            src="https://www.youtube.com/embed/yusLnVmCmTk" 
-                            title="Tasmi' Juz 30"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                <div class="card-video">
+                    <div class="video-wrap">
+                        <iframe src="https://www.youtube.com/embed/yusLnVmCmTk" allowfullscreen></iframe>
                     </div>
-                    <div class="video-ad-info">
-                        <span class="ad-badge live">Live</span>
+                    <div class="card-info">
+                        <span class="badge live">LIVE</span>
                         <h4>Tasmi' Juz 30</h4>
                         <p>SDIT AL HIDAYAH Islamic School</p>
                     </div>
                 </div>
-
+                
                 <!-- Video 2 -->
-                <div class="video-ad-card">
-                    <div class="video-ad-thumb">
-                        <iframe 
-                            src="https://www.youtube.com/embed/hOM1e-FO5Ag" 
-                            title="Graduation 13"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                <div class="card-video">
+                    <div class="video-wrap">
+                        <iframe src="https://www.youtube.com/embed/hOM1e-FO5Ag" allowfullscreen></iframe>
                     </div>
-                    <div class="video-ad-info">
-                        <span class="ad-badge grad">Wisuda</span>
+                    <div class="card-info">
+                        <span class="badge wisuda">WISUDA</span>
                         <h4>Graduation 13</h4>
                         <p>Angkatan ke-13 AHIS</p>
                     </div>
                 </div>
-
+                
                 <!-- Video 3 -->
-                <div class="video-ad-card">
-                    <div class="video-ad-thumb">
-                        <iframe 
-                            src="https://www.youtube.com/embed/GdH1VES0kQI" 
-                            title="Graduation 14"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                <div class="card-video">
+                    <div class="video-wrap">
+                        <iframe src="https://www.youtube.com/embed/GdH1VES0kQI" allowfullscreen></iframe>
                     </div>
-                    <div class="video-ad-info">
-                        <span class="ad-badge grad">Wisuda</span>
+                    <div class="card-info">
+                        <span class="badge wisuda">WISUDA</span>
                         <h4>Graduation 14</h4>
                         <p>Angkatan ke-14 AHIS</p>
                     </div>
                 </div>
-
             </div>
             
-            <!-- Mini Navigation -->
-            <button class="video-ad-prev" id="videoAdPrev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="video-ad-next" id="videoAdNext">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+            <button class="nav-btn nav-prev" id="btnPrev">‹</button>
+            <button class="nav-btn nav-next" id="btnNext">›</button>
         </div>
         
-        <div class="video-ad-dots" id="videoAdDots"></div>
+        <div class="dot-container" id="dotContainer"></div>
         
-        <a href="news.html" class="video-ad-more">
-            Lihat Semua Kegiatan <i class="fas fa-arrow-right"></i>
+        <a href="gallery.html" class="link-semua">
+            Lihat Semua <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
 
     <!-- Footer -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
@@ -1399,7 +1418,8 @@
                             <p>Lembah Hijau</p>
                         </div>
                     </div>
-                    <p>Mencerdaskan kehidupan bangsa, meringankan beban sesama. Bersama membangun peradaban yang lebih baik.</p>
+                    <p>Mencerdaskan kehidupan bangsa, meringankan beban sesama. Bersama membangun peradaban yang lebih
+                        baik.</p>
                     <div class="footer-cert">
                         <span><i class="fas fa-check-circle"></i> SK Kemenkumham No. AHU-1234.2024</span>
                         <span><i class="fas fa-check-circle"></i> Terdaftar di BAZNAS</span>
@@ -1452,11 +1472,11 @@
 
         window.addEventListener('scroll', () => {
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (scrollY >= (sectionTop - 100)) {
                     current = section.getAttribute('id');
                 }
@@ -1470,8 +1490,9 @@
             });
         });
 
-        
+
 
     </script>
 </body>
+
 </html>

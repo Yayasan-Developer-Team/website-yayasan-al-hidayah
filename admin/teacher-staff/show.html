@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Guru/Staff - Admin Yayasan Al-Hidayah</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../../photo/logoYAYASAN.png" alt="Logo Yayasan Al-Hidayah" class="logo-img">
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="../contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-users"></i>
+                                <span>Guru & Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="../profile.html">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Detail Guru / Staff</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <a href="edit.html?id=5" class="btn-edit" style="margin-right: 12px;">
+                        <i class="fas fa-edit"></i> Edit Data
+                    </a>
+                    <a href="../notification.html" class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </a>
+                    
+                    <a href="../profile.html" class="admin-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Back Button -->
+                <div style="margin-bottom: 20px;">
+                    <a href="index.html" class="btn-view-all">
+                        <i class="fas fa-arrow-left"></i> Kembali ke Daftar
+                    </a>
+                </div>
+                
+                <!-- Teacher Detail Header -->
+                <div class="teacher-detail-header">
+                    <div class="teacher-detail-photo">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=140&h=140&fit=crop" alt="Ahmad Fauzi">
+                    </div>
+                    <div class="teacher-detail-info">
+                        <h3>Drs. H. Ahmad Fauzi, M.Pd.</h3>
+                        <div class="position-badge">
+                            <i class="fas fa-briefcase"></i> Kepala SD Islam Al-Hidayah
+                        </div>
+                        <div class="teacher-detail-grid">
+                            <div class="teacher-detail-item-large">
+                                <i class="fas fa-id-card"></i>
+                                <strong>NIP</strong>
+                                <span>198505152010011001</span>
+                            </div>
+                            <div class="teacher-detail-item-large">
+                                <i class="fas fa-envelope"></i>
+                                <strong>Email</strong>
+                                <span>ahmad.fauzi@alhidayah.sch.id</span>
+                            </div>
+                            <div class="teacher-detail-item-large">
+                                <i class="fas fa-phone"></i>
+                                <strong>Telepon</strong>
+                                <span>0812-3456-7890</span>
+                            </div>
+                            <div class="teacher-detail-item-large">
+                                <i class="fas fa-venus-mars"></i>
+                                <strong>Jenis Kelamin</strong>
+                                <span>Laki-laki</span>
+                            </div>
+                            <div class="teacher-detail-item-large">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <strong>Tempat, Tgl Lahir</strong>
+                                <span>Jakarta, 15 Mei 1985</span>
+                            </div>
+                            <div class="teacher-detail-item-large">
+                                <i class="fas fa-calendar"></i>
+                                <strong>Bergabung</strong>
+                                <span>15 Juli 2003 (22 tahun)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detail Cards Grid -->
+                <div class="profile-grid">
+                    <!-- Alamat & Kontak -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-address-card"></i> Alamat & Kontak</h3>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Alamat</div>
+                                <div class="profile-info-value">
+                                    Jl. Pendidikan No. 45, Cilandak<br>
+                                    Jakarta Selatan, DKI Jakarta
+                                </div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Email Alternatif</div>
+                                <div class="profile-info-value">ahmad.fauzi@gmail.com</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Kontak Darurat</div>
+                                <div class="profile-info-value">0813-9876-5432 (Istri)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kepegawaian -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-briefcase"></i> Kepegawaian</h3>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Unit</div>
+                                <div class="profile-info-value">SD Islam Al-Hidayah</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Jabatan</div>
+                                <div class="profile-info-value">Kepala Sekolah</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Status Kepegawaian</div>
+                                <div class="profile-info-value">Guru Tetap Yayasan</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Status</div>
+                                <div class="profile-info-value">
+                                    <span class="badge badge-success">Aktif</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pendidikan -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-graduation-cap"></i> Pendidikan</h3>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Pendidikan Terakhir</div>
+                                <div class="profile-info-value">S2 - Magister</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Jurusan</div>
+                                <div class="profile-info-value">Manajemen Pendidikan</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Universitas</div>
+                                <div class="profile-info-value">Universitas Negeri Jakarta</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Tahun Lulus</div>
+                                <div class="profile-info-value">2010</div>
+                            </div>
+                            <div class="profile-info-row">
+                                <div class="profile-info-label">Sertifikasi</div>
+                                <div class="profile-info-value">
+                                    <span class="badge badge-primary">Sudah Sertifikasi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Statistik & Kinerja -->
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h3><i class="fas fa-chart-bar"></i> Statistik & Kinerja</h3>
+                        </div>
+                        <div class="profile-card-body">
+                            <div class="teacher-stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+                                <div class="teacher-stat-item">
+                                    <div class="stat-value">22</div>
+                                    <div class="stat-label">Tahun Pengabdian</div>
+                                </div>
+                                <div class="teacher-stat-item">
+                                    <div class="stat-value">98%</div>
+                                    <div class="stat-label">Kehadiran</div>
+                                </div>
+                                <div class="teacher-stat-item">
+                                    <div class="stat-value">4.8</div>
+                                    <div class="stat-label">Rating Kinerja</div>
+                                </div>
+                                <div class="teacher-stat-item">
+                                    <div class="stat-value">12</div>
+                                    <div class="stat-label">Pelatihan Diikuti</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Biografi -->
+                <div class="detail-card" style="margin-top: 24px;">
+                    <div class="detail-card-header">
+                        <i class="fas fa-user-edit"></i>
+                        <h4>Biografi & Catatan</h4>
+                    </div>
+                    <div class="detail-card-body">
+                        <p style="line-height: 1.8; color: var(--gray);">
+                            Drs. H. Ahmad Fauzi, M.Pd. adalah pendidik berpengalaman dengan lebih dari 20 tahun dedikasi di bidang pendidikan dasar. 
+                            Beliau memulai karir sebagai guru kelas di SD Islam Al-Hidayah pada tahun 2003, kemudian menjabat sebagai Wakil Kepala Sekolah 
+                            Bidang Kurikulum selama 8 tahun sebelum akhirnya dipercaya menjadi Kepala Sekolah pada tahun 2015.
+                        </p>
+                        <p style="line-height: 1.8; color: var(--gray); margin-top: 12px;">
+                            Di bawah kepemimpinannya, SD Islam Al-Hidayah telah meraih berbagai prestasi baik di tingkat regional maupun nasional, 
+                            termasuk Akreditasi A dan penghargaan Sekolah Adiwiyata. Beliau juga aktif dalam pengembangan kurikulum berbasis karakter 
+                            dan menjadi narasumber di berbagai pelatihan guru.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Riwayat Jabatan -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <i class="fas fa-history"></i>
+                        <h4>Riwayat Jabatan</h4>
+                    </div>
+                    <div class="detail-card-body">
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Jabatan</th>
+                                        <th>Unit</th>
+                                        <th>Periode</th>
+                                        <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kepala Sekolah</td>
+                                        <td>SD Islam Al-Hidayah</td>
+                                        <td>2015 - Sekarang</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wakil Kepala Sekolah Bid. Kurikulum</td>
+                                        <td>SD Islam Al-Hidayah</td>
+                                        <td>2007 - 2015</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Guru Kelas</td>
+                                        <td>SD Islam Al-Hidayah</td>
+                                        <td>2003 - 2007</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('collapsed');
+            });
+        }
+    </script>
+</body>
+</html>

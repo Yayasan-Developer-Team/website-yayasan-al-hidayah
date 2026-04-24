@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Guru/Staff - Admin Yayasan Al-Hidayah</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Admin Style CSS -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../../photo/logoYAYASAN.png" alt="Logo Yayasan Al-Hidayah" class="logo-img">
+                    <div class="logo-text">
+                        <span>YAYASAN AL-HIDAYAH</span>
+                        <small>Lembah Hijau</small>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <div class="menu-label">MAIN</div>
+                    <ul>
+                        <li>
+                            <a href="../dashboard.html">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">KONTEN</div>
+                    <ul>
+                        <li>
+                            <a href="../contact-message/index.html">
+                                <i class="fas fa-envelope"></i>
+                                <span>Pesan Masuk</span>
+                                <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fas fa-users"></i>
+                                <span>Guru & Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../donation/index.html">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Donasi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../news/index.html">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/index.html">
+                                <i class="fas fa-images"></i>
+                                <span>Galeri</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <div class="menu-label">AKUN</div>
+                    <ul>
+                        <li>
+                            <a href="../profile.html">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../index.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="admin-detail">
+                        <span class="admin-name">Admin</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <nav class="top-nav">
+                <div class="page-title">
+                    <h2>Tambah Guru / Staff Baru</h2>
+                </div>
+                
+                <div class="top-nav-actions">
+                    <a href="../notification.html" class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </a>
+                    <a href="../profile.html" class="admin-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="content-area">
+                <div class="form-container">
+                    <form action="index.html" method="get" class="admin-form">
+                        <!-- Data Diri -->
+                        <div class="form-section-title">
+                            <i class="fas fa-user"></i> Data Diri
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Foto Profil</label>
+                                <div class="photo-upload-area">
+                                    <div class="current-photo" id="photoPreview">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="photo-upload-control">
+                                        <button type="button" class="btn-select-file" onclick="document.getElementById('foto').click()">
+                                            <i class="fas fa-cloud-upload-alt"></i> Pilih Foto
+                                        </button>
+                                        <input type="file" id="foto" name="foto" accept="image/*" style="display: none;" onchange="previewPhoto(this)">
+                                        <p>Format: JPG, PNG. Maksimal 2MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nama">Nama Lengkap *</label>
+                                <input type="text" id="nama" name="nama" placeholder="Contoh: Drs. H. Ahmad Fauzi" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gelar">Gelar</label>
+                                <input type="text" id="gelar" name="gelar" placeholder="Contoh: S.Pd., M.Pd.">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nip">NIP / NIK</label>
+                                <input type="text" id="nip" name="nip" placeholder="Nomor Induk Pegawai">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="nama@alhidayah.sch.id" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telepon">No. Telepon</label>
+                                <input type="tel" id="telepon" name="telepon" placeholder="0812-xxxx-xxxx">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Jenis Kelamin *</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Pilih</option>
+                                    <option value="L">Laki-laki</option>
+                                    <option value="P">Perempuan</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tempat_lahir">Tempat Lahir</label>
+                                <input type="text" id="tempat_lahir" name="tempat_lahir" placeholder="Contoh: Jakarta">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tanggal_lahir">Tanggal Lahir</label>
+                                <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="alamat">Alamat</label>
+                                <textarea id="alamat" name="alamat" rows="2" placeholder="Alamat lengkap"></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Kepegawaian -->
+                        <div class="form-section-title">
+                            <i class="fas fa-briefcase"></i> Kepegawaian
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="unit">Unit *</label>
+                                <select id="unit" name="unit" required>
+                                    <option value="">Pilih Unit</option>
+                                    <option value="tk">TK Islam Al-Hidayah</option>
+                                    <option value="sd">SD Islam Al-Hidayah</option>
+                                    <option value="smp">SMP Islam Al-Hidayah</option>
+                                    <option value="sma">SMA Islam Al-Hidayah</option>
+                                    <option value="staff">Staff Yayasan</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="jabatan">Jabatan *</label>
+                                <select id="jabatan" name="jabatan" required>
+                                    <option value="">Pilih Jabatan</option>
+                                    <option value="kepala">Kepala Sekolah</option>
+                                    <option value="wakil">Wakil Kepala Sekolah</option>
+                                    <option value="guru">Guru</option>
+                                    <option value="kepala-staff">Kepala Staff</option>
+                                    <option value="staff">Staff</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" id="mapelGroup">
+                                <label for="mapel">Mata Pelajaran</label>
+                                <input type="text" id="mapel" name="mapel" placeholder="Contoh: Matematika">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="status_pegawai">Status Kepegawaian *</label>
+                                <select id="status_pegawai" name="status_pegawai" required>
+                                    <option value="">Pilih Status</option>
+                                    <option value="tetap">Guru Tetap Yayasan</option>
+                                    <option value="kontrak">Kontrak</option>
+                                    <option value="honorer">Honorer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="status">Status *</label>
+                                <select id="status" name="status" required>
+                                    <option value="active">Aktif</option>
+                                    <option value="inactive">Non-Aktif</option>
+                                    <option value="cuti">Cuti</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tgl_bergabung">Tanggal Bergabung</label>
+                                <input type="date" id="tgl_bergabung" name="tgl_bergabung">
+                            </div>
+                        </div>
+                        
+                        <!-- Pendidikan -->
+                        <div class="form-section-title">
+                            <i class="fas fa-graduation-cap"></i> Pendidikan & Kualifikasi
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="pendidikan">Pendidikan Terakhir *</label>
+                                <select id="pendidikan" name="pendidikan" required>
+                                    <option value="">Pilih</option>
+                                    <option value="SMA">SMA/Sederajat</option>
+                                    <option value="D3">Diploma (D3)</option>
+                                    <option value="S1">Sarjana (S1)</option>
+                                    <option value="S2">Magister (S2)</option>
+                                    <option value="S3">Doktor (S3)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="jurusan">Jurusan</label>
+                                <input type="text" id="jurusan" name="jurusan" placeholder="Contoh: Pendidikan Matematika">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="universitas">Universitas</label>
+                                <input type="text" id="universitas" name="universitas" placeholder="Contoh: Universitas Negeri Jakarta">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tahun_lulus">Tahun Lulus</label>
+                                <input type="number" id="tahun_lulus" name="tahun_lulus" placeholder="Contoh: 2010">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sertifikasi">Sertifikasi</label>
+                                <select id="sertifikasi" name="sertifikasi">
+                                    <option value="">Pilih</option>
+                                    <option value="sudah">Sudah Sertifikasi</option>
+                                    <option value="belum">Belum Sertifikasi</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="keahlian">Keahlian Khusus</label>
+                                <input type="text" id="keahlian" name="keahlian" placeholder="Contoh: Hafidz 30 Juz">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pengalaman">Pengalaman (tahun)</label>
+                                <input type="number" id="pengalaman" name="pengalaman" placeholder="Contoh: 15" min="0">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tampil_website">Tampilkan di Website</label>
+                                <select id="tampil_website" name="tampil_website">
+                                    <option value="ya">Ya</option>
+                                    <option value="tidak">Tidak</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="bio">Biografi / Catatan</label>
+                                <textarea id="bio" name="bio" rows="3" placeholder="Informasi tambahan..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save"></i> Simpan Data
+                            </button>
+                            <a href="index.html" class="btn-cancel">
+                                <i class="fas fa-times"></i> Batal
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+        }
+        
+        function previewPhoto(input) {
+            const preview = document.getElementById('photoPreview');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => preview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        
+        document.getElementById('jabatan').addEventListener('change', function() {
+            document.getElementById('mapelGroup').style.display = this.value === 'guru' ? 'block' : 'none';
+        });
+        
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault();
+            alert('Data berhasil ditambahkan!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

@@ -17,7 +17,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="logo">
-                    <i class="fas fa-kaaba"></i>
+                    <img src="../../photo/logoYAYASAN.png" alt="Logo Yayasan Al-Hidayah" class="logo-img">
                     <div class="logo-text">
                         <span>YAYASAN AL-HIDAYAH</span>
                         <small>Lembah Hijau</small>
@@ -49,6 +49,12 @@
                                 <i class="fas fa-envelope"></i>
                                 <span>Pesan Masuk</span>
                                 <span class="menu-badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-staff/index.html">
+                                <i class="fas fa-users"></i>
+                                <span>Guru$staff</span>
                             </a>
                         </li>
                         <li>
@@ -111,23 +117,6 @@
                 <div class="page-title">
                     <h2>Profile Admin</h2>
                 </div>
-                
-                <div class="top-nav-actions">
-                    <div class="notification-dropdown">
-                        <a href="notifications.html" class="notification-btn">
-                            <i class="fas fa-bell"></i>
-                            <span class="notification-badge">3</span>
-                        </a>
-                    </div>
-                    
-                    <div class="admin-dropdown">
-                        <a href="profile.html" class="admin-btn">
-                            <i class="fas fa-user-circle"></i>
-                            <span>Admin</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                    </div>
-                </div>
             </nav>
             
             <!-- Content Area -->
@@ -146,21 +135,6 @@
                                     <i class="fas fa-check-circle"></i> Verified Account
                                 </span>
                             </div>
-                            
-                            <div class="profile-stats">
-                                <div class="profile-stat-item">
-                                    <h3>127</h3>
-                                    <p>Aktivitas</p>
-                                </div>
-                                <div class="profile-stat-item">
-                                    <h3>12</h3>
-                                    <p>Berita</p>
-                                </div>
-                                <div class="profile-stat-item">
-                                    <h3>24</h3>
-                                    <p>Foto</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,9 +145,6 @@
                     <div class="profile-card">
                         <div class="profile-card-header">
                             <h3><i class="fas fa-user"></i> Informasi Pribadi</h3>
-                            <button class="profile-edit-btn" onclick="editProfile()">
-                                <i class="fas fa-edit"></i> Edit
-                            </button>
                         </div>
                         <div class="profile-card-body">
                             <div class="profile-info-row">
@@ -213,9 +184,6 @@
                     <div class="profile-card">
                         <div class="profile-card-header">
                             <h3><i class="fas fa-shield-alt"></i> Keamanan</h3>
-                            <button class="profile-edit-btn" onclick="changePassword()">
-                                <i class="fas fa-key"></i> Ganti Password
-                            </button>
                         </div>
                         <div class="profile-card-body">
                             <div class="security-option">
@@ -265,16 +233,6 @@
         sidebarToggle.addEventListener('click', function() {
             sidebar.classList.toggle('collapsed');
         });
-        
-        // Edit Profile
-        function editProfile() {
-            alert('Fitur edit profile akan segera hadir!');
-        }
-        
-        // Change Password
-        function changePassword() {
-            alert('Fitur ganti password akan segera hadir!');
-        }
         
         // Logout All Devices
         function logoutAll() {

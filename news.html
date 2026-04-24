@@ -60,7 +60,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active">
+                            <a href="#" class="nav-link dropdown-toggle ">
                                 Program <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
@@ -107,12 +107,6 @@
                     <p>Sebanyak 312 siswa SMA Islam Al-Hidayah diwisuda dengan prestasi gemilang. 306 di antaranya diterima di berbagai perguruan tinggi negeri melalui jalur SNBP, SNBT, dan jalur prestasi lainnya. Acara wisuda berlangsung di Balai Sidang Jakarta Convention Center dan dihadiri oleh orang tua, dewan guru, serta pejabat pendidikan.</p>
                     <div class="featured-news-footer">
                         <a href="wisuda-news.html" class="btn btn-primary">Baca Selengkapnya</a>
-                        <div class="news-share">
-                            <span>Bagikan:</span>
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -373,5 +367,465 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        /**
+ * News Filter & Search
+ * Professional and modern filtering system for news page
+ */
+
+class NewsFilter {
+    constructor(options = {}) {
+        this.container = options.container || '.berita-grid';
+        this.filterButtons = options.filterButtons || '.news-filter-btn';
+        this.searchInput = options.searchInput || '.news-search input';
+        this.items = options.items || '.berita-card';
+        
+        this.currentFilter = 'all';
+        this.searchTerm = '';
+        this.debounceTimer = null;
+        
+        this.init();
+    }
+    
+    init() {
+        this.newsContainer = document.querySelector(this.container);
+        this.filterBtns = document.querySelectorAll(this.filterButtons);
+        this.searchField = document.querySelector(this.searchInput);
+        this.newsItems = document.querySelectorAll(this.items);
+        
+        if (!this.newsContainer || !this.newsItems.length) {
+            console.warn('News container or items not found');
+            return;
+        }
+        
+        this.bindEvents();
+        this.createResultsInfo();
+        this.updateResultsCount();
+    }
+    
+    bindEvents() {
+        // Filter button clicks
+        this.filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const filter = btn.dataset.filter;
+                this.setActiveFilter(btn, filter);
+            });
+        });
+        
+        // Search input with debounce
+        if (this.searchField) {
+            this.searchField.addEventListener('input', (e) => {
+                clearTimeout(this.debounceTimer);
+                this.debounceTimer = setTimeout(() => {
+                    this.searchTerm = e.target.value.toLowerCase().trim();
+                    this.filterItems();
+                }, 300);
+            });
+            
+            // Clear search on Escape key
+            this.searchField.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    this.searchField.value = '';
+                    this.searchTerm = '';
+                    this.filterItems();
+                    this.searchField.blur();
+                }
+            });
+        }
+    }
+    
+    setActiveFilter(activeBtn, filter) {
+        // Update active state
+        this.filterBtns.forEach(btn => btn.classList.remove('active'));
+        activeBtn.classList.add('active');
+        
+        // Update filter and apply
+        this.currentFilter = filter;
+        this.filterItems();
+    }
+    
+    filterItems() {
+        let visibleCount = 0;
+        
+        // Process each news item
+        this.newsItems.forEach(item => {
+            const category = item.dataset.category;
+            
+            // Get title from berita-title
+            const titleElement = item.querySelector('.berita-title a, .berita-title');
+            const title = titleElement ? titleElement.textContent.toLowerCase() : '';
+            
+            // Get excerpt from berita-excerpt
+            const excerptElement = item.querySelector('.berita-excerpt');
+            const excerpt = excerptElement ? excerptElement.textContent.toLowerCase() : '';
+            
+            // Check filter match
+            const matchesFilter = this.currentFilter === 'all' || category === this.currentFilter;
+            
+            // Check search match
+            const matchesSearch = this.searchTerm === '' || 
+                title.includes(this.searchTerm) || 
+                excerpt.includes(this.searchTerm);
+            
+            // Apply visibility with animation
+            if (matchesFilter && matchesSearch) {
+                this.showItem(item);
+                visibleCount++;
+            } else {
+                this.hideItem(item);
+            }
+        });
+        
+        // Update UI
+        this.updateResultsCount(visibleCount);
+        this.handleNoResults(visibleCount);
+        this.updatePaginationVisibility(visibleCount);
+    }
+    
+    showItem(item) {
+        item.style.display = 'block';
+        item.offsetHeight; // Force reflow
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+        item.style.pointerEvents = 'auto';
+    }
+    
+    hideItem(item) {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(10px)';
+        item.style.pointerEvents = 'none';
+        
+        setTimeout(() => {
+            if (item.style.opacity === '0') {
+                item.style.display = 'none';
+            }
+        }, 300);
+    }
+    
+    createResultsInfo() {
+        // Remove existing results info if any
+        const existingInfo = document.querySelector('.news-results-info');
+        if (existingInfo) existingInfo.remove();
+        
+        // Create new results info
+        const resultsInfo = document.createElement('div');
+        resultsInfo.className = 'news-results-info';
+        
+        // Insert after filter section
+        const filterSection = document.querySelector('.news-filter-section');
+        if (filterSection) {
+            filterSection.parentNode.insertBefore(resultsInfo, filterSection.nextSibling);
+        }
+    }
+    
+    updateResultsCount(visibleCount) {
+        const resultsInfo = document.querySelector('.news-results-info');
+        if (!resultsInfo) return;
+        
+        const totalCount = this.newsItems.length;
+        const count = visibleCount !== undefined ? visibleCount : 
+            Array.from(this.newsItems).filter(item => item.style.display !== 'none').length;
+        
+        const filterName = this.getFilterName();
+        const filterText = this.currentFilter !== 'all' ? 
+            `<span class="filter-badge"><i class="fas fa-tag"></i> ${filterName}</span>` : '';
+        
+        const searchText = this.searchTerm ? 
+            `<span class="search-badge"><i class="fas fa-search"></i> "${this.searchTerm}"</span>` : '';
+        
+        resultsInfo.innerHTML = `
+            <div class="results-count">
+                <i class="fas fa-newspaper"></i> 
+                Menampilkan <strong>${count}</strong> dari <strong>${totalCount}</strong> berita
+            </div>
+            <div class="active-filters">
+                ${filterText}
+                ${searchText}
+                ${(this.currentFilter !== 'all' || this.searchTerm) ? 
+                    `<button class="clear-filters-btn" onclick="window.newsFilter.resetAllFilters()">
+                        <i class="fas fa-times"></i> Reset
+                    </button>` : ''}
+            </div>
+        `;
+    }
+    
+    getFilterName() {
+        const activeBtn = document.querySelector(`${this.filterButtons}.active`);
+        return activeBtn ? activeBtn.textContent.trim() : this.currentFilter;
+    }
+    
+    handleNoResults(visibleCount) {
+        const existingNoResults = document.querySelector('.news-no-results');
+        const pagination = document.querySelector('.pagination');
+        
+        if (visibleCount === 0) {
+            if (!existingNoResults) {
+                const noResults = this.createNoResultsElement();
+                this.newsContainer.style.display = 'none';
+                this.newsContainer.parentNode.insertBefore(noResults, this.newsContainer.nextSibling);
+            }
+            if (pagination) pagination.style.display = 'none';
+        } else {
+            if (existingNoResults) {
+                existingNoResults.remove();
+            }
+            this.newsContainer.style.display = 'grid';
+            if (pagination) pagination.style.display = 'flex';
+        }
+    }
+    
+    createNoResultsElement() {
+        const div = document.createElement('div');
+        div.className = 'news-no-results';
+        div.innerHTML = `
+            <div class="no-results-icon">
+                <i class="fas fa-newspaper"></i>
+            </div>
+            <h3>Tidak ada berita ditemukan</h3>
+            <p>Maaf, tidak ada berita yang sesuai dengan filter atau kata kunci pencarian Anda.</p>
+            <button class="btn btn-primary reset-news-filters">
+                <i class="fas fa-redo-alt"></i> Tampilkan Semua Berita
+            </button>
+        `;
+        
+        // Add event listener to reset button
+        const resetBtn = div.querySelector('.reset-news-filters');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => this.resetAllFilters());
+        }
+        
+        return div;
+    }
+    
+    updatePaginationVisibility(visibleCount) {
+        const pagination = document.querySelector('.pagination');
+        if (pagination) {
+            pagination.style.display = visibleCount === 0 ? 'none' : 'flex';
+        }
+    }
+    
+    resetAllFilters() {
+        // Reset filter buttons
+        this.filterBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.filter === 'all') {
+                btn.classList.add('active');
+            }
+        });
+        
+        // Reset search
+        if (this.searchField) {
+            this.searchField.value = '';
+        }
+        
+        // Reset state
+        this.currentFilter = 'all';
+        this.searchTerm = '';
+        
+        // Apply filter
+        this.filterItems();
+    }
+    
+    // Public methods
+    filterBy(category) {
+        const targetBtn = Array.from(this.filterBtns).find(btn => btn.dataset.filter === category);
+        if (targetBtn) {
+            this.setActiveFilter(targetBtn, category);
+        }
+    }
+    
+    search(term) {
+        if (this.searchField) {
+            this.searchField.value = term;
+            this.searchTerm = term.toLowerCase().trim();
+            this.filterItems();
+        }
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize news filter
+    const newsFilter = new NewsFilter({
+        container: '.berita-grid',
+        filterButtons: '.news-filter-btn',
+        searchInput: '.news-search input',
+        items: '.berita-card'
+    });
+    
+    // Add keyboard shortcut (Ctrl/Cmd + K) to focus search
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const searchInput = document.querySelector('.news-search input');
+            if (searchInput) {
+                searchInput.focus();
+                searchInput.style.transition = 'all 0.3s ease';
+                searchInput.style.boxShadow = '0 0 0 4px var(--primary-light)';
+                setTimeout(() => {
+                    searchInput.style.boxShadow = '';
+                }, 500);
+            }
+        }
+    });
+    
+    // Add CSS styles
+    const style = document.createElement('style');
+    style.textContent = `
+        /* News Card Animation */
+        .berita-card {
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Results Info */
+        .news-results-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+            padding: 0.75rem 1.25rem;
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        
+        .results-count {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .results-count i {
+            color: var(--primary);
+        }
+        
+        .results-count strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .active-filters {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .filter-badge,
+        .search-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.9rem;
+            background: var(--primary-light);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .search-badge {
+            background: var(--secondary-light);
+            color: var(--secondary);
+        }
+        
+        .clear-filters-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.9rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .clear-filters-btn:hover {
+            background: var(--danger, #ef4444);
+            border-color: var(--danger, #ef4444);
+            color: white;
+        }
+        
+        /* No Results */
+        .news-no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--white);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+        
+        .news-no-results .no-results-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .news-no-results .no-results-icon i {
+            font-size: 2.5rem;
+            color: var(--gray);
+            opacity: 0.5;
+        }
+        
+        .news-no-results h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-no-results p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Search Focus */
+        .news-search input:focus {
+            outline: none;
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 3px var(--primary-light) !important;
+        }
+        
+        /* Filter Button Active State */
+        .news-filter-btn.active {
+            background: var(--primary) !important;
+            color: white !important;
+            border-color: var(--primary) !important;
+        }
+        
+        /* Pagination */
+        .pagination {
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .news-results-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Expose to global scope
+    window.newsFilter = newsFilter;
+});
+    </script>
 </body>
 </html>

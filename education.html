@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yayasan Al-Hidayah Lembah Hijau membina pendidikan TK, SD, SMP, dan SMA Islam Al-Hidayah. Informasi lengkap di website resmi sekolah.">
     <title>Program Pendidikan - Yayasan Al-Hidayah Lembah Hijau</title>
     
     <!-- Font Awesome 6 -->
@@ -11,25 +12,25 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Global CSS -->
+    <!-- Global CSS (Root, Header, Footer) -->
     <link rel="stylesheet" href="css/index.css">
     
-    <!-- Page CSS -->
+    <!-- Page Specific CSS -->
     <link rel="stylesheet" href="css/education.css">
 </head>
 <body>
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Header -->
-     <header class="header">
+    <!-- Header (Sesuaikan dengan index.html) -->
+    <header class="header">
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
@@ -42,7 +43,7 @@
                     </div>
                 </a>
 
-                <button class="mobile-toggle" id="mobileToggle">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -56,7 +57,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
-                                <li><a href="teacher&staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -64,8 +65,8 @@
                                 Program <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
-                                <li><a href="humanity.html" class="active"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                                <li><a href="education.html" class="active"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                                <li><a href="humanity.html"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
                             </ul>
                         </li>
                         <li><a href="news.html" class="nav-link">Berita</a></li>
@@ -81,301 +82,153 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="education-hero">
         <div class="container">
             <h1>Program Pendidikan</h1>
-            <p>Membentuk generasi cerdas, berakhlak mulia, dan siap menghadapi tantangan global</p>
+            <p>Membina TK, SD, SMP & SMA Islam Al-Hidayah</p>
         </div>
     </section>
 
-    <!-- TK Section -->
-    <section class="section program-detail">
+    <!-- Peran Yayasan Section -->
+    <section class="role-section">
         <div class="container">
-            <div class="program-detail-grid">
-                <div class="program-detail-content">
-                    <span class="program-level">PAUD & TK</span>
-                    <h2>TK Islam Al-Hidayah</h2>
-                    <p class="program-age">Usia 4-6 Tahun</p>
-                    <p class="program-description">
-                        Pendidikan anak usia dini dengan pendekatan belajar sambil bermain. Kami menanamkan 
-                        nilai-nilai Islam, kemandirian, dan keterampilan sosial sejak dini dalam lingkungan yang 
-                        aman dan menyenangkan.
-                    </p>
-                    
-                    <div class="program-highlight">
-                        <div class="highlight-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Senin - Jumat, 07.30 - 12.00</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-users"></i>
-                            <span>1:8 Rasio Guru - Murid</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-book-quran"></i>
-                            <span>Hafalan Doa & Surat Pendek</span>
-                        </div>
-                    </div>
-
-                    <h3>Kurikulum Unggulan:</h3>
-                    <ul class="program-curriculum">
-                        <li><i class="fas fa-check-circle"></i> Kurikulum Nasional + Muatan Lokal Islami</li>
-                        <li><i class="fas fa-check-circle"></i> Metode Montessori & Beyond Centers</li>
-                        <li><i class="fas fa-check-circle"></i> Tahfidz Juz 30 (target 5 surat)</li>
-                        <li><i class="fas fa-check-circle"></i> Bahasa Inggris dasar (fun learning)</li>
-                        <li><i class="fas fa-check-circle"></i> Pengembangan motorik & seni</li>
-                    </ul>
-
-                    <div class="program-cta">
-                        <a href="https://ahis.sch.id/" target="_blank" class="btn btn-primary">lihat lebih lanjut</a>
-                        <a href="#fasilitas" class="btn btn-outline">Lihat Fasilitas</a>
-                    </div>
+            <div class="role-badge">
+                <i class="fas fa-landmark"></i> Peran Yayasan
+            </div>
+            <h2>Sebagai Pembina & Pengawas</h2>
+            <p class="role-description">
+                Yayasan Al-Hidayah Lembah Hijau berperan sebagai <strong>pembina dan pengawas</strong> 
+                unit-unit pendidikan di bawah naungan kami. Kami memastikan setiap jenjang pendidikan 
+                berjalan dengan standar mutu terbaik dan nilai-nilai Islam yang kuat.
+            </p>
+            <div class="role-stats">
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Jenjang Pendidikan</span>
                 </div>
-                <div class="program-detail-image">
-                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="TK Islam Al-Hidayah">
+                <div class="stat-item">
+                    <span class="stat-number">1.200+</span>
+                    <span class="stat-label">Siswa Aktif</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">120+</span>
+                    <span class="stat-label">Tenaga Pendidik</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Lulusan PTN</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SD Section -->
-    <section class="section section-light">
+    <!-- Redirect Info Section -->
+    <section class="redirect-section">
         <div class="container">
-            <div class="program-detail-grid reverse">
-                <div class="program-detail-image">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SD Islam Al-Hidayah">
-                </div>
-                <div class="program-detail-content">
-                    <span class="program-level">SEKOLAH DASAR</span>
-                    <h2>SD Islam Al-Hidayah</h2>
-                    <p class="program-age">Kelas 1 - 6</p>
-                    <p class="program-description">
-                        Membangun fondasi akademik yang kuat dengan kurikulum nasional yang diperkaya 
-                        pendidikan agama, bahasa Arab, dan program tahfidz Al-Qur'an.
-                    </p>
-                    
-                    <div class="program-highlight">
-                        <div class="highlight-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Senin - Jumat, 07.00 - 15.00</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-users"></i>
-                            <span>Maksimal 28 siswa/kelas</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-book-quran"></i>
-                            <span>Target Tahfidz 3 Juz</span>
-                        </div>
-                    </div>
-
-                    <h3>Kurikulum Unggulan:</h3>
-                    <ul class="program-curriculum">
-                        <li><i class="fas fa-check-circle"></i> Kurikulum Merdeka + Diniyah</li>
-                        <li><i class="fas fa-check-circle"></i> Program Tahfidz (target 3 juz)</li>
-                        <li><i class="fas fa-check-circle"></i> Bahasa Arab & Inggris intensif</li>
-                        <li><i class="fas fa-check-circle"></i> Sains & Teknologi dasar</li>
-                        <li><i class="fas fa-check-circle"></i> Ekstrakurikuler pilihan (robotik, futsal, panahan)</li>
-                    </ul>
-
-                   <div class="program-cta">
-                        <a href="https://ahis.sch.id/" target="_blank" class="btn btn-primary">lihat lebih lanjut</a>
-                        <a href="#fasilitas" class="btn btn-outline">Lihat Fasilitas</a>
-                    </div>
-                </div>
+            <div class="redirect-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Informasi Lengkap tentang Penerimaan, Biaya, Kurikulum & Kegiatan Sekolah</h3>
+                <p>Seluruh informasi detail mengenai TK, SD, SMP, dan SMA Islam Al-Hidayah tersedia di website resmi sekolah.</p>
+                <a href="https://ahis.sch.id/" class="btn-school" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> Kunjungi Website Resmi Sekolah
+                    <span>ahis.sch.id</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- SMP Section -->
-    <section class="section">
-        <div class="container">
-            <div class="program-detail-grid">
-                <div class="program-detail-content">
-                    <span class="program-level">SEKOLAH MENENGAH PERTAMA</span>
-                    <h2>SMP Islam Al-Hidayah</h2>
-                    <p class="program-age">Kelas 7 - 9</p>
-                    <p class="program-description">
-                        Penguatan akademik dan karakter remaja muslim dengan fokus pada sains, bahasa, 
-                        dan kepemimpinan.
-                    </p>
-                    
-                    <div class="program-highlight">
-                        <div class="highlight-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Senin - Jumat, 07.00 - 15.30</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-flask"></i>
-                            <span>Lab Sains & Komputer</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-book-quran"></i>
-                            <span>Target Tahfidz 5 Juz</span>
-                        </div>
-                    </div>
-
-                    <h3>Kurikulum Unggulan:</h3>
-                    <ul class="program-curriculum">
-                        <li><i class="fas fa-check-circle"></i> Kelas bilingual (Indonesia-Inggris)</li>
-                        <li><i class="fas fa-check-circle"></i> Program tahfidz lanjutan</li>
-                        <li><i class="fas fa-check-circle"></i> Pembinaan OSN (Matematika, IPA, IPS)</li>
-                        <li><i class="fas fa-check-circle"></i> Leadership & entrepreneurship</li>
-                        <li><i class="fas fa-check-circle"></i> Program kunjungan industri</li>
-                    </ul>
-
-                    <div class="program-cta">
-                        <a href="https://ahis.sch.id/" target="_blank" class="btn btn-primary">lihat lebih lanjut</a>
-                        <a href="#fasilitas" class="btn btn-outline">Lihat Fasilitas</a>
-                    </div>
-                </div>
-                <div class="program-detail-image">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SMP Islam Al-Hidayah">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SMA Section -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="program-detail-grid reverse">
-                <div class="program-detail-image">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SMA Islam Al-Hidayah">
-                </div>
-                <div class="program-detail-content">
-                    <span class="program-level">SEKOLAH MENENGAH ATAS</span>
-                    <h2>SMA Islam Al-Hidayah</h2>
-                    <p class="program-age">Kelas 10 - 12</p>
-                    <p class="program-description">
-                        Persiapan masuk perguruan tinggi negeri dan luar negeri dengan peminatan IPA, IPS, 
-                        dan Bahasa. Program unggulan dengan 98% lulusan diterima di PTN favorit.
-                    </p>
-                    
-                    <div class="program-highlight">
-                        <div class="highlight-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Senin - Jumat, 07.00 - 16.00</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-university"></i>
-                            <span>98% lulusan PTN</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-book-quran"></i>
-                            <span>Target Tahfidz 10 Juz</span>
-                        </div>
-                    </div>
-
-                    <h3>Kurikulum Unggulan:</h3>
-                    <ul class="program-curriculum">
-                        <li><i class="fas fa-check-circle"></i> Peminatan IPA, IPS, dan Bahasa</li>
-                        <li><i class="fas fa-check-circle"></i> Program bimbingan intensif SNBT/UTBK</li>
-                        <li><i class="fas fa-check-circle"></i> Kelas riset & karya ilmiah</li>
-                        <li><i class="fas fa-check-circle"></i> Program persiapan TOEFL/IELTS</li>
-                        <li><i class="fas fa-check-circle"></i> Beasiswa untuk siswa berprestasi</li>
-                    </ul>
-
-                    <div class="program-cta">
-                        <a href="https://ahis.sch.id/" target="_blank" class="btn btn-primary">lihat lebih lanjut</a>
-                        <a href="#fasilitas" class="btn btn-outline">Lihat Fasilitas</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Program Tahfidz -->
-    <section class="section">
-        <div class="container">
-            <div class="program-detail-grid">
-                <div class="program-detail-content">
-                    <span class="program-level">PROGRAM KHUSUS</span>
-                    <h2>Tahfidz Al-Qur'an</h2>
-                    <p class="program-description">
-                        Program unggulan untuk mencetak hafidz/hafidzah dengan sanad yang bersambung 
-                        dan pemahaman yang baik terhadap Al-Qur'an.
-                    </p>
-                    
-                    <div class="program-stats-mini">
-                        <div class="stat-mini">
-                            <h4>3 Juz</h4>
-                            <p>Target SD</p>
-                        </div>
-                        <div class="stat-mini">
-                            <h4>5 Juz</h4>
-                            <p>Target SMP</p>
-                        </div>
-                        <div class="stat-mini">
-                            <h4>10 Juz</h4>
-                            <p>Target SMA</p>
-                        </div>
-                        <div class="stat-mini">
-                            <h4>30 Juz</h4>
-                            <p>Program Khusus</p>
-                        </div>
-                    </div>
-
-                    <ul class="program-curriculum">
-                        <li><i class="fas fa-check-circle"></i> Metode tahfidz mutqin (kuat hafalan)</li>
-                        <li><i class="fas fa-check-circle"></i> Sertifikasi sanad</li>
-                        <li><i class="fas fa-check-circle"></i> Pembimbing bersertifikat</li>
-                        <li><i class="fas fa-check-circle"></i> Program murojaah harian</li>
-                    </ul>
-                </div>
-                <div class="program-detail-image">
-                    <img src="https://images.unsplash.com/photo-1609598424816-cc566b1a79fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Program Tahfidz">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fasilitas -->
-    <section id="fasilitas"class="section section-light">
+    <!-- Program Yayasan untuk Pendidikan -->
+    <section class="program-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tagline">FASILITAS</span>
-                <h2 class="section-title">Fasilitas Penunjang Pendidikan</h2>
-                <p class="section-description">Lingkungan belajar modern dan nyaman untuk mendukung proses pembelajaran</p>
+                <span class="section-tagline">PROGRAM YAYASAN</span>
+                <h2 class="section-title">Dukungan Pengembangan Pendidikan</h2>
+                <p class="section-description">
+                    Ini adalah program yang dijalankan langsung oleh Yayasan Al-Hidayah untuk mendukung mutu pendidikan.
+                </p>
             </div>
 
-            <div class="fasilitas-grid">
-                <div class="fasilitas-card">
-                    <i class="fas fa-flask"></i>
-                    <h3>Lab Sains</h3>
-                    <p>Laboratorium Fisika, Kimia, dan Biologi terintegrasi</p>
+            <div class="program-grid">
+                <div class="program-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Beasiswa Prestasi & Dhuafa</h3>
+                    <p>Beasiswa penuh untuk siswa berprestasi dari keluarga kurang mampu.</p>
+                    <div class="program-stats">100+ penerima aktif</div>
                 </div>
-                <div class="fasilitas-card">
-                    <i class="fas fa-laptop"></i>
-                    <h3>Lab Komputer</h3>
-                    <p>60 unit komputer dengan akses internet cepat</p>
+                <div class="program-card">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <h3>Pelatihan & Sertifikasi Guru</h3>
+                    <p>Program peningkatan kompetensi tenaga pendidik secara berkala.</p>
+                    <div class="program-stats">120+ guru tersertifikasi</div>
                 </div>
-                <div class="fasilitas-card">
-                    <i class="fas fa-book"></i>
-                    <h3>Perpustakaan Digital</h3>
-                    <p>15.000+ koleksi buku dan e-book</p>
+                <div class="program-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Bantuan Sarana Prasarana</h3>
+                    <p>Pengadaan lab, perpustakaan digital, dan renovasi ruang kelas.</p>
+                    <div class="program-stats">6 laboratorium modern</div>
                 </div>
-                <div class="fasilitas-card">
-                    <i class="fas fa-mosque"></i>
-                    <h3>Masjid</h3>
-                    <p>Masjid 2 lantai dengan kapasitas 1000 jamaah</p>
-                </div>
-                <div class="fasilitas-card">
-                    <i class="fas fa-futbol"></i>
-                    <h3>Lapangan Olahraga</h3>
-                    <p>Lapangan futsal, basket, dan voli</p>
-                </div>
-                <div class="fasilitas-card">
-                    <i class="fas fa-bus"></i>
-                    <h3>Transportasi</h3>
-                    <p>Layanan antar jemput dengan 10 armada</p>
+                <div class="program-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Bantuan Operasional Sekolah</h3>
+                    <p>Subsidi biaya operasional untuk meringankan beban orang tua.</p>
+                    <div class="program-stats">Rp 2,5M+ (2024)</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Prestasi Section -->
+    <section class="achievement-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">PRESTASI</span>
+                <h2 class="section-title">Capaian Lembaga Binaan</h2>
+            </div>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Akreditasi A</h4>
+                    <p>Semua jenjang terakreditasi A dari BAN-S/M</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-award"></i>
+                    <h4>Sekolah Adiwiyata</h4>
+                    <p>Sekolah berwawasan lingkungan tingkat provinsi</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-medal"></i>
+                    <h4>30+ Medali OSN</h4>
+                    <p>Olimpiade Sains Nasional tingkat provinsi & nasional</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-quran"></i>
+                    <h4>Program Tahfidz</h4>
+                    <p>Santri hafidz 30 juz setiap tahun</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ingin Mendaftar atau Mendukung Pendidikan?</h2>
+                <p>Pendaftaran siswa baru melalui website sekolah. Donasi untuk beasiswa melalui yayasan.</p>
+                <div class="cta-buttons">
+                    <a href="https://ahis.sch.id/ppdb" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-user-graduate"></i> Pendaftaran Siswa Baru
+                    </a>
+                    <a href="donation.html" class="btn btn-outline">
+                        <i class="fas fa-hand-holding-heart"></i> Donasi Pendidikan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Sesuaikan dengan index.html) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -407,7 +260,7 @@
                     <ul>
                         <li><a href="about.html">Sejarah</a></li>
                         <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
-                        <li><a href="teacher&staff.html">Guru & Staff</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
                     </ul>
                 </div>
 
