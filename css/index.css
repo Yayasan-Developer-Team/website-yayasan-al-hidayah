@@ -467,42 +467,33 @@ body {
 
     /* 1. PERBAIKAN LOGO  AGAR TIDAK BERDEKATAN */
     .header-content {
-        gap: 1rem !important;
-        justify-content: space-between !important;
+        gap: 1rem ;
+        justify-content: space-between ;
     }
 
     .logo {
-        gap: 0.75rem !important;
-        flex-shrink: 0 !important;
-    }
-
-    /* 2. PERBAIKAN HEADER NUTUPIN KONTEN */
-    .hero,
-    .hero-enhanced,
-    .hero-premium,
-    section#home {
-        padding-top: 100px !important;
-        margin-top: 0 !important;
+        gap: 0.75rem ;
+        flex-shrink: 0 ;
     }
 
     /* Untuk semua section agar tidak ketutupan saat scroll anchor */
     section {
-        scroll-margin-top: 85px;
+        scroll-margin-top: 90px;
     }
 }
 
 @media (max-width: 768px) {
     .logo-icon {
-        width: 67px !important;
-        height: 67px !important;
+        width: 50px !important;
+        height: 50px !important;
     }
 
     .logo-title {
-        font-size: 17px !important;
+        font-size: 15px !important;
     }
 
     .logo-subtitle {
-        font-size: 15px !important;
+        font-size: 13px !important;
     }
 
     .logo {
@@ -516,7 +507,7 @@ body {
     .btn-donate {
         padding: 0.5rem 1.2rem;
         font-size: 0.8rem;
-        display: inline-flex !important;
+        display: inline-flex;
     }
 }
 
@@ -524,7 +515,7 @@ body {
 
     /* Tombol Donasi - TETAP MUNCUL DI HP */
     .btn-donate {
-        display: inline-flex !important;
+        display: inline-flex;
         padding: 0.4rem 1rem;
         font-size: 0.7rem;
         margin-left: auto;
@@ -550,7 +541,7 @@ body {
     /* Menu navigasi */
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 80px;
         left: -100%;
         width: 100%;
         height: auto;
@@ -611,7 +602,7 @@ body {
     }
 
     .dropdown-menu {
-        position: absolute;
+        position: relative;
         transform: none;
         opacity: 1;
         visibility: visible;
@@ -623,10 +614,6 @@ body {
         margin-top: 0.5rem;
         background: var(--light-gray);
         border-radius: 12px;
-    }
-
-    .dropdown-menu {
-        position: relative;
     }
 
 
@@ -643,7 +630,7 @@ body {
     .hero,
     .hero-enhanced,
     section#home {
-        padding-top: 100px !important;
+        padding-top: 80px ;
     }
 }
 

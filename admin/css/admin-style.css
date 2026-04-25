@@ -3535,3 +3535,490 @@ html, body {
     .data-table td:nth-child(5)::before { content: "Status"; }
     .data-table td:nth-child(6)::before { content: "Aksi"; }
 }
+
+/* ========================================
+   RESPONSIVE FIX - ADD TO END OF FILE
+   ======================================== */
+
+/* Reset Overflow */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===== SIDEBAR RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px !important;
+    }
+    
+    .sidebar .logo-text,
+    .sidebar .menu-label,
+    .sidebar .admin-detail,
+    .sidebar .menu-badge,
+    .sidebar-menu li a span {
+        display: none !important;
+    }
+    
+    .sidebar .logo {
+        justify-content: center !important;
+    }
+    
+    .sidebar-menu li a {
+        justify-content: center !important;
+        padding: 12px !important;
+    }
+    
+    .sidebar-menu li a i {
+        margin: 0 !important;
+        font-size: 18px !important;
+    }
+    
+    .main-content {
+        margin-left: 80px !important;
+        width: calc(100% - 80px) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 60px !important;
+    }
+    
+    .main-content {
+        margin-left: 60px !important;
+        width: calc(100% - 60px) !important;
+    }
+}
+
+/* ===== TOP NAV RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 12px 16px !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+    
+    .page-title h2 {
+        font-size: 18px !important;
+    }
+    
+    .admin-btn span {
+        display: none !important;
+    }
+    
+    .notification-btn {
+        width: 36px !important;
+        height: 36px !important;
+    }
+}
+
+/* ===== CONTENT AREA ===== */
+.content-area {
+    padding: 20px !important;
+}
+
+@media (max-width: 768px) {
+    .content-area {
+        padding: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-area {
+        padding: 12px !important;
+    }
+}
+
+/* ===== DASHBOARD STATS ===== */
+.dashboard-stats {
+    display: grid !important;
+    gap: 16px !important;
+}
+
+@media (min-width: 1200px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===== DASHBOARD GRID ===== */
+.dashboard-grid {
+    display: grid !important;
+    gap: 20px !important;
+}
+
+@media (min-width: 992px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===== TABLE RESPONSIVE (CARD STYLE DI MOBILE) ===== */
+.table-wrapper {
+    width: 100% !important;
+    overflow-x: auto !important;
+}
+
+.data-table {
+    width: 100% !important;
+    min-width: 600px !important;
+}
+
+@media (max-width: 640px) {
+    .table-wrapper {
+        overflow-x: visible !important;
+    }
+    
+    .data-table,
+    .data-table thead,
+    .data-table tbody,
+    .data-table tr,
+    .data-table th,
+    .data-table td {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .data-table thead {
+        display: none !important;
+    }
+    
+    .data-table tr {
+        background: white !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 16px !important;
+        padding: 14px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .data-table td {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+        padding: 8px 0 !important;
+        border: none !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .data-table td::before {
+        content: attr(data-label) !important;
+        font-weight: 700 !important;
+        color: var(--primary) !important;
+        min-width: 100px !important;
+        font-size: 12px !important;
+    }
+    
+    .data-table td:last-child {
+        display: flex !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .data-table td:last-child::before {
+        content: "Aksi" !important;
+    }
+}
+
+/* ===== FORM RESPONSIVE ===== */
+.form-container {
+    padding: 20px !important;
+}
+
+.form-grid {
+    display: grid !important;
+    gap: 16px !important;
+}
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .form-grid .full-width {
+        grid-column: span 2 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .form-grid .full-width {
+        grid-column: span 1 !important;
+    }
+}
+
+.form-actions {
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+.btn-save,
+.btn-cancel {
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+/* ===== FILTER SECTION ===== */
+.teacher-filter-bar,
+.content-toolbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+}
+
+.filter-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+}
+
+.filter-select-sm,
+.search-box {
+    width: 100% !important;
+}
+
+.toolbar-left,
+.toolbar-right {
+    flex-direction: column !important;
+    width: 100% !important;
+}
+
+/* ===== TEACHER CARDS (HORIZONTAL SCROLL) ===== */
+.teacher-cards-grid {
+    display: flex !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    padding-bottom: 16px !important;
+    cursor: grab !important;
+}
+
+.teacher-cards-grid:active {
+    cursor: grabbing !important;
+}
+
+.teacher-cards-grid::-webkit-scrollbar {
+    height: 6px !important;
+}
+
+.teacher-cards-grid::-webkit-scrollbar-track {
+    background: var(--border) !important;
+    border-radius: 10px !important;
+}
+
+.teacher-cards-grid::-webkit-scrollbar-thumb {
+    background: var(--primary) !important;
+    border-radius: 10px !important;
+}
+
+.teacher-admin-card {
+    min-width: 260px !important;
+    max-width: 260px !important;
+    flex-shrink: 0 !important;
+}
+
+@media (max-width: 480px) {
+    .teacher-admin-card {
+        min-width: 240px !important;
+    }
+}
+
+/* ===== GALLERY THUMBNAILS ===== */
+.gallery-thumbnails {
+    display: grid !important;
+    gap: 16px !important;
+}
+
+@media (min-width: 992px) {
+    .gallery-thumbnails {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .gallery-thumbnails {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .gallery-thumbnails {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 479px) {
+    .gallery-thumbnails {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===== PROFILE PAGE ===== */
+@media (max-width: 768px) {
+    .profile-header-content {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .profile-avatar-large {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .profile-avatar-large i {
+        font-size: 45px !important;
+    }
+    
+    .profile-title h2 {
+        font-size: 24px !important;
+    }
+    
+    .profile-stats {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .profile-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .profile-info-row {
+        flex-direction: column !important;
+    }
+    
+    .profile-info-label {
+        width: 100% !important;
+        margin-bottom: 5px !important;
+    }
+}
+
+/* ===== NOTIFICATIONS PAGE ===== */
+@media (max-width: 768px) {
+    .notifications-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .notifications-actions {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+    
+    .btn-notification {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .notification-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .notification-actions {
+        width: 100% !important;
+        justify-content: flex-end !important;
+        margin-top: 8px !important;
+    }
+}
+
+/* ===== LOGIN PAGE ===== */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 30px 24px !important;
+        max-width: 400px !important;
+    }
+    
+    .form-options {
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 24px 20px !important;
+    }
+    
+    .logo-icon {
+        width: 65px !important;
+        height: 65px !important;
+    }
+    
+    .logo-icon i {
+        font-size: 32px !important;
+    }
+    
+    .login-header h2 {
+        font-size: 24px !important;
+    }
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+
+.page-link {
+    min-width: 36px !important;
+    height: 36px !important;
+    font-size: 13px !important;
+}
+
+/* ===== STATS MINI ===== */
+@media (max-width: 768px) {
+    .stats-mini {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+    
+    .stat-mini-item {
+        justify-content: space-between !important;
+    }
+}
+
+/* ===== UTILITIES ===== */
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+/* ===== FIX OVERFLOW ===== */
+body, .main-content, .content-area {
+    overflow-x: hidden !important;
+}
+
+.card-body {
+    overflow-x: auto !important;
+}
+
+p, h1, h2, h3, h4, span, a, li {
+    word-wrap: break-word !important;
+}
