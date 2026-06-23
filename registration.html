@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Pendaftaran online siswa baru Yayasan Al-Hidayah Lembah Hijau. Daftar sekarang untuk TK, SD, SMP, dan SMA Islam Al-Hidayah. Proses mudah dan cepat.">
+    <title>Pendaftaran Online - Yayasan Al-Hidayah Lembah Hijau</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Registration CSS -->
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/6281212345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="photo/logoYAYASAN.png" alt="Logo Yayasan Al-Hidayah">
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">YAYASAN AL-HIDAYAH</span>
+                        <span class="logo-subtitle">Lembah Hijau</span>
+                    </div>
+                </a>
+
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Beranda</a></li>
+                        <li><a href="about.html" class="nav-link">Tentang</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Struktur <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="struktur-yayasan.html"><i class="fas fa-sitemap"></i> Struktur Yayasan</a></li>
+                                <li><a href="teacher-staff.html"><i class="fas fa-chalkboard-user"></i> Guru & Staff</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Program <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                                <li><a href="humanity.html"><i class="fas fa-hand-holding-heart"></i> Kemanusiaan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">Berita</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                </nav>
+
+                <a href="donation.html" class="btn btn-primary btn-donate">
+                    <i class="fas fa-hand-holding-heart"></i> Donasi
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Registration Section -->
+    <section class="registration-hero" data-aos="fade-down">
+        <div class="container">
+            <div class="registration-hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i> Pendaftaran Siswa Baru
+                </div>
+                <h1>Daftar Menjadi <span class="text-gradient">Bagian Keluarga Besar</span> Al-Hidayah</h1>
+                <p>Isi formulir pendaftaran online dengan mudah dan cepat. Kami akan segera menghubungi Anda setelah pendaftaran diterima.</p>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Proses Mudah & Cepat</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Konfirmasi via WhatsApp</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Informasi Transparan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-container" data-aos="fade-up">
+                <!-- Steps -->
+                <div class="registration-steps" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step active">
+                        <div class="step-number"><span>01</span></div>
+                        <div class="step-info">
+                            <span class="step-label">Langkah 1</span>
+                            <span class="step-title">Data Pribadi</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number"><span>02</span></div>
+                        <div class="step-info">
+                            <span class="step-label">Langkah 2</span>
+                            <span class="step-title">Data Orang Tua</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number"><span>03</span></div>
+                        <div class="step-info">
+                            <span class="step-label">Langkah 3</span>
+                            <span class="step-title">Data Akademik</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number"><span>04</span></div>
+                        <div class="step-info">
+                            <span class="step-label">Langkah 4</span>
+                            <span class="step-title">Upload Berkas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="registrationForm" class="registration-form">
+                    <!-- Step 1: Data Pribadi -->
+                    <div class="form-section active" id="step1" data-aos="fade-up" data-aos-delay="150">
+                        <div class="section-header-custom">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3>Data Pribadi Siswa</h3>
+                            <p>Isi data diri siswa dengan lengkap dan benar</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Nama Lengkap <span class="required">*</span></label>
+                                <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Contoh: Ahmad Fauzi bin Abdullah" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>NISN</label>
+                                <input type="text" id="nisn" name="nisn" placeholder="10 digit angka">
+                                <small>Kosongkan jika belum punya</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>NIK <span class="required">*</span></label>
+                                <input type="text" id="nik" name="nik" placeholder="16 digit angka" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Tempat Lahir <span class="required">*</span></label>
+                                <input type="text" id="tempat_lahir" name="tempat_lahir" placeholder="Contoh: Jakarta" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Tanggal Lahir <span class="required">*</span></label>
+                                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Jenis Kelamin <span class="required">*</span></label>
+                                <select id="jenis_kelamin" name="jenis_kelamin" required>
+                                    <option value="">Pilih</option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Agama <span class="required">*</span></label>
+                                <select id="agama" name="agama" required>
+                                    <option value="">Pilih</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Buddha">Buddha</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Anak Ke-</label>
+                                <input type="number" id="anak_ke" name="anak_ke" placeholder="Contoh: 1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Jumlah Saudara</label>
+                                <input type="number" id="jumlah_saudara" name="jumlah_saudara" placeholder="Contoh: 2">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Alamat Lengkap <span class="required">*</span></label>
+                                <textarea id="alamat" name="alamat" rows="3" placeholder="Jalan, RT/RW, Kelurahan, Kecamatan, Kota, Provinsi" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Kode Pos</label>
+                                <input type="text" id="kode_pos" name="kode_pos" placeholder="Contoh: 17530">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>No. WhatsApp Siswa</label>
+                                <input type="tel" id="no_hp_siswa" name="no_hp_siswa" placeholder="08xxxxxxxxxx">
+                            </div>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn-next" data-next="2">
+                                Lanjut ke Data Orang Tua <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Data Orang Tua -->
+                    <div class="form-section" id="step2" data-aos="fade-up" data-aos-delay="150">
+                        <div class="section-header-custom">
+                            <i class="fas fa-users"></i>
+                            <h3>Data Orang Tua / Wali</h3>
+                            <p>Isi data orang tua/wali dengan lengkap untuk keperluan komunikasi</p>
+                        </div>
+                        
+                        <div class="form-subsection">
+                            <h4><i class="fas fa-male"></i> Data Ayah</h4>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Nama Lengkap Ayah <span class="required">*</span></label>
+                                    <input type="text" id="nama_ayah" name="nama_ayah" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>NIK Ayah</label>
+                                    <input type="text" id="nik_ayah" name="nik_ayah">
+                                </div>
+                                <div class="form-group">
+                                    <label>Pendidikan Terakhir Ayah</label>
+                                    <select id="pendidikan_ayah" name="pendidikan_ayah">
+                                        <option value="">Pilih</option>
+                                        <option value="SD">SD</option>
+                                        <option value="SMP">SMP</option>
+                                        <option value="SMA">SMA</option>
+                                        <option value="D3">D3</option>
+                                        <option value="S1">S1</option>
+                                        <option value="S2">S2</option>
+                                        <option value="S3">S3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Pekerjaan Ayah</label>
+                                    <input type="text" id="pekerjaan_ayah" name="pekerjaan_ayah">
+                                </div>
+                                <div class="form-group">
+                                    <label>No. WhatsApp Ayah <span class="required">*</span></label>
+                                    <input type="tel" id="no_hp_ayah" name="no_hp_ayah" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-subsection">
+                            <h4><i class="fas fa-female"></i> Data Ibu</h4>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Nama Lengkap Ibu <span class="required">*</span></label>
+                                    <input type="text" id="nama_ibu" name="nama_ibu" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>NIK Ibu</label>
+                                    <input type="text" id="nik_ibu" name="nik_ibu">
+                                </div>
+                                <div class="form-group">
+                                    <label>Pendidikan Terakhir Ibu</label>
+                                    <select id="pendidikan_ibu" name="pendidikan_ibu">
+                                        <option value="">Pilih</option>
+                                        <option value="SD">SD</option>
+                                        <option value="SMP">SMP</option>
+                                        <option value="SMA">SMA</option>
+                                        <option value="D3">D3</option>
+                                        <option value="S1">S1</option>
+                                        <option value="S2">S2</option>
+                                        <option value="S3">S3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Pekerjaan Ibu</label>
+                                    <input type="text" id="pekerjaan_ibu" name="pekerjaan_ibu">
+                                </div>
+                                <div class="form-group">
+                                    <label>No. WhatsApp Ibu <span class="required">*</span></label>
+                                    <input type="tel" id="no_hp_ibu" name="no_hp_ibu" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-subsection">
+                            <h4><i class="fas fa-user-check"></i> Data Wali (Jika berbeda)</h4>
+                            <div class="form-checkbox">
+                                <label>
+                                    <input type="checkbox" id="wali_sama"> 
+                                    <span>Sama dengan data orang tua</span>
+                                </label>
+                            </div>
+                            
+                            <div id="wali_data" style="display: none;">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Nama Lengkap Wali</label>
+                                        <input type="text" id="nama_wali" name="nama_wali">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Hubungan dengan Siswa</label>
+                                        <input type="text" id="hubungan_wali" name="hubungan_wali" placeholder="Contoh: Paman, Kakek">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>No. WhatsApp Wali</label>
+                                        <input type="tel" id="no_hp_wali" name="no_hp_wali">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn-prev" data-prev="1">
+                                <i class="fas fa-arrow-left"></i> Kembali
+                            </button>
+                            <button type="button" class="btn-next" data-next="3">
+                                Lanjut ke Data Akademik <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Data Akademik -->
+                    <div class="form-section" id="step3" data-aos="fade-up" data-aos-delay="150">
+                        <div class="section-header-custom">
+                            <i class="fas fa-school"></i>
+                            <h3>Data Akademik</h3>
+                            <p>Isi informasi terkait pendidikan dan minat bakat siswa</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Jenjang Yang Dipilih <span class="required">*</span></label>
+                                <select id="jenjang" name="jenjang" required>
+                                    <option value="">Pilih Jenjang</option>
+                                    <option value="TK">TK Islam Al-Hidayah</option>
+                                    <option value="SD">SD Islam Al-Hidayah</option>
+                                    <option value="SMP">SMP Islam Al-Hidayah</option>
+                                    <option value="SMA">SMA Islam Al-Hidayah</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Tahun Ajaran <span class="required">*</span></label>
+                                <select id="tahun_ajaran" name="tahun_ajaran" required>
+                                    <option value="">Pilih Tahun Ajaran</option>
+                                    <option value="2025/2026">2025/2026</option>
+                                    <option value="2026/2027">2026/2027</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Asal Sekolah</label>
+                                <input type="text" id="asal_sekolah" name="asal_sekolah" placeholder="Nama sekolah sebelumnya">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>NPSN Asal Sekolah</label>
+                                <input type="text" id="npsn" name="npsn" placeholder="Jika ada">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Program Unggulan Yang Diminati</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="program" value="Tahfidz"> Program Tahfidz Al-Qur'an</label>
+                                    <label><input type="checkbox" name="program" value="Olimpiade"> Program Olimpiade Sains</label>
+                                    <label><input type="checkbox" name="program" value="Bilingual"> Program Bilingual</label>
+                                    <label><input type="checkbox" name="program" value="Robotik"> Program Robotik</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Kegiatan Ekstrakurikuler Yang Diminati</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="ekskul" value="Futsal"> Futsal</label>
+                                    <label><input type="checkbox" name="ekskul" value="Basket"> Basket</label>
+                                    <label><input type="checkbox" name="ekskul" value="Panahan"> Panahan</label>
+                                    <label><input type="checkbox" name="ekskul" value="Renang"> Renang</label>
+                                    <label><input type="checkbox" name="ekskul" value="Pramuka"> Pramuka</label>
+                                    <label><input type="checkbox" name="ekskul" value="Drumband"> Drumband</label>
+                                    <label><input type="checkbox" name="ekskul" value="Hadroh"> Hadroh</label>
+                                    <label><input type="checkbox" name="ekskul" value="Kaligrafi"> Kaligrafi</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Prestasi Yang Pernah Diraih</label>
+                                <textarea id="prestasi" name="prestasi" rows="3" placeholder="Sebutkan prestasi akademik/non-akademik (jika ada)"></textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Catatan Khusus (Kesehatan, dll)</label>
+                                <textarea id="catatan_khusus" name="catatan_khusus" rows="2" placeholder="Sebutkan jika ada alergi, penyakit tertentu, atau kebutuhan khusus"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn-prev" data-prev="2">
+                                <i class="fas fa-arrow-left"></i> Kembali
+                            </button>
+                            <button type="button" class="btn-next" data-next="4">
+                                Lanjut ke Upload Berkas <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Upload Berkas -->
+                    <div class="form-section" id="step4" data-aos="fade-up" data-aos-delay="150">
+                        <div class="section-header-custom">
+                            <i class="fas fa-file-upload"></i>
+                            <h3>Upload Berkas Persyaratan</h3>
+                            <p>Upload dokumen yang diperlukan dalam format JPG, PNG, atau PDF</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Foto Siswa (3x4) <span class="required">*</span></label>
+                                <div class="upload-area" onclick="document.getElementById('foto_siswa').click()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Klik untuk upload foto</p>
+                                    <small>Format: JPG/PNG. Maks 1MB</small>
+                                </div>
+                                <input type="file" id="foto_siswa" name="foto_siswa" accept="image/*" style="display: none;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Kartu Keluarga (KK) <span class="required">*</span></label>
+                                <div class="upload-area" onclick="document.getElementById('kk').click()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Klik untuk upload KK</p>
+                                    <small>Format: JPG/PNG/PDF. Maks 2MB</small>
+                                </div>
+                                <input type="file" id="kk" name="kk" accept="image/*,application/pdf" style="display: none;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Akta Kelahiran <span class="required">*</span></label>
+                                <div class="upload-area" onclick="document.getElementById('akta').click()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Klik untuk upload akta</p>
+                                    <small>Format: JPG/PNG/PDF. Maks 2MB</small>
+                                </div>
+                                <input type="file" id="akta" name="akta" accept="image/*,application/pdf" style="display: none;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Ijazah / SKL Terakhir <span class="required">*</span></label>
+                                <div class="upload-area" onclick="document.getElementById('ijazah').click()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Klik untuk upload ijazah</p>
+                                    <small>Format: JPG/PNG/PDF. Maks 2MB</small>
+                                </div>
+                                <input type="file" id="ijazah" name="ijazah" accept="image/*,application/pdf" style="display: none;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Rapor Terakhir <span class="required">*</span></label>
+                                <div class="upload-area" onclick="document.getElementById('rapor').click()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Klik untuk upload rapor</p>
+                                    <small>Format: JPG/PNG/PDF. Maks 2MB</small>
+                                </div>
+                                <input type="file" id="rapor" name="rapor" accept="image/*,application/pdf" style="display: none;">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Sertifikat Prestasi (Opsional)</label>
+                                <div class="upload-area" onclick="document.getElementById('sertifikat').click()">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Klik untuk upload sertifikat</p>
+                                    <small>Format: JPG/PNG/PDF. Maks 2MB</small>
+                                </div>
+                                <input type="file" id="sertifikat" name="sertifikat" accept="image/*,application/pdf" style="display: none;">
+                            </div>
+                        </div>
+                        
+                        <div class="form-agreement">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreement" required>
+                                <span>Dengan ini saya menyatakan bahwa data yang saya isikan adalah benar dan dapat dipertanggungjawabkan. Saya setuju untuk mengikuti seluruh proses seleksi dan peraturan yang berlaku di Yayasan Al-Hidayah Lembah Hijau.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn-prev" data-prev="3">
+                                <i class="fas fa-arrow-left"></i> Kembali
+                            </button>
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> Kirim Pendaftaran
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="registration-info" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <h4>Informasi Penting</h4>
+                            <p>Setelah mengirim formulir pendaftaran, Anda akan mendapatkan nomor registrasi melalui WhatsApp. Kami akan menghubungi Anda untuk jadwal tes seleksi dan wawancara dalam waktu 1x24 jam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="photo/logoYAYASAN.png" alt="Logo Yayasan Al-Hidayah">
+                        <div>
+                            <h4>YAYASAN AL-HIDAYAH</h4>
+                            <p>Lembah Hijau</p>
+                        </div>
+                    </div>
+                    <p>Mencerdaskan kehidupan bangsa, meringankan beban sesama. Bersama membangun peradaban yang lebih baik.</p>
+                    <div class="footer-cert">
+                        <span><i class="fas fa-check-circle"></i> SK Kemenkumham No. AHU-1234.2024</span>
+                        <span><i class="fas fa-check-circle"></i> Terdaftar di BAZNAS</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="education.html">Pendidikan Islam</a></li>
+                        <li><a href="humanity.html">Kemanusiaan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tentang</h4>
+                    <ul>
+                        <li><a href="about.html">Sejarah</a></li>
+                        <li><a href="struktur-yayasan.html">Struktur Yayasan</a></li>
+                        <li><a href="teacher-staff.html">Guru & Staff</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Dukungan</h4>
+                    <ul>
+                        <li><a href="donation.html">Cara Donasi</a></li>
+                        <li><a href="relawan.html">Jadi Relawan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yayasan Al-Hidayah Lembah Hijau. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Kebijakan Privasi</a>
+                    <a href="terms.html">Syarat & Ketentuan</a>
+                    <a href="sitemap.html">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.className = navMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+            });
+        }
+
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('show', window.scrollY > 300);
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Step Navigation
+        let currentStep = 1;
+        const sections = document.querySelectorAll('.form-section');
+        const nextBtns = document.querySelectorAll('.btn-next');
+        const prevBtns = document.querySelectorAll('.btn-prev');
+        const steps = document.querySelectorAll('.step');
+
+        function showStep(step) {
+            sections.forEach((section, index) => {
+                section.classList.toggle('active', index + 1 === step);
+            });
+            
+            steps.forEach((stepEl, index) => {
+                stepEl.classList.toggle('active', index + 1 === step);
+                if (index + 1 < step) {
+                    stepEl.classList.add('completed');
+                } else {
+                    stepEl.classList.remove('completed');
+                }
+            });
+            
+            currentStep = step;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const nextStep = parseInt(btn.getAttribute('data-next'));
+                if (nextStep) showStep(nextStep);
+            });
+        });
+
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const prevStep = parseInt(btn.getAttribute('data-prev'));
+                if (prevStep) showStep(prevStep);
+            });
+        });
+
+        // Wali data toggle
+        const waliCheckbox = document.getElementById('wali_sama');
+        const waliData = document.getElementById('wali_data');
+        
+        if (waliCheckbox) {
+            waliCheckbox.addEventListener('change', function() {
+                waliData.style.display = this.checked ? 'none' : 'block';
+            });
+        }
+
+        // File upload trigger
+        document.querySelectorAll('.upload-area').forEach(area => {
+            area.addEventListener('click', function() {
+                const fileInput = this.nextElementSibling;
+                if (fileInput && fileInput.type === 'file') {
+                    fileInput.click();
+                }
+            });
+        });
+
+        // Dropdown mobile
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.closest('.dropdown').classList.toggle('active');
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        // Form Submission
+        const registrationForm = document.getElementById('registrationForm');
+        if (registrationForm) {
+            registrationForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const agreement = document.getElementById('agreement');
+                if (agreement && !agreement.checked) {
+                    alert('Silakan centang persetujuan untuk melanjutkan.');
+                    return;
+                }
+                
+                alert('Terima kasih! Pendaftaran Anda telah kami terima. Nomor registrasi akan dikirim ke WhatsApp dalam 1x24 jam.');
+            });
+        }
+    </script>
+</body>
+</html>

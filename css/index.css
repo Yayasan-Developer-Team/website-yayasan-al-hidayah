@@ -553,7 +553,7 @@ body {
         z-index: 999;
         overflow-y: auto;
         display: block;
-        backdrop-filter: blur(20px);
+        background: white;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
